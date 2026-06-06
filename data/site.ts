@@ -1,6 +1,6 @@
 export const boxer = {
   name: 'Harsh Bharti',
-  nickname: 'Net Boxer',
+  nickname: 'Kick Boxer',
   tagline: 'Fighting for greatness, one round at a time.',
   age: 19,
   birthDate: '7 May 2007',

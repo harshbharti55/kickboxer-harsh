@@ -14,7 +14,7 @@ const bebas = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: 'Harsh Bharti | Net Boxer Portfolio',
+  title: 'Harsh Bharti | Kick Boxer Portfolio',
   description: 'Professional boxer portfolio website built with Next.js, TypeScript, and Framer Motion.',
 };
 
