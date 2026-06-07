@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-display text-6xl leading-[0.92] text-white sm:text-7xl lg:text-[6.8rem]">
-            {boxer.name}
+            
             <span className="block text-gradient">{boxer.nickname}</span>
           </h1>
 
