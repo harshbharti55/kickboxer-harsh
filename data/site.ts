@@ -1,6 +1,6 @@
 export const boxer = {
   name: 'Harsh Bharti',
-  nickname: 'Kick Boxer',
+  nickname: 'KickBoxer Harsh',
   tagline: 'Fighting for greatness, one round at a time.',
   age: 19,
   birthDate: '7 May 2007',
@@ -118,10 +118,7 @@ export const gallery = [
   { src: '/media/hero.png', alt: 'Hero portrait at tournament' },
   { src: '/media/gallery-1.png', alt: 'Ring pose with raised gloves' },
   { src: '/media/gallery-2.png', alt: 'Winner pose in arena' },
-  { src: 'https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1200&q=80', alt: 'Training gym background' },
-  { src: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80', alt: 'Athlete preparation shot' },
-  { src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80', alt: 'Boxing ring wide view' },
-];
+]
 
 export const sponsors = [
   { name: 'Brand Partner One', type: 'Performance wear' },
@@ -131,8 +128,11 @@ export const sponsors = [
 ];
 
 export const contact = {
-  whatsapp: 'https://wa.me/919999999999',
-  email: 'harshbharti@example.com',
-  instagram: 'https://instagram.com/',
-  youtube: 'https://youtube.com/',
+  whatsapp: "https://wa.me/919816875780",
+  email: "Kickboxerharsh@gmail.com",
+  instagram: "https://www.instagram.com/harsh_bharti5?igsh=NmhnZ3M3MWdhbDMw",
+  facebook: "https://www.facebook.com/share/1Dw6ZKqKyE/",
+  twitter: "https://x.com/Harsh_bharti5",
+  linkedin: "https://www.linkedin.com/in/harsh-bharti-931b31251",
+  phone: "+91 9816875780",
 };
