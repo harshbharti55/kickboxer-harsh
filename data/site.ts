@@ -3,7 +3,7 @@ export const boxer = {
   nickname: 'KickBoxer Harsh',
   tagline: 'Fighting for greatness, one round at a time.',
   age: 19,
-  birthDate: '7 May 2007',
+  birthDate: '24 July 2006',
   hometown: 'Shimla, Himachal Pradesh',
   nationality: 'Indian',
   weightClass: '-51 kg',
@@ -40,8 +40,8 @@ export const boxer = {
 
 export const stats = [
   { label: 'Total fights', value: 42 },
-  { label: 'Wins', value: 27 },
-  { label: 'Losses', value: 12 },
+  { label: 'Wins', value: 35 },
+  { label: 'Losses', value: 4 },
   { label: 'Draws', value: 3 },
   { label: 'Knockouts', value: 14 },
   { label: 'Titles won', value: 6 },
@@ -50,7 +50,7 @@ export const stats = [
 export const fightRecords = [
   { opponent: 'State Finalist A', result: 'Win', date: '2026', event: 'National Camp Series', method: 'Decision' },
   { opponent: 'Junior Champion B', result: 'Win', date: '2025', event: 'Senior Nationals', method: 'TKO' },
-  { opponent: 'International Prospect C', result: 'Loss', date: '2024', event: 'Open Championship', method: 'Decision' },
+  { opponent: 'International Prospect C', result: 'Win', date: '2024', event: 'Open Championship', method: 'Decision' },
   { opponent: 'Champion D', result: 'Win', date: '2024', event: 'Inter-State Meet', method: 'KO' },
   { opponent: 'Elite Fighter E', result: 'Win', date: '2023', event: 'National Trials', method: 'TKO' },
   { opponent: 'Pressure Fighter F', result: 'Win', date: '2022', event: 'Junior Nationals', method: 'Decision' },
@@ -88,13 +88,13 @@ export const training = {
 
 export const highlights = [
   {
-    title: 'Fight Highlights',
+    title: ' Senior national Ranchi',
     description: 'Big moments, clean combinations, and ring control.',
     type: 'video',
     src: '',
   },
   {
-    title: 'Knockout Clips',
+    title: ' MMA entry in SFC',
     description: 'Explosive finishes and decisive pressure.',
     type: 'video',
     src: '',
