@@ -91,19 +91,19 @@ export const highlights = [
     title: ' Senior national Ranchi',
     description: 'Big moments, clean combinations, and ring control.',
     type: 'video',
-    src: '',
+    src: '/media/harsh.mp4',
   },
   {
     title: ' MMA entry in SFC',
     description: 'Explosive finishes and decisive pressure.',
     type: 'video',
-    src: '',
+    src: '/media/mmac.mp4',
   },
   {
     title: 'Training Videos',
     description: 'Bag work, pad work, and conditioning sessions.',
     type: 'video',
-    src: '',
+    src: '/media/training.mp4',
   },
 ];
 
