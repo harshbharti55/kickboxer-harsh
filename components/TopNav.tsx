@@ -24,7 +24,9 @@ export default function TopNav() {
           </div>
           <div>
             <p className="text-sm font-semibold text-white">Harsh Bharti</p>
-            <p className="text-xs text-white/50">Kick Boxer's Portfolio</p>
+            <p className="text-xs text-white/50">Kick Boxer's
+            
+             Portfolio</p>
           </div>
         </a>
 

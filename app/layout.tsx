@@ -14,8 +14,137 @@ const bebas = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: 'Harsh Bharti | Kick Boxer Portfolio',
-  description: 'Professional boxer portfolio website built with Next.js, TypeScript, and Framer Motion.',
+  metadataBase: new URL('https://kickboxer-harsh.online'),
+
+  title: {
+    default: 'Harsh Bharti | Kickboxer',
+    template: '%s | Harsh Bharti',
+  },
+
+  description:
+    'Harsh Bharti is an Indian kickboxer, national medalist, international competitor, and BPES student pursuing a career in professional combat sports.',
+
+  keywords: [
+    'Harsh Bharti',
+    'Kickboxer Harsh',
+    'Indian Kickboxer',
+    'Kickboxing Athlete',
+    'National Medalist',
+    'Combat Sports',
+    'WAKO India',
+    'Professional Kickboxer',
+  ],
+
+  authors: [
+    {
+      name: 'Harsh Bharti',
+      url: 'https://kickboxer-harsh.online',
+    },
+  ],
+
+  creator: 'Harsh Bharti',
+
+  openGraph: {
+    title: 'Harsh Bharti | Kickboxer',
+    description:
+      'Indian kickboxer, national medalist, international competitor, and combat sports athlete.',
+    url: 'https://kickboxer-harsh.online',
+    siteName: 'Harsh Bharti',
+    locale: 'en_US',
+    type: 'profile',
+    images: [
+      {
+        url: '/profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Harsh Bharti',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Harsh Bharti | Kickboxer',
+    description:
+      'Indian kickboxer, national medalist, international competitor.',
+    images: ['/profile.jpg'],
+  },
+
+  alternates: {
+    canonical: 'https://kickboxer-harsh.online',
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://kickboxer-harsh.online/#person',
+
+  name: 'Harsh Bharti',
+  alternateName: 'Kickboxer Harsh',
+
+  birthDate: '2006-07-24',
+
+  url: 'https://kickboxer-harsh.online',
+
+  image: 'https://kickboxer-harsh.online/profile.jpg',
+
+  jobTitle: 'Competitive Kickboxer',
+
+  description:
+    'Indian kickboxer, national medalist, international competitor, and BPES student pursuing a career in professional combat sports.',
+
+  gender: 'Male',
+
+  nationality: {
+    '@type': 'Country',
+    name: 'India',
+  },
+
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Himachal Pradesh',
+    addressCountry: 'India',
+  },
+
+  sport: 'Kickboxing',
+
+  knowsAbout: [
+    'Kickboxing',
+    'Combat Sports',
+    'Full Contact Kickboxing',
+    'Sports Marketing',
+    'Athlete Sponsorship',
+    'Physical Education',
+    'Wushu',
+  ],
+
+  alumniOf: {
+    '@type': 'EducationalOrganization',
+    name: 'Lamrin Tech Skills University',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'Punjab',
+      addressCountry: 'India',
+    },
+  },
+
+  award: [
+    'Gold Medal - Open International Kickboxing Championship 2023',
+    'Silver Medal - Senior National Kickboxing Championship (Raipur)',
+    'Bronze Medal - National Kickboxing Championship 2024',
+    'Silver Medal - National Kickboxing Championship 2023',
+    'Gold Medal - Junior National Kickboxing Championship 2022',
+  ],
+
+  sameAs: [
+    'https://www.wikidata.org/wiki/Q138682935',
+    'https://youtube.com/@kickboxerharsh',
+    'https://www.instagram.com/harsh_bharti5',
+    'https://x.com/Harsh_bharti5',
+    'https://www.linkedin.com/in/harsh-bharti-931b31251',
+    'https://www.facebook.com/share/197uuUAZuV/',
+  ],
 };
 
 export default function RootLayout({
@@ -25,6 +154,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
+      </head>
+
       <body className={`${inter.variable} ${bebas.variable} font-sans`}>
         {children}
       </body>
