@@ -20,6 +20,8 @@ export default function Page() {
       <About /> 
       <Gallery/>
 
+      <Articles />
+
       <Stats />
       <Timeline />
       <Training />
