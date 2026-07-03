@@ -107,8 +107,7 @@ const personSchema = {
     addressCountry: 'India',
   },
 
-  sport: 'Kickboxing',
-
+  // Removed 'sport' to fix the validator warning shown in 78773.jpg
   knowsAbout: [
     'Kickboxing',
     'Combat Sports',
@@ -154,16 +153,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${inter.variable} ${bebas.variable} font-sans antialiased`}>
+        {/* Next.js safely handles injecting scripts when placed inside the body element */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(personSchema),
+            __html: JSON.stringify(personSchema).replace(/</g, '\\u003c'),
           }}
         />
-      </head>
-
-      <body className={`${inter.variable} ${bebas.variable} font-sans`}>
         {children}
       </body>
     </html>
