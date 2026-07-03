@@ -6,6 +6,7 @@ import Timeline from '@/components/Timeline';
 import Training from '@/components/Training';
 import Highlights from '@/components/Highlights';
 import Achievements from '@/components/Achievements';
+import Articles from '@/components/Articles';
 import Gallery from '@/components/Gallery';
 import Sponsors from '@/components/Sponsors';
 import Contact from '@/components/Contact';
