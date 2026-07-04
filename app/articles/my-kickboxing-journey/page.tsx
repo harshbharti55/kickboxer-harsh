@@ -57,7 +57,7 @@ export default function ArticlePage() {
   height={675}
   className="w-full rounded-xl"
 />
-          {/header>
+          </header>
 
         {/* Article Body */}
         <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
