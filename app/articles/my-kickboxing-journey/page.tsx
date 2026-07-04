@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: 'My Kickboxing Journey',
@@ -50,11 +51,11 @@ export default function ArticlePage() {
           </div>
 
           {/* Hero Image Placeholder */}
-          <div className="w-full aspect-video rounded-xl overflow-hidden bg-gradient-to-b from-red-900/20 to-yellow-900/20 border border-white/10 flex items-center justify-center mb-8">
-            <div className="text-center">
-              <p className="text-gray-400 text-lg">Hero Image Placeholder</p>
-              <p className="text-gray-600 text-sm mt-2">1200 x 675px recommended</p>
-            </div>
+<div className="w-full aspect-video ...">
+  <div className="text-center">
+    <p>Hero Image Placeholder</p>
+    <p>1200 × 675px recommended</p>
+  </div>
           </div>
         </header>
 
