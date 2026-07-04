@@ -55,7 +55,7 @@ export default function ArticlePage() {
   alt="Harsh Bharti Kickboxing"
   width={1200}
   height={675}
-  className="w-full rounded-xl"
+  className="w-full h-[450px] object-cover rounded-xl"
 />
           </header>
 
