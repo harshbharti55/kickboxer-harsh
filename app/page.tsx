@@ -3,12 +3,9 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Stats from '@/components/Stats';
 import Timeline from '@/components/Timeline';
-import Training from '@/components/Training';
 import Highlights from '@/components/Highlights';
-import Achievements from '@/components/Achievements';
 import Articles from '@/components/Articles';
 import Gallery from '@/components/Gallery';
-import Sponsors from '@/components/Sponsors';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -24,11 +21,8 @@ export default function Page() {
 
       <Stats />
       <Timeline />
-      <Training />
       <Highlights />
-      <Achievements />
       
-      <Sponsors />
       <Contact />
       <Footer />
     </main>
