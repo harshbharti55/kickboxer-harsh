@@ -48,16 +48,16 @@ export default function ArticlePage() {
             <span>{publishDate}</span>
             <span className="text-gray-600">•</span>
             <span>{readingTime} min read</span>
-          </div>
-
-          {/* Hero Image Placeholder */}
-<div className="w-full aspect-video ...">
-  <div className="text-center">
-    <p>Hero Image Placeholder</p>
-    <p>1200 × 675px recommended</p>
-  </div>
-          </div>
-        </header>
+          </div> 
+          
+<Image
+  src="/media/hero.png"
+  alt="Harsh Bharti Kickboxing"
+  width={1200}
+  height={675}
+  className="w-full rounded-xl"
+/>
+          {/header>
 
         {/* Article Body */}
         <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
