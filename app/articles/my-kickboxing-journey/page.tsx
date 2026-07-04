@@ -47,7 +47,29 @@ twitter: {
 export default function ArticlePage() {
   const readingTime = 8;
   const publishDate = 'January 15, 2024';
-
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "My Kickboxing Journey",
+  description:
+    "Read the journey of Harsh Bharti from beginner to national medalist and international kickboxer.",
+  image: "https://kickboxer-harsh.online/media/hero.png",
+  author: {
+    "@type": "Person",
+    name: "Harsh Bharti",
+    url: "https://kickboxer-harsh.online",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Harsh Bharti",
+  },
+  datePublished: "2024-01-15",
+  dateModified: "2026-07-04",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://kickboxer-harsh.online/articles/my-kickboxing-journey",
+  },
+};
   return (
     <main className="min-h-screen bg-bg">
       {/* Back to Home Button */}
