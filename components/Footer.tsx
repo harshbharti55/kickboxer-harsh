@@ -23,18 +23,11 @@ export default function Footer() {
               Built for sponsors, media, and fans.
             </p>
           </div>
-
-          <div>
-            <p className="text-sm text-white/50">
-              Made with ❤️ by{" "}
-              <span className="font-medium text-gold">
-                Hitansh Sharma
-              </span>
-            </p>
-          </div>
-
-        </div>
-      </div>
+<div>
+  <p className="text-sm text-white/50">
+    © {new Date().getFullYear()} Harsh Bharti. All Rights Reserved.
+  </p>
+</div>
     </footer>
   );
 }
