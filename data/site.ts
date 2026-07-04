@@ -39,21 +39,43 @@ export const boxer = {
 };
 
 export const stats = [
-  { label: 'Total fights', value: 42 },
-  { label: 'Wins', value: 35 },
-  { label: 'Losses', value: 4 },
-  { label: 'Draws', value: 3 },
-  { label: 'Knockouts', value: 14 },
-  { label: 'Titles won', value: 6 },
+  { label: "National Gold", value: 1 },
+  { label: "National Silver", value: 2 },
+  { label: "National Bronze", value: 1 },
+  { label: "International Events", value: 2 },
+  { label: "Years Experience", value: 8 },
+  { label: "Training Camps", value: 3 },
 ];
 
 export const fightRecords = [
-  { opponent: 'State Finalist A', result: 'Win', date: '2026', event: 'National Camp Series', method: 'Decision' },
-  { opponent: 'Junior Champion B', result: 'Win', date: '2025', event: 'Senior Nationals', method: 'TKO' },
-  { opponent: 'International Prospect C', result: 'Win', date: '2024', event: 'Open Championship', method: 'Decision' },
-  { opponent: 'Champion D', result: 'Win', date: '2024', event: 'Inter-State Meet', method: 'KO' },
-  { opponent: 'Elite Fighter E', result: 'Win', date: '2023', event: 'National Trials', method: 'TKO' },
-  { opponent: 'Pressure Fighter F', result: 'Win', date: '2022', event: 'Junior Nationals', method: 'Decision' },
+  {
+    opponent: "Senior National Championship",
+    result: "Silver",
+    date: "2025",
+    event: "Raipur, Chhattisgarh",
+    method: "Full Contact -51 kg",
+  },
+  {
+    opponent: "National Kickboxing Championship",
+    result: "Bronze",
+    date: "2024",
+    event: "Siliguri",
+    method: "Full Contact -51 kg",
+  },
+  {
+    opponent: "WAKO India Nationals",
+    result: "Silver",
+    date: "2023",
+    event: "Ranchi",
+    method: "Full Contact -51 kg",
+  },
+  {
+    opponent: "Junior National Championship",
+    result: "Gold",
+    date: "2022",
+    event: "Kolkata",
+    method: "Full Contact -45 kg",
+  },
 ];
 
 export const journey = [
