@@ -72,6 +72,12 @@ const articleSchema = {
 };
   return (
     <main className="min-h-screen bg-bg">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(articleSchema),
+  }}
+/>
       {/* Back to Home Button */}
       <div className="sticky top-0 z-40 border-b border-white/10 bg-bg/80 backdrop-blur-md">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
