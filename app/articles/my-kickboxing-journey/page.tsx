@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-};
+
 
 twitter: {
   card: "summary_large_image",
@@ -43,6 +43,7 @@ twitter: {
     "Read the journey of Harsh Bharti from beginner to national medalist and international kickboxer.",
   images: ["https://kickboxer-harsh.online/media/hero.png"],
 },
+};
 
 export default function ArticlePage() {
   const readingTime = 8;
