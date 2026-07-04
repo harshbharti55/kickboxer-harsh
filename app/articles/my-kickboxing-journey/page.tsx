@@ -56,7 +56,12 @@ export default function ArticlePage() {
   width={1200}
   height={675}
   className="w-full h-[450px] object-cover rounded-xl"
-/>
+  />
+
+  <p className="mt-3 text-center text-sm text-gray-400">
+  Harsh Bharti after winning the Silver Medal at the Senior National Kickboxing Championship.
+</p>
+
           </header>
 
         {/* Article Body */}
