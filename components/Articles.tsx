@@ -1,19 +1,24 @@
+import Link from 'next/link';
+
 export default function Articles() {
   const articles = [
     {
       title: "My Kickboxing Journey",
       description:
         "From my first training session to representing India and winning national medals.",
+      href: "/articles/my-kickboxing-journey",
     },
     {
       title: "How I Prepare for Championships",
       description:
         "Training routine, nutrition, recovery, and mental preparation before competitions.",
+      href: "#",
     },
     {
       title: "Life of a Student Athlete",
       description:
         "Balancing university studies with elite kickboxing training.",
+      href: "#",
     },
   ];
 
@@ -26,22 +31,26 @@ export default function Articles() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {articles.map((article, index) => (
-            <div
+            <Link
               key={index}
-              className="rounded-xl border p-6 hover:shadow-xl transition"
+              href={article.href}
             >
-              <h3 className="text-xl font-semibold mb-3">
-                {article.title}
-              </h3>
+              <div
+                className="rounded-xl border p-6 hover:shadow-xl transition cursor-pointer h-full hover:border-yellow-500/50 hover:bg-white/5"
+              >
+                <h3 className="text-xl font-semibold mb-3">
+                  {article.title}
+                </h3>
 
-              <p className="text-gray-400">
-                {article.description}
-              </p>
+                <p className="text-gray-400">
+                  {article.description}
+                </p>
 
-              <button className="mt-5 font-semibold">
-                Read More →
-              </button>
-            </div>
+                <button className="mt-5 font-semibold hover:text-yellow-400 transition-colors">
+                  Read More →
+                </button>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
