@@ -30,6 +30,13 @@ export const metadata: Metadata = {
         width: 1200,
         height: 675,
         alt: "Harsh Bharti Kickboxing",
+        twitter: {
+  card: "summary_large_image",
+  title: "My Kickboxing Journey | Harsh Bharti",
+  description:
+    "Read the journey of Harsh Bharti from beginner to national medalist and international kickboxer.",
+  images: ["https://kickboxer-harsh.online/media/hero.png"],
+},
       },
     ],
   },
