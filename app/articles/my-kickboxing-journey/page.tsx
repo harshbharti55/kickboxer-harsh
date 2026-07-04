@@ -4,16 +4,34 @@ import { ArrowLeft } from 'lucide-react';
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'My Kickboxing Journey',
+  title: "My Kickboxing Journey | Harsh Bharti - Indian Kickboxer",
   description:
-    'From my first training session to representing India and winning national medals.',
+    "Read the journey of Harsh Bharti, an Indian kickboxer from Shimla, from his first training session to winning national medals and representing India in international competitions.",
+  keywords: [
+    "Harsh Bharti",
+    "Indian kickboxer",
+    "Kickboxing",
+    "WAKO India",
+    "National Kickboxing",
+    "Combat Sports",
+    "Full Contact Kickboxing",
+    "Shimla athlete",
+    "Himachal Pradesh",
+  ],
   openGraph: {
-    title: 'My Kickboxing Journey | Harsh Bharti',
+    title: "My Kickboxing Journey | Harsh Bharti",
     description:
-      'From my first training session to representing India and winning national medals.',
-    type: 'article',
-    authors: ['Harsh Bharti'],
-    publishedTime: '2024-01-15',
+      "Read the journey of Harsh Bharti from beginner to national medalist and international kickboxer.",
+    type: "article",
+    url: "https://kickboxer-harsh.online/articles/my-kickboxing-journey",
+    images: [
+      {
+        url: "https://kickboxer-harsh.online/media/hero.png",
+        width: 1200,
+        height: 675,
+        alt: "Harsh Bharti Kickboxing",
+      },
+    ],
   },
 };
 
