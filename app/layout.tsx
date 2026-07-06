@@ -156,7 +156,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${bebas.variable} font-sans antialiased bg-black text-white`}>
+     <body className={`${inter.variable} ${bebas.variable} font-sans antialiased bg-black`}>
   <Navbar />
 
   <script
@@ -166,7 +166,9 @@ export default function RootLayout({
     }}
   />
 
-  {children}
+  <main className="pt-20">
+    {children}
+  </main>
 
   <Footer />
 </body>
