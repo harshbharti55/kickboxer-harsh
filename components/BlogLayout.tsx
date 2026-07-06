@@ -12,6 +12,16 @@ export default function BlogLayout({
   children,
 }: BlogProps) {
   return (
-    // layout code here
-  );
+  <main>
+    <h1>{title}</h1>
+
+    <p>
+      {date} • {category}
+    </p>
+
+    <article>
+      {children}
+    </article>
+  </main>
+);
 }
