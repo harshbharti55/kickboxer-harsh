@@ -12,13 +12,13 @@ export default function Articles() {
       title: "How I Prepare for Championships",
       description:
         "Training routine, nutrition, recovery, and mental preparation before competitions.",
-      href: "#",
+      href: "/articles/how-i-prepare-for-championships"
     },
     {
       title: "Life of a Student Athlete",
       description:
         "Balancing university studies with elite kickboxing training.",
-      href: "#",
+      href: "/articles/life-of-a-student-athlete"
     },
   ];
 
