@@ -6,12 +6,14 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const links = [
-  ['About', '#about'],
-  ['Stats', '#stats'],
-  ['Record', '#record'],
-  ['Training', '#training'],
-  ['Media', '#media'],
-  ['Contact', '#contact'],
+  ['Home', '/'],
+  ['Articles', '/articles'],
+  ['About', '/#about'],
+  ['Stats', '/#stats'],
+  ['Record', '/#record'],
+  ['Training', '/#training'],
+  ['Media', '/#media'],
+  ['Contact', '/#contact'],
 ];
 
 export default function TopNav() {
