@@ -1,1 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Harsh Bharti Blog</title>
+    <link>https://kickboxer-harsh.online</link>
+    <description>Official blog of Harsh Bharti</description>
 
+    <item>
+      <title>Welcome to My Blog</title>
+      <link>https://kickboxer-harsh.online/blog</link>
+      <description>Training updates and competition reports.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
