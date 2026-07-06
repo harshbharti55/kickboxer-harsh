@@ -1,13 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-  <channel>
-    <title>Harsh Bharti Blog</title>
-    <link>https://kickboxer-harsh.online</link>
-    <description>Official blog of Harsh Bharti</description>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom">
 
-   <item>
+<channel>
+<title>Harsh Bharti Blog</title>
+<link>https://kickboxer-harsh.online</link>
+<description>Official blog of Harsh Bharti - Kickboxer, Athlete & Sports Professional</description>
+<language>en-us</language>
+
+<atom:link
+href="https://kickboxer-harsh.online/rss.xml"
+rel="self"
+type="application/rss+xml"/>
+
+<item>
 <title>My Kickboxing Journey</title>
 <link>https://kickboxer-harsh.online/articles/my-kickboxing-journey</link>
+<guid>https://kickboxer-harsh.online/articles/my-kickboxing-journey</guid>
 <description>From my first training session to representing India and winning national medals.</description>
 <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
 </item>
@@ -15,9 +24,34 @@
 <item>
 <title>How I Prepare for Championships</title>
 <link>https://kickboxer-harsh.online/articles/how-i-prepare-for-championships</link>
-<description>Training routine, nutrition, recovery, and mental preparation.</description>
+<guid>https://kickboxer-harsh.online/articles/how-i-prepare-for-championships</guid>
+<description>Training routine, nutrition, recovery, and mental preparation before every championship.</description>
 <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
 </item>
 
-  </channel>
+<item>
+<title>Life of a Student Athlete</title>
+<link>https://kickboxer-harsh.online/articles/life-of-a-student-athlete</link>
+<guid>https://kickboxer-harsh.online/articles/life-of-a-student-athlete</guid>
+<description>Balancing university studies with elite kickboxing training.</description>
+<pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+</item>
+
+<item>
+<title>Nutrition for Kickboxers</title>
+<link>https://kickboxer-harsh.online/articles/nutrition-for-kickboxers</link>
+<guid>https://kickboxer-harsh.online/articles/nutrition-for-kickboxers</guid>
+<description>Daily nutrition, hydration, recovery meals, and weight management for kickboxers.</description>
+<pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+</item>
+
+<item>
+<title>World Cup Preparation</title>
+<link>https://kickboxer-harsh.online/articles/world-cup-preparation</link>
+<guid>https://kickboxer-harsh.online/articles/world-cup-preparation</guid>
+<description>Preparing physically and mentally for the WAKO Kickboxing World Cup.</description>
+<pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+</item>
+
+</channel>
 </rss>
