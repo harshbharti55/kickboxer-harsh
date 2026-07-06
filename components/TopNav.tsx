@@ -1,5 +1,7 @@
 'use client';
 
+
+import TopNav from "@/components/TopNav";
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
