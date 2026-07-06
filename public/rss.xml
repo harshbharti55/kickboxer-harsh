@@ -5,12 +5,19 @@
     <link>https://kickboxer-harsh.online</link>
     <description>Official blog of Harsh Bharti</description>
 
-    <item>
-      <title>Welcome to My Blog</title>
-      <link>https://kickboxer-harsh.online/blog</link>
-      <description>Training updates and competition reports.</description>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
-    </item>
+   <item>
+<title>My Kickboxing Journey</title>
+<link>https://kickboxer-harsh.online/articles/my-kickboxing-journey</link>
+<description>From my first training session to representing India and winning national medals.</description>
+<pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+</item>
+
+<item>
+<title>How I Prepare for Championships</title>
+<link>https://kickboxer-harsh.online/articles/how-i-prepare-for-championships</link>
+<description>Training routine, nutrition, recovery, and mental preparation.</description>
+<pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+</item>
 
   </channel>
 </rss>
