@@ -12,13 +12,13 @@ export default function BlogLayout({
   children,
 }: BlogProps) {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
-      <div className="mb-10">
+<main className="min-h-screen bg-[#111827] py-12 px-5">
+ <div className="max-w-4xl mx-auto bg-[#18181B] rounded-3xl shadow-2xl border border-gray-800 p-8 md:p-12">
         <span className="text-yellow-400 font-semibold">
           {category}
         </span>
 
-        <h1 className="text-5xl font-bold mt-3 mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold mt-3 mb-4">
           {title}
         </h1>
 
@@ -26,14 +26,13 @@ export default function BlogLayout({
           Published • {date} • 6 min read
         </p>
       </div>
-
-      <article className="prose prose-invert max-w-none">
+<article className="prose prose-invert prose-lg max-w-none leading-8">
         {children}
       </article>
 
       <hr className="my-12 border-gray-700" />
 
-      <div className="rounded-xl border border-gray-700 p-6">
+      <div className="rounded-2xl bg-[#202020] border border-gray-700 p-6">
         <h3 className="text-2xl font-bold mb-2">
           About the Author
         </h3>
