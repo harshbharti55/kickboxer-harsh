@@ -20,6 +20,16 @@ export default function Articles() {
         "Balancing university studies with elite kickboxing training.",
       href: "/articles/life-of-a-student-athlete"
     },
+    {
+  title: "My World Cup Preparation",
+  description: "Training, preparation and goals for the WAKO World Cup.",
+  href: "/articles/world-cup-preparation",
+},
+    {
+  title: "Nutrition for Kickboxers",
+  description: "My daily diet and recovery routine.",
+  href: "/articles/nutrition-for-kickboxers",
+},
   ];
 
   return (
