@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 export default function Articles() {
   const articles = [
     {
@@ -62,7 +61,15 @@ export default function Articles() {
               </div>
             </Link>
           ))}
-        </div>
+        </div> 
+        <div className="mt-8 text-center">
+  <Link
+    href="/articles"
+    className="inline-block rounded-lg border border-white/20 px-6 py-3 font-semibold hover:bg-white hover:text-black transition"
+  >
+    View All Articles →
+  </Link>
+</div>
       </div>
     </section>
   );
