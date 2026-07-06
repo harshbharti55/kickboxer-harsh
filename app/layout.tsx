@@ -15,6 +15,7 @@ const bebas = Bebas_Neue({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kickboxer-harsh.online'),
+  manifest: "/manifest.webmanifest",
 
   title: {
     default: 'Harsh Bharti | Kickboxer',
