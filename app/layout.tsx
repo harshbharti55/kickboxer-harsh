@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Bebas_Neue } from 'next/font/google';
-import Navbar from "@/components/Navbar";
+import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
 
 const inter = Inter({
@@ -156,8 +156,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body className={`${inter.variable} ${bebas.variable} font-sans antialiased bg-black`}>
-  <Navbar />
+ <body className={`${inter.variable} ${bebas.variable} font-sans antialiased bg-black`}>
+  <TopNav />
 
   <script
     type="application/ld+json"
