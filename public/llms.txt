@@ -1,0 +1,24 @@
+# Harsh Bharti
+
+Official website: https://kickboxer-harsh.online
+
+Name: Harsh Bharti
+Sport: Kickboxing
+Country: India
+
+About:
+Harsh Bharti is an Indian kickboxer, national medalist, and international competitor. This website contains his athlete profile, achievements, training articles, competition updates, and media.
+
+Important pages:
+https://kickboxer-harsh.online/
+https://kickboxer-harsh.online/articles/my-kickboxing-journey
+https://kickboxer-harsh.online/articles/how-i-prepare-for-championships
+https://kickboxer-harsh.online/articles/life-of-a-student-athlete
+https://kickboxer-harsh.online/articles/nutrition-for-kickboxers
+https://kickboxer-harsh.online/articles/world-cup-preparation
+
+RSS:
+https://kickboxer-harsh.online/rss.xml
+
+Sitemap:
+https://kickboxer-harsh.online/sitemap.xml
