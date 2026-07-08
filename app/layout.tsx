@@ -38,6 +38,9 @@ keywords: [
   'National Kickboxing Medalist',
   'Professional Kickboxer',
   'Official Website'
+  'Harsh bharti wiki'
+  'Harsh bharti wikipedia'
+  'Harsh bharti Himachal pradesh'
 ],
 
   authors: [
@@ -122,17 +125,18 @@ const personSchema = {
     name: 'Competitive Kickboxer',
   },
 
-  identifier: {
-  '@type': 'PropertyValue',
-  propertyID: 'Wikidata',
-  value: 'Q138682935',
-  }
+  identifier: [
+  {
+    '@type': 'PropertyValue',
+    propertyID: 'Wikidata',
+    value: 'Q138682935',
+  },
   {
     '@type': 'PropertyValue',
     propertyID: 'YouTube Channel',
-    value: '@harsh_bharti_kickboxer'
-}
-},
+    value: '@harsh_bharti_kickboxer',
+  },
+],
 
   knowsLanguage: [
     'English',
