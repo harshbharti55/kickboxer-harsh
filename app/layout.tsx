@@ -2,7 +2,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Bebas_Neue } from 'next/font/google';
 import TopNav from "@/components/TopNav";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer"; 
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -209,6 +211,8 @@ export default function RootLayout({
       __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
     }}
   />
+     <Analytics />
+       <SpeedInsights />
 
   <main className="pt-20">
     {children}
