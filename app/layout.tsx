@@ -81,7 +81,6 @@ keywords: [
 };
 
 const personSchema = {
-  '@const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   '@id': 'https://kickboxer-harsh.online/#person',
