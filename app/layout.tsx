@@ -122,6 +122,18 @@ const personSchema = {
     name: 'Competitive Kickboxer',
   },
 
+  identifier: {
+  '@type': 'PropertyValue',
+  propertyID: 'Wikidata',
+  value: 'Q138682935',
+  }
+  {
+    '@type': 'PropertyValue',
+    propertyID: 'YouTube Channel',
+    value: '@harsh_bharti_kickboxer'
+}
+},
+
   knowsLanguage: [
     'English',
     'Hindi',
