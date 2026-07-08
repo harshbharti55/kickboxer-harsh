@@ -211,13 +211,13 @@ export default function RootLayout({
       __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
     }}
   />
-     <Analytics />
-       <SpeedInsights />
+     
 
   <main className="pt-20">
     {children}
   </main>
-
+<Analytics />
+<SpeedInsights />
   <Footer />
 </body>
     </html>
