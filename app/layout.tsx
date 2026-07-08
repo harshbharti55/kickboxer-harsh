@@ -166,15 +166,15 @@ const personSchema = {
   ],
 
   subjectOf: [
-    {
-      '@type': 'NewsArticle',
-      url: 'https://www.firstverdict.com/harsh-bharti-won-gold-medal-in-junior-kick-boxing-competition',
-    },
-    {
-      '@type': 'Article',
-      url: 'https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education',
-    },
-  ],
+  {
+    '@type': 'CreativeWork',
+    url: 'https://www.firstverdict.com/harsh-bharti-won-gold-medal-in-junior-kick-boxing-competition'
+  },
+  {
+    '@type': 'CreativeWork',
+    url: 'https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education'
+  }, 
+], 
 };
 
 export default function RootLayout({
