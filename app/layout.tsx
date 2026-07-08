@@ -19,24 +19,26 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://kickboxer-harsh.online'),
   manifest: "/manifest.webmanifest",
 
-  title: {
-    default: 'Harsh Bharti | Kickboxer',
-    template: '%s | Harsh Bharti',
-  },
+ title: {
+  default: 'Harsh Bharti | Indian Kickboxer',
+  template: '%s | Harsh Bharti',
+},
 
-  description:
-    'Harsh Bharti is an Indian kickboxer, national medalist, international competitor, and BPES student pursuing a career in professional combat sports.',
+description:
+  'Official website of Harsh Bharti, an Indian kickboxer, national medalist, international competitor, and BPES student. Explore competition results, achievements, media coverage, and athlete updates.',
 
-  keywords: [
-    'Harsh Bharti',
-    'Kickboxer Harsh',
-    'Indian Kickboxer',
-    'Kickboxing Athlete',
-    'National Medalist',
-    'Combat Sports',
-    'WAKO India',
-    'Professional Kickboxer',
-  ],
+keywords: [
+  'Harsh Bharti',
+  'Harsh Bharti Kickboxer',
+  'Indian Kickboxer',
+  'Kickboxer Harsh',
+  'Kickboxing Athlete',
+  'Combat Sports',
+  'WAKO India',
+  'National Kickboxing Medalist',
+  'Professional Kickboxer',
+  'Official Website'
+],
 
   authors: [
     {
@@ -79,6 +81,7 @@ export const metadata: Metadata = {
 };
 
 const personSchema = {
+  '@const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   '@id': 'https://kickboxer-harsh.online/#person',
@@ -95,7 +98,7 @@ const personSchema = {
   jobTitle: 'Competitive Kickboxer',
 
   description:
-    'Indian kickboxer, national medalist, international competitor, and BPES student pursuing a career in professional combat sports.',
+    'Official website of Harsh Bharti, an Indian kickboxer, national medalist, international competitor, and BPES student.',
 
   gender: 'Male',
 
@@ -110,7 +113,21 @@ const personSchema = {
     addressCountry: 'India',
   },
 
-  // Removed 'sport' to fix the validator warning shown in 78773.jpg
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://kickboxer-harsh.online',
+  },
+
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Competitive Kickboxer',
+  },
+
+  knowsLanguage: [
+    'English',
+    'Hindi',
+  ],
+
   knowsAbout: [
     'Kickboxing',
     'Combat Sports',
@@ -132,20 +149,32 @@ const personSchema = {
   },
 
   award: [
-    'Gold Medal - Open International Kickboxing Championship 2023',
-    'Silver Medal - Senior National Kickboxing Championship (Raipur)',
-    'Bronze Medal - National Kickboxing Championship 2024',
-    'Silver Medal - National Kickboxing Championship 2023',
     'Gold Medal - Junior National Kickboxing Championship 2022',
+    'Silver Medal - National Kickboxing Championship 2023',
+    'Bronze Medal - National Kickboxing Championship 2024',
+    'Silver Medal - Senior National Kickboxing Championship 2025',
   ],
 
   sameAs: [
     'https://www.wikidata.org/wiki/Q138682935',
-    'https://youtube.com/@kickboxerharsh',
     'https://www.instagram.com/harsh_bharti5',
-    'https://x.com/Harsh_bharti5',
+    'https://youtube.com/@harsh_bharti_kickboxer',
     'https://www.linkedin.com/in/harsh-bharti-931b31251',
-    'https://www.facebook.com/share/197uuUAZuV/',
+    'https://x.com/Harsh_bharti5',
+    'https://www.facebook.com/share/1ERg1t4UHH/',
+    'https://liquipedia.net/lab/Harsh_bharti',
+    'https://sportsmatik.com/athlete/Harshbharti',
+  ],
+
+  subjectOf: [
+    {
+      '@type': 'NewsArticle',
+      url: 'https://www.firstverdict.com/harsh-bharti-won-gold-medal-in-junior-kick-boxing-competition',
+    },
+    {
+      '@type': 'Article',
+      url: 'https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education',
+    },
   ],
 };
 
