@@ -37,10 +37,10 @@ keywords: [
   'WAKO India',
   'National Kickboxing Medalist',
   'Professional Kickboxer',
-  'Official Website'
-  'Harsh bharti wiki'
-  'Harsh bharti wikipedia'
-  'Harsh bharti Himachal pradesh'
+  'Official Website',
+  'Harsh Bharti wiki',
+  'Harsh Bharti Wikipedia',
+  'Harsh Bharti Himachal Pradesh',
 ],
 
   authors: [
