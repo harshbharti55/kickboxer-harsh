@@ -59,11 +59,6 @@ export const metadata: Metadata = {
 
   publisher: 'Harsh Bharti',
 
-  hasOccupation: {
-  "@type": "Occupation",
-  name: "Competitive Kickboxer"
-},
-
   alternates: {
     canonical: 'https://kickboxer-harsh.online',
   },
