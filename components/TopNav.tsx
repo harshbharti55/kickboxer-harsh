@@ -5,19 +5,13 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const links = [
-  ['Home', '/'],
-  ['Articles', '/articles'],
-  ['About', '/#about'],
-  ['Achievements', '/achievements'],
-  ['Stats', '/#stats'],
-  ['Record', '/#record'],
-  ['Training', '/#training'],
-  ['Calendar', '/calendar'],
-  ['Media', '/#media'],
-  ['Gallery', '/gallery'],
-  ['Sponsors', '/sponsors'],
-  ['Press Kit', '/press-kit'],
-  ['Contact', '/#contact'],
+  ["Home", "/"],
+  ["About", "/about"],
+  ["Gallery", "/gallery"],
+  ["Calendar", "/calendar"],
+  ["Media", "/media"],
+  ["Sponsors", "/sponsors"],
+  ["Contact", "/contact"],
 ];
 
 export default function TopNav() {
