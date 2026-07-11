@@ -74,7 +74,13 @@ export default function Hero() {
             >
               <MessageCircleMore className="h-5 w-5 text-gold" />
               Contact / Book
-            </a>
+            </a> 
+            <a
+  href="/gallery"
+  className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-6 py-3 font-semibold text-gold transition hover:bg-gold hover:text-black"
+>
+  📷 View Gallery
+</a>
           </div>
 
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
