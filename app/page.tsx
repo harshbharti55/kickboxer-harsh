@@ -15,7 +15,7 @@ export default function Page() {
       <TopNav />
       <Hero />
       <About /> 
-      <Gallery/>
+      <HomeGallery />
 
       <Articles />
 
