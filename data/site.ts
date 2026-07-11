@@ -140,7 +140,19 @@ export const gallery = [
   { src: '/media/hero.png', alt: 'Hero portrait at tournament' },
   { src: '/media/gallery-1.png', alt: 'Ring pose with raised gloves' },
   { src: '/media/gallery-2.png', alt: 'Winner pose in arena' },
-]
+ { src: "/public/gallery/DSC_3075.JPG", alt: "Gallery 1" },
+  { src: "/public/gallery/DSC_3076.JPG", alt: "Gallery 2" },
+  { src: "/public/gallery/DSC_3077.JPG", alt: "Gallery 3" },
+  { src: "/public/gallery/DSC_3079.JPG", alt: "Gallery 4" },
+  { src: "/public/gallery/DSC_3080.JPG", alt: "Gallery 5" },
+  { src: "/public/gallery/DSC_3083.JPG", alt: "Gallery 6" },
+  { src: "/public/gallery/DSC_3151.JPG", alt: "Gallery 7" },
+  { src: "/public/gallery/DSC_3153.JPG", alt: "Gallery 8" },
+  { src: "/public/gallery/DSC_3156.JPG", alt: "Gallery 9" },
+  { src: "/public/gallery/IMG-20250719-WA0011.jpg", alt: "Gallery 10" },
+  { src: "/public/gallery/IMG-20250721-WA0012.jpg", alt: "Gallery 11" },
+  { src: "/public/gallery/IMG_20240714_161034.jpg", alt: "Gallery 12" },
+];
 
 export const sponsors = [
   { name: 'Brand Partner One', type: 'Performance wear' },
