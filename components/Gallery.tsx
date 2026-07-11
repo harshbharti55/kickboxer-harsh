@@ -35,6 +35,14 @@ subtitle="Explore Harsh Bharti's journey through national championships, interna
               <p className="text-sm uppercase tracking-[0.25em] text-gold/80">{index < 3 ? 'Featured' : 'Media'}</p>
               <h3 className="mt-1 text-lg font-semibold text-white">{item.alt}</h3>
             </div>
+            <div className="mt-10 text-center">
+  <a
+    href="/gallery"
+    className="inline-flex rounded-full bg-gold px-6 py-3 font-semibold text-black hover:opacity-90"
+  >
+    📸 See All Photos
+  </a>
+</div>
           </motion.div>
         ))}
       </div>
