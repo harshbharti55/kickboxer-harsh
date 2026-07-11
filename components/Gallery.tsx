@@ -4,6 +4,7 @@ import SectionHeading from "./SectionHeading";
 import Image from "next/image";
 import { gallery } from "@/data/site";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Gallery() {
   return (
@@ -48,12 +49,12 @@ export default function Gallery() {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <a
-          href="/gallery"
-          className="inline-flex rounded-full bg-gold px-8 py-3 font-semibold text-black transition hover:opacity-90"
-        >
-          📸 See All Photos
-        </a>
+      <Link
+  href="/gallery"
+  className="inline-flex rounded-full bg-gold px-8 py-3 font-semibold text-black transition hover:opacity-90"
+>
+  📸 See All Photos
+</Link>
       </div>
     </section>
   );
