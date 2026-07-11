@@ -14,7 +14,7 @@ subtitle="Explore Harsh Bharti's journey through national championships, interna
         />
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-        {gallery.map((item, index) => (
+       {gallery.slice(0, 6).map((item, index) => (
           <motion.div
             key={item.alt + index}
             whileHover={{ y: -6 }}
