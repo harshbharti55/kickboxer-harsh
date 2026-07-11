@@ -14,6 +14,7 @@ const links = [
   ['Training', '/#training'],
   ['Media', '/#media'],
   ['Gallery', '/gallery'],
+  ['Sponsors', '/sponsors'],
   ['Contact', '/#contact'],
 ];
 
