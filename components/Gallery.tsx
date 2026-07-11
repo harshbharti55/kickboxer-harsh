@@ -21,12 +21,14 @@ subtitle="Explore Harsh Bharti's journey through national championships, interna
             className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5"
           >
             <div className="relative aspect-[4/5]">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-cover transition duration-700 group-hover:scale-105"
-              />
+            <a href={item.src} target="_blank" rel="noopener noreferrer">
+  <Image
+    src={item.src}
+    alt={item.alt}
+    fill
+    className="object-cover transition duration-700 group-hover:scale-105"
+  />
+</a>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent" />
             </div>
             <div className="absolute inset-x-0 bottom-0 p-5">
