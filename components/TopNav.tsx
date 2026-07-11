@@ -16,6 +16,7 @@ const links = [
   ['Media', '/#media'],
   ['Gallery', '/gallery'],
   ['Sponsors', '/sponsors'],
+  ['Press Kit', '/press-kit'],
   ['Contact', '/#contact'],
 ];
 
