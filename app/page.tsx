@@ -5,7 +5,7 @@ import Stats from '@/components/Stats';
 import Timeline from '@/components/Timeline';
 import Highlights from '@/components/Highlights';
 import Articles from '@/components/Articles';
-import Gallery from '@/components/Gallery';
+import HomeGallery from "@/components/HomeGallery";
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
