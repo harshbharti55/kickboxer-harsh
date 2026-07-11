@@ -9,9 +9,9 @@ export default function Gallery() {
     <section className="container-page py-24">
       <SectionHeading
         eyebrow="Gallery"
-        title="Match photos, training shots, and behind-the-scenes visuals."
-        subtitle="The gallery uses editable image cards so you can replace the dummy images with your own media at any time."
-      />
+       title="Official Photo Gallery"
+subtitle="Explore Harsh Bharti's journey through national championships, international competitions, training sessions, medal ceremonies, and behind-the-scenes moments."
+        />
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
         {gallery.map((item, index) => (
