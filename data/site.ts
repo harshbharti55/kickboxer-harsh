@@ -163,7 +163,7 @@ export const gallery = [
 { src: "/gallery/IMG_20240714_161034.jpg", alt: "Gallery 23" },
 { src: "/gallery/IMG_20250720_110904.jpg", alt: "Gallery 24" },
 { src: "/gallery/Screenshot_20230830-150314-2.png", alt: "Gallery 25" },
-  ]:
+  ];
 export const sponsors = [
   { name: 'Brand Partner One', type: 'Performance wear' },
   { name: 'Brand Partner Two', type: 'Nutrition support' },
