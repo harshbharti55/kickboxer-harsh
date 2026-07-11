@@ -137,9 +137,7 @@ export const achievements = [
 ];
 
 export const gallery = [
-  { src: '/media/hero.png', alt: 'Hero portrait at tournament' },
-  { src: '/media/gallery-1.png', alt: 'Ring pose with raised gloves' },
-  { src: '/media/gallery-2.png', alt: 'Winner pose in arena' },
+
  { src: "/public/gallery/DSC_3075.JPG", alt: "Gallery 1" },
   { src: "/public/gallery/DSC_3076.JPG", alt: "Gallery 2" },
   { src: "/public/gallery/DSC_3077.JPG", alt: "Gallery 3" },
