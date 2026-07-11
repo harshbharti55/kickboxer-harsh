@@ -138,7 +138,7 @@ export const achievements = [
 
 export const gallery = [
 { src: "/gallery/DSC_3075.JPG", alt: "Gallery 1" },
-{ src: "/gallery/DSC_3078-2.JPG", alt: "Gallery 2" },
+{ src: "/gallery/DSC_3197.JPG", alt: "Gallery 2" },
 { src: "/gallery/DSC_3079.JPG", alt: "Gallery 3" },
 { src: "/gallery/DSC_3151.JPG", alt: "Gallery 4" },
 { src: "/gallery/DSC_3154.JPG", alt: "Gallery 5" },
