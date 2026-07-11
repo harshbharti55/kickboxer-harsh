@@ -12,6 +12,7 @@ const links = [
   ['Stats', '/#stats'],
   ['Record', '/#record'],
   ['Training', '/#training'],
+  ['Calendar', '/calendar'],
   ['Media', '/#media'],
   ['Gallery', '/gallery'],
   ['Sponsors', '/sponsors'],
