@@ -11,6 +11,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/calendar`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/media`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/achievements`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sponsors`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/press-kit`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/articles`,
+      lastModified: new Date(),
+    },
+
+    // Article pages
+    {
       url: `${baseUrl}/articles/my-kickboxing-journey`,
       lastModified: new Date(),
     },
