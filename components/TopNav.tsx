@@ -12,6 +12,7 @@ const links = [
   ['Record', '/#record'],
   ['Training', '/#training'],
   ['Media', '/#media'],
+  ['Gallery', '/gallery'],
   ['Contact', '/#contact'],
 ];
 
