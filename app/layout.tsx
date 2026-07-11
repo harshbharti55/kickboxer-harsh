@@ -77,8 +77,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    type: 'profile',
-    locale: 'en_US',
+   type: 'website',
+ locale: 'en_IN',
     url: 'https://kickboxer-harsh.online',
     siteName: 'Harsh Bharti',
 
@@ -87,13 +87,13 @@ export const metadata: Metadata = {
     description:
       'Official website of Indian kickboxer Harsh Bharti featuring achievements, tournament results, media coverage, athlete profile, and latest updates.',
 
-    images: [
-      {
-        url: '/profile.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Harsh Bharti',
-      },
+  images: [
+  {
+    url: '/og-image.jpg',
+    width: 1200,
+    height: 630,
+    alt: 'Harsh Bharti | Indian Kickboxer',
+  },
     ],
   },
 
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
 
     creator: '@Harsh_bharti5',
 
-    images: ['/profile.jpg'],
+    images: ['/og-image.jpg'],
   },
 
   icons: {
