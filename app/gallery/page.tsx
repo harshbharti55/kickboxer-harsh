@@ -1,4 +1,5 @@
 import Gallery from "@/components/Gallery";
+import { createBreadcrumbSchema } from "@/lib/breadcrumb";
 
 export default function GalleryPage() {
   return (
