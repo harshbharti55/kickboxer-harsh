@@ -16,7 +16,7 @@ export default function Gallery() {
       />
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-        {gallery.slice(0, 2).map((item, index) => (
+   {gallery.map((item, index) => (
           <motion.div
             key={item.alt + index}
             whileHover={{ y: -6 }}
