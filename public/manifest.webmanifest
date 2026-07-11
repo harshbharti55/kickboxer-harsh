@@ -1,16 +1,22 @@
 {
-  "name": "Harsh Bharti - Kickboxer",
-  "short_name": "Harsh",
-  "description": "Official website of Harsh Bharti - Indian Kickboxer, National Medalist and Athlete.",
+  "name": "Harsh Bharti | Professional Kickboxer",
+  "short_name": "Harsh Bharti",
+  "description": "Official website of Harsh Bharti, Indian kickboxer.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#facc15",
+  "background_color": "#0a0a0a",
+  "theme_color": "#f5c518",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/icon.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/icon.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
     }
   ]
 }
