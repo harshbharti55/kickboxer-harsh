@@ -5,6 +5,8 @@ import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 
+
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -18,6 +20,10 @@ const bebas = Bebas_Neue({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kickboxer-harsh.online'),
+
+  verification: {
+    google: "LTDs5YFw033xWbomaMJ02IX1EGHQl9QbblH-xRsHAPs",
+  },
 
   manifest: '/manifest.webmanifest',
 
@@ -298,11 +304,6 @@ const organizationSchema = {
   ]
 };
 
-export const metadata = {
-  verification: {
-    google: "LTDs5YFw033xWbomaMJ02IX1EGHQl9QbblH-xRsHAPs",
-  },
-};
 
 
 export default function RootLayout({
