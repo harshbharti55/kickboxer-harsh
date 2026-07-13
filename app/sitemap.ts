@@ -1,68 +1,82 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+const baseUrl = "https://kickboxer-harsh.online";
+
+const pages = [
+  {
+    path: "",
+    priority: 1.0,
+    changeFrequency: "weekly" as const,
+  },
+  {
+    path: "/about",
+    priority: 0.9,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/gallery",
+    priority: 0.9,
+    changeFrequency: "weekly" as const,
+  },
+  {
+    path: "/calendar",
+    priority: 0.9,
+    changeFrequency: "weekly" as const,
+  },
+  {
+    path: "/achievements",
+    priority: 0.9,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/media",
+    priority: 0.9,
+    changeFrequency: "weekly" as const,
+  },
+  {
+    path: "/articles",
+    priority: 0.9,
+    changeFrequency: "weekly" as const,
+  },
+  {
+    path: "/sponsors",
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/downloads",
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/contact",
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/privacy",
+    priority: 0.3,
+    changeFrequency: "yearly" as const,
+  },
+  {
+    path: "/terms",
+    priority: 0.3,
+    changeFrequency: "yearly" as const,
+  },
+  {
+    path: "/cookies",
+    priority: 0.3,
+    changeFrequency: "yearly" as const,
+  },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://kickboxer-harsh.online";
+  const lastModified = new Date();
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/gallery`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/calendar`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/media`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/achievements`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/sponsors`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/press-kit`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/articles`,
-      lastModified: new Date(),
-    },
-
-    // Article pages
-    {
-      url: `${baseUrl}/articles/my-kickboxing-journey`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/articles/how-i-prepare-for-championships`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/articles/life-of-a-student-athlete`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/articles/nutrition-for-kickboxers`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/articles/world-cup-preparation`,
-      lastModified: new Date(),
-    },
-  ];
+  return pages.map((page) => ({
+    url: `${baseUrl}${page.path}`,
+    lastModified,
+    changeFrequency: page.changeFrequency,
+    priority: page.priority,
+  }));
 }
