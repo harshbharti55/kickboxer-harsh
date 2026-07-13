@@ -220,3 +220,160 @@ export default function AchievementsPage() {
         </div>
 
       </section>
+            {/* Medal Showcase */}
+
+      <section className="container-page py-24">
+
+        <div className="mx-auto max-w-3xl text-center">
+
+          <p className="text-sm uppercase tracking-[0.35em] text-gold">
+            Medal Collection
+          </p>
+
+          <h2 className="mt-4 font-display text-5xl text-white">
+            Championship Highlights
+          </h2>
+
+          <p className="mt-6 text-lg leading-8 text-white/70">
+            National and international competitions that have shaped my
+            career as a Full Contact Kickboxing athlete.
+          </p>
+
+        </div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          {[
+            {
+              medal: "🥇",
+              title: "Gold Medal",
+              event: "Junior National Championship",
+              year: "2022",
+            },
+            {
+              medal: "🥈",
+              title: "Silver Medal",
+              event: "WAKO India National",
+              year: "2023",
+            },
+            {
+              medal: "🥉",
+              title: "Bronze Medal",
+              event: "National Championship",
+              year: "2024",
+            },
+            {
+              medal: "🥈",
+              title: "Silver Medal",
+              event: "Senior National Championship",
+              year: "2025",
+            },
+            {
+              medal: "🇮🇳",
+              title: "Represented India",
+              event: "International Events",
+              year: "2025–2026",
+            },
+            {
+              medal: "🏆",
+              title: "Career Goal",
+              event: "World Championship",
+              year: "Future",
+            },
+          ].map((item) => (
+
+            <motion.div
+              key={item.title + item.year}
+              whileHover={{ y: -8 }}
+              className="glass rounded-[2rem] border border-white/10 p-8 text-center"
+            >
+
+              <div className="text-6xl">
+                {item.medal}
+              </div>
+
+              <h3 className="mt-6 text-2xl font-display text-white">
+                {item.title}
+              </h3>
+
+              <p className="mt-3 text-gold">
+                {item.event}
+              </p>
+
+              <p className="mt-2 text-white/60">
+                {item.year}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* Final CTA */}
+
+      <section className="container-page pb-28">
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="overflow-hidden rounded-[2.5rem] border border-gold/20 bg-gradient-to-r from-gold/10 via-black to-black p-12"
+        >
+
+          <div className="mx-auto max-w-4xl text-center">
+
+            <p className="text-sm uppercase tracking-[0.35em] text-gold">
+              The Journey Continues
+            </p>
+
+            <h2 className="mt-5 font-display text-5xl text-white">
+              Every Medal Is
+              <span className="block text-gradient">
+                A Step Forward
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/70">
+              My achievements are the result of years of discipline,
+              determination and hard work. I continue striving to represent
+              India with pride while pursuing success on the international
+              stage.
+            </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-5">
+
+              <a
+                href="/gallery"
+                className="rounded-full bg-gold px-8 py-4 font-semibold text-black transition hover:scale-105"
+              >
+                View Gallery
+              </a>
+
+              <a
+                href="/media"
+                className="rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white transition hover:border-gold/40 hover:bg-white/10"
+              >
+                Watch Highlights
+              </a>
+
+              <a
+                href="/contact"
+                className="rounded-full border border-gold/30 bg-gold/10 px-8 py-4 font-semibold text-gold transition hover:bg-gold hover:text-black"
+              >
+                Contact Me
+              </a>
+
+            </div>
+
+          </div>
+
+        </motion.div>
+
+      </section>
+
+    </main>
+  );
+}
