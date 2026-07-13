@@ -298,6 +298,12 @@ const organizationSchema = {
   ]
 };
 
+export const metadata = {
+  verification: {
+    google: "LTDs5YFw033xWbomaMJ02IX1EGHQl9QbblH-xRsHAPs",
+  },
+};
+
 
 export default function RootLayout({
   children,
