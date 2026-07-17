@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Scene from "./Scene";
 import {
   MessageCircleMore,
   PlayCircle,
@@ -19,22 +20,11 @@ export default function Hero() {
     >
       {/* Background */}
       <div className="absolute inset-0 grid-overlay opacity-20" />
+      <Scene />
 
       <div className="absolute inset-0 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="h-full w-full object-cover brightness-[0.35] scale-105"
-        >
-          <source src="/media/harsh.mp4" type="video/mp4" />
-        </video>
-
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-black" />
-      </div>
+  <div className="absolute inset-0 bg-gradient-to-br from-black via-[#050505] to-black" />
+</div>
 
       <div className="container-page relative z-10 grid min-h-screen items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div
