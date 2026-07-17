@@ -47,13 +47,12 @@ export default function FloatingAthlete() {
           />
         </RoundedBox>
 
-        <Image
-          url="/media/hero.png
-          scale={[2.55, 3.75]}
-          position={[0, 0, 0.09]}
-          transparent
-
-        />
+      <Image
+  url="/media/hero.png"
+  scale={[2.55, 3.75]}
+  position={[0, 0, 0.09]}
+  transparent
+/>
       </group>
     </Float>
   );
