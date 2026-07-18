@@ -1,82 +1,60 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://kickboxer-harsh.online";
+const BASE_URL = "https://kickboxer-harsh.online";
 
 const pages = [
-  {
-    path: "",
-    priority: 1.0,
-    changeFrequency: "weekly" as const,
-  },
-  {
-    path: "/about",
-    priority: 0.9,
-    changeFrequency: "monthly" as const,
-  },
-  {
-    path: "/gallery",
-    priority: 0.9,
-    changeFrequency: "weekly" as const,
-  },
-  {
-    path: "/calendar",
-    priority: 0.9,
-    changeFrequency: "weekly" as const,
-  },
-  {
-    path: "/achievements",
-    priority: 0.9,
-    changeFrequency: "monthly" as const,
-  },
-  {
-    path: "/media",
-    priority: 0.9,
-    changeFrequency: "weekly" as const,
-  },
-  {
-    path: "/articles",
-    priority: 0.9,
-    changeFrequency: "weekly" as const,
-  },
-  {
-    path: "/sponsors",
-    priority: 0.8,
-    changeFrequency: "monthly" as const,
-  },
-  {
-    path: "/downloads",
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  },
-  {
-    path: "/contact",
-    priority: 0.8,
-    changeFrequency: "monthly" as const,
-  },
-  {
-    path: "/privacy",
-    priority: 0.3,
-    changeFrequency: "yearly" as const,
-  },
-  {
-    path: "/terms",
-    priority: 0.3,
-    changeFrequency: "yearly" as const,
-  },
-  {
-    path: "/cookies",
-    priority: 0.3,
-    changeFrequency: "yearly" as const,
-  },
+  "",
+  "/about",
+  "/gallery",
+  "/calendar",
+  "/achievements",
+  "/media",
+  "/articles",
+  "/sponsors",
+  "/downloads",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/cookies",
+];
+
+const articleSlugs = [
+  "world-cup-preparation",
+  "how-i-prepare-for-championships",
+  "my-kickboxing-journey",
+  "nutrition-for-kickboxers",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return pages.map((page) => ({
-    url: `${baseUrl}${page.path}`,
+  const staticPages: MetadataRoute.Sitemap = pages.map((path) => ({
+    url: `${BASE_URL}${path}`,
     lastModified,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
+    changeFrequency:
+      path === ""
+        ? "weekly"
+        : path === "/privacy" ||
+          path === "/terms" ||
+          path === "/cookies"
+        ? "yearly"
+        : "monthly",
+    priority:
+      path === ""
+        ? 1.0
+        : path === "/privacy" ||
+          path === "/terms" ||
+          path === "/cookies"
+        ? 0.3
+        : 0.8,
   }));
+
+  const articlePages: MetadataRoute.Sitemap = articleSlugs.map((slug) => ({
+    url: `${BASE_URL}/articles/${slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...articlePages];
 }
