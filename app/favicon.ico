@@ -1,8 +1,0 @@
-icons: {
-  icon: [
-    { url: "/icon.png", type: "image/png", sizes: "192x192" },
-    { url: "/favicon.ico", sizes: "any" },
-  ],
-  shortcut: "/favicon.ico",
-  apple: "/apple-touch-icon.png",
-},
