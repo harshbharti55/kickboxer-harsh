@@ -117,9 +117,6 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
 
-icons: {
-  icon: "/icon.png",
-},
 };
 
 
