@@ -27,7 +27,7 @@ export default function BlogLayout({
   };
   return (
   <main>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} />
     <h1>{title}</h1>
 
     <p>
