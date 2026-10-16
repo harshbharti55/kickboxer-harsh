@@ -88,14 +88,15 @@ export function RecordsList() {
 export function PlannedGoalsList() {
   return (
     <div>
-      <p className="mb-5 rounded-md border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-4 text-sm text-[#e6c24f]">{PLANNED_NOTE}</p>
+      <p className="mb-5 rounded-md border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-4 text-sm leading-6 text-[#e6c24f]">{PLANNED_NOTE}</p>
       <ul className="grid gap-4 sm:grid-cols-2">
         {plannedGoals2027.map((g) => (
           <li key={g.name} className="rounded-lg border border-neutral-800 bg-neutral-950 p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">2027 · {g.status}</p>
             <p className="mt-2 text-lg font-bold text-white">{g.name}</p>
-            <p className="mt-1 text-sm text-neutral-500">Date: to be confirmed</p>
-            <p className="text-sm text-neutral-500">Participation: unconfirmed</p>
+            <p className="mt-2 text-sm text-neutral-300">{g.planningWindow}</p>
+            <p className="mt-1 text-sm text-neutral-500">Target location: {g.targetLocation}</p>
+            {g.note ? <p className="mt-2 text-sm leading-5 text-neutral-500">{g.note}</p> : null}
           </li>
         ))}
       </ul>
