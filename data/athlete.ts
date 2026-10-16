@@ -2,7 +2,7 @@
  * Athlete-supplied competition record and site content.
  * Planned events remain explicitly unconfirmed until verified.
  */
-export const SITE_URL = "https://kickboxer-harsh.vercel.app";
+export const SITE_URL = "https://kickboxer-harsh.online";
 
 export const athlete = {
   name: "Harsh Bharti",
