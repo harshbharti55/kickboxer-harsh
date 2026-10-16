@@ -176,11 +176,9 @@ export const sponsors = [
 ];
 
 export const contact = {
-  whatsapp: "https://wa.me/919816875780",
   email: "Kickboxerharsh@gmail.com",
   instagram: "https://www.instagram.com/harsh_bharti5?igsh=NmhnZ3M3MWdhbDMw",
   facebook: "https://www.facebook.com/share/1Dw6ZKqKyE/",
   twitter: "https://x.com/Harsh_bharti5",
   linkedin: "https://www.linkedin.com/in/harsh-bharti-931b31251",
-  phone: "+91 9816875780",
 };
