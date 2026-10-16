@@ -32,27 +32,6 @@ export default function ContactPage() {
               </a>
             </div>
 
-            <div>
-              <p className="text-sm text-gold">Phone</p>
-              <a
-                href="tel:+919816875780"
-                className="text-lg text-white hover:text-gold"
-              >
-                +91 98168 75780
-              </a>
-            </div>
-
-            <div>
-              <p className="text-sm text-gold">WhatsApp</p>
-              <a
-                href="https://wa.me/919816875780"
-                target="_blank"
-                rel="noreferrer"
-                className="text-lg text-white hover:text-gold"
-              >
-                Chat on WhatsApp
-              </a>
-            </div>
 
           </div>
 
@@ -65,14 +44,6 @@ export default function ContactPage() {
               Email Me
             </a>
 
-            <a
-              href="https://wa.me/919816875780"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 px-8 py-3 font-semibold text-white"
-            >
-              WhatsApp
-            </a>
 
             <Link
               href="/"
