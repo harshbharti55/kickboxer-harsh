@@ -108,6 +108,21 @@ export default function Hero() {
     </a>
 
     <a
+      href="/cv"
+      className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-7 py-3 font-semibold text-gold transition hover:bg-gold hover:text-black"
+    >
+      <Medal className="h-5 w-5" />
+      Athlete CV
+    </a>
+
+    <a
+      href="/sponsorship"
+      className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3 font-semibold text-white transition hover:border-gold/40 hover:bg-white/10"
+    >
+      Sponsorship
+    </a>
+
+    <a
       href={contact.whatsapp}
       target="_blank"
       rel="noreferrer"
