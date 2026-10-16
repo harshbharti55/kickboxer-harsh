@@ -402,7 +402,7 @@ export default function About() {
           <div className="mt-10 flex flex-wrap justify-center gap-5">
 
             <a
-              href={contact.whatsapp}
+              href="/sponsorship"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-gold px-8 py-4 font-semibold text-black transition hover:scale-105"
