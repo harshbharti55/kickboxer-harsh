@@ -1,14 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const links = [
-  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Achievements', href: '/achievements' },
-  { label: 'Gallery', href: '/gallery' },
   { label: 'Calendar', href: '/calendar' },
   { label: 'Media', href: '/media' },
   { label: 'Sponsors', href: '/sponsors' },
@@ -18,77 +16,48 @@ const links = [
 export default function TopNav() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
-      <div className="container-page flex h-16 items-center justify-between">
-
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-          onClick={() => setOpen(false)}
-        >
-          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-redbrand to-gold font-bold text-black">
-            HB
-          </div>
-
-          <div>
-            <p className="text-sm font-semibold text-white">
-              Harsh Bharti
-            </p>
-
-            <p className="text-xs text-white/50">
-              Kickboxer's Portfolio
-            </p>
-          </div>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-[#080808]/85 backdrop-blur-2xl">
+      <div className="container-page flex h-[4.25rem] items-center justify-between gap-4 sm:h-[4.5rem]">
+        <Link href="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3" onClick={() => setOpen(false)} aria-label="Harsh Bharti home">
+          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#ffe36a] via-[#ffd700] to-[#d90429] text-sm font-black text-black shadow-[0_0_28px_rgba(255,215,0,.12)] sm:h-10 sm:w-10">HB</span>
+          <span className="min-w-0">
+            <span className="block truncate text-sm font-extrabold tracking-wide text-white sm:text-base">HARSH BHARTI</span>
+            <span className="mt-0.5 block truncate text-[9px] font-semibold uppercase tracking-[0.18em] text-white/40 sm:text-[10px] sm:tracking-[0.22em]">Indian Kickboxing Athlete</span>
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-7 md:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-white/70 transition hover:text-gold"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav aria-label="Main navigation" className="hidden items-center gap-5 xl:flex 2xl:gap-7">
+          {links.map((link) => <Link key={link.href} href={link.href} className="whitespace-nowrap text-xs font-semibold text-white/60 transition hover:text-[#ffd700] 2xl:text-sm">{link.label}</Link>)}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle Menu"
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 md:hidden"
-        >
-          {open ? (
-            <X className="h-5 w-5 text-white" />
-          ) : (
-            <Menu className="h-5 w-5 text-white" />
-          )}
+        <div className="hidden items-center gap-3 xl:flex">
+          <Link href="/cv" className="whitespace-nowrap text-xs font-semibold text-white/70 transition hover:text-white">Athlete CV</Link>
+          <Link href="/sponsorship" className="inline-flex items-center gap-2 rounded-lg bg-[#ffd700] px-4 py-2.5 text-xs font-extrabold text-black transition hover:-translate-y-0.5 hover:bg-[#ffe66d]">Sponsor <ArrowUpRight className="h-3.5 w-3.5" /></Link>
+        </div>
+
+        <button type="button" onClick={() => setOpen((value) => !value)} aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={open} aria-controls="mobile-navigation" className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/[0.04] text-white transition hover:border-[#ffd700]/40 xl:hidden">
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {open && (
-        <div className="border-t border-white/10 bg-black/95 backdrop-blur-xl md:hidden">
-          <div className="container-page flex flex-col py-4">
-
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-white/80 transition hover:bg-gold/10 hover:text-gold"
-              >
-                {link.label}
-              </Link>
-            ))}
-
-          </div>
+      {open ? (
+        <div id="mobile-navigation" className="border-t border-white/10 bg-[#090909]/[0.98] shadow-2xl backdrop-blur-2xl xl:hidden">
+          <nav aria-label="Mobile navigation" className="container-page grid grid-cols-2 gap-2 py-4 sm:grid-cols-3">
+            {links.map((link, index) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="flex min-h-12 items-center justify-between gap-2 rounded-xl border border-white/[0.07] bg-white/[0.025] px-3 py-3 text-sm font-semibold text-white/80 transition hover:border-[#ffd700]/30 hover:bg-[#ffd700]/[0.06] hover:text-[#ffd700]"><span>{link.label}</span><span className="text-[10px] text-white/25">0{index + 1}</span></Link>)}
+            <Link href="/cv" onClick={() => setOpen(false)} className="flex min-h-12 items-center rounded-xl border border-white/[0.07] px-3 py-3 text-sm font-semibold text-white/80">Athlete CV</Link>
+            <Link href="/sponsorship" onClick={() => setOpen(false)} className="col-span-2 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#ffd700] px-4 py-3 text-sm font-extrabold text-black sm:col-span-1">Become a sponsor <ArrowUpRight className="h-4 w-4" /></Link>
+          </nav>
         </div>
-      )}
+      ) : null}
     </header>
   );
 }
