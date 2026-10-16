@@ -32,7 +32,6 @@ NAME = "Harsh Bharti"
 HEADLINE = "Indian Full Contact Kickboxer"
 REGION = "Himachal Pradesh, India"
 EMAIL = "kickboxerharsh@gmail.com"
-PHONE = "+91 9816875780"
 SITE = "kickboxer-harsh.online"
 
 RECORDS = [  # newest first, exactly as supplied
@@ -161,7 +160,6 @@ def contact_block():
     return [
         Paragraph("Contact", h2),
         Paragraph(f"Email: {EMAIL}", body),
-        Paragraph(f"Phone / WhatsApp: {PHONE}", body),
         Paragraph(f"Website: {SITE}", body),
     ]
 
@@ -224,7 +222,7 @@ def build_proposal(path):
     s += [Paragraph("Competition Record", h2), records_table()]
     s += [Paragraph("2027 Planned Goals", h2)] + goals_block()
     s += contact_block()
-    s += [Spacer(1, 10), Paragraph("To discuss a partnership, email or message on WhatsApp.", small)]
+    s += [Spacer(1, 10), Paragraph("To discuss a partnership, contact by email.", small)]
     doc.build(s)
 
 
