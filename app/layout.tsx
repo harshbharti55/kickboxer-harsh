@@ -134,6 +134,8 @@ const personSchema = {
 
   url: "https://kickboxer-harsh.online",
 
+  email: "kickboxerharsh@gmail.com",
+
   image: "https://kickboxer-harsh.online/profile.jpg",
 
   description:
