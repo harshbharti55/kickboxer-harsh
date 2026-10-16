@@ -466,7 +466,7 @@ export default function SponsorsPage() {
           {[
             {
               q: "How can my brand become a sponsor?",
-              a: "Simply contact me through the Contact page or WhatsApp. I'll provide a sponsorship proposal tailored to your brand.",
+              a: "Simply contact me by email or through the Contact page. I'll provide a sponsorship proposal tailored to your brand.",
             },
             {
               q: "Do you work with local and international brands?",
@@ -546,14 +546,6 @@ export default function SponsorsPage() {
                 Contact Me
               </a>
 
-              <a
-                href="https://wa.me/919816875780"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-gold/30 bg-gold/10 px-8 py-4 font-semibold text-gold transition hover:bg-gold hover:text-black"
-              >
-                WhatsApp
-              </a>
 
             </div>
 
