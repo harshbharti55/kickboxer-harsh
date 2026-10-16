@@ -28,11 +28,8 @@ const articleSlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   const staticPages: MetadataRoute.Sitemap = pages.map((path) => ({
     url: `${BASE_URL}${path}`,
-    lastModified,
     changeFrequency:
       path === ""
         ? "weekly"
