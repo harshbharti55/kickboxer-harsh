@@ -10,9 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#0A0A0A',
-        redbrand: '#D90429',
-        gold: '#FFD700',
+        bg: '#080C17',
+        redbrand: '#FF4D6D',
+        gold: '#E8C56A',
         soft: '#F5F5F5',
       },
       boxShadow: {
