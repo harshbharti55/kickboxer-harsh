@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import BlogLayout from "@/components/BlogLayout";
+
+const canonical = "https://kickboxer-harsh.online/articles/how-i-prepare-for-championships";
+
+export const metadata: Metadata = {
+  title: "How I Prepare for Kickboxing Championships | Harsh Bharti",
+  description: "A practical overview of kickboxing championship preparation, including technical training, nutrition, recovery, mental focus, and competition-week planning.",
+  alternates: { canonical },
+  openGraph: {
+    title: "How I Prepare for Kickboxing Championships | Harsh Bharti",
+    description: "Training, recovery, nutrition, and mental preparation for kickboxing competitions.",
+    type: "article",
+    url: canonical,
+  },
+};
 
 export default function Page() {
   return (
