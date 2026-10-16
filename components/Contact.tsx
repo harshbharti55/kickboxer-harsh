@@ -66,14 +66,13 @@ const SERVICES = [
 
 export default function ContactSection() {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const emailUrl = useMemo(() => {
-    const body = `Name: ${name}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
+    const body = `Name: ${name}\nSubject: ${subject}\nMessage: ${message}`;
     return `mailto:${EMAIL}?subject=${encodeURIComponent(subject || "Website enquiry")}&body=${encodeURIComponent(body)}`;
-  }, [name, phone, subject, message]);
+  }, [name, subject, message]);
 
   return (
     <section
@@ -326,24 +325,6 @@ export default function ContactSection() {
         placeholder="Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-gold"
-      />
-
-    </div>
-
-    {/* Phone */}
-    <div>
-
-      <label className="mb-2 block text-sm font-medium text-white/70">
-        Phone Number
-      </label>
-
-      <input
-        type="tel"
-        required
-        placeholder="+91 XXXXX XXXXX"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
         className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-gold"
       />
 
