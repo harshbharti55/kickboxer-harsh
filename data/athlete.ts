@@ -9,6 +9,7 @@ export const athlete = {
   headline: "Indian Competitive Kickboxer",
   region: "Himachal Pradesh, India",
   discipline: "Full Contact Kickboxing",
+  weightClass: "−54 kg Full Contact",
   email: "kickboxerharsh@gmail.com",
   phone: "+91 9816875780",
   whatsapp: "https://wa.me/919816875780",
@@ -89,21 +90,65 @@ export const competitionRecords: CompetitionRecord[] = [
 ];
 
 export const PLANNED_NOTE =
-  "Planned goal. Dates and participation are unconfirmed until officially verified.";
+  "These are planning targets only. Dates, eligibility, selection, and participation must be confirmed through official event and federation information.";
 
 export interface PlannedGoal {
   name: string;
   status: "Planned goal";
+  planningWindow: string;
+  targetLocation: string;
+  note?: string;
 }
 
-/** Goals only: dates and participation have not been confirmed. */
+/** Tentative planning windows only; not official event dates or confirmed entries. */
 export const plannedGoals2027: PlannedGoal[] = [
-  { name: "India Open 2027", status: "Planned goal" },
-  { name: "Italy World Cup", status: "Planned goal" },
-  { name: "Thailand World Cup", status: "Planned goal" },
-  { name: "Uzbekistan World Cup", status: "Planned goal" },
-  { name: "Senior World Championship", status: "Planned goal" },
+  {
+    name: "India Open International Kickboxing Cup",
+    status: "Planned goal",
+    planningWindow: "Target: February 2027",
+    targetLocation: "India",
+    note: "Tentative planning window; event dates and entry unconfirmed.",
+  },
+  {
+    name: "WAKO World Cup — Italy",
+    status: "Planned goal",
+    planningWindow: "Target window: March–June 2027",
+    targetLocation: "Italy",
+    note: "Tentative planning window; event dates and entry unconfirmed.",
+  },
+  {
+    name: "Thailand World Cup",
+    status: "Planned goal",
+    planningWindow: "Target window: April–August 2027",
+    targetLocation: "Thailand",
+    note: "Tentative planning window; event dates and entry unconfirmed.",
+  },
+  {
+    name: "Uzbekistan World Cup",
+    status: "Planned goal",
+    planningWindow: "Target window: September–October 2027",
+    targetLocation: "Uzbekistan",
+    note: "Tentative planning window; event dates and entry unconfirmed.",
+  },
+  {
+    name: "WAKO Senior World Kickboxing Championship",
+    status: "Planned goal",
+    planningWindow: "2027 — exact dates to be confirmed",
+    targetLocation: "Tashkent, Uzbekistan (target)",
+    note: "Primary international goal. Selection, eligibility, dates, and participation are not confirmed.",
+  },
 ];
+
+export const sponsorshipGoal = {
+  event: "WAKO Senior World Kickboxing Championship 2027",
+  location: "Tashkent, Uzbekistan",
+  requestedFunding: "₹3,00,000–₹4,00,000",
+  currentFunding: "₹0 — seeking sponsorship",
+  selectionStatus: "Not yet confirmed",
+  contactEmail: "kickboxerharsh@gmail.com",
+  contactPhone: "+91 9816875780",
+  note: "Budget is preliminary and must be validated with official event information and actual quotations.",
+} as const;
 
 export const sponsorPackages = [
   {
