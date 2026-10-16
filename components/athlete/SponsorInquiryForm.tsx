@@ -7,10 +7,9 @@ import { athlete, sponsorPackages } from "../../data/athlete";
 /**
  * Sponsor inquiry form with NO backend and NO external service.
  * It validates the input, then opens the visitor's email app addressed to
- * the athlete (mailto:) or WhatsApp with the message pre-filled.
+ * the athlete (mailto:). The public contact method is email only.
  *
  * Limitation: this depends on the visitor having an email app configured.
- * That is why a WhatsApp option and the plain email address are shown too.
  * A server-side option can be added later with the athlete's approval.
  */
 
@@ -80,17 +79,6 @@ export default function SponsorInquiryForm() {
       `&body=${encodeURIComponent(buildText(form))}`;
     setSent(true);
     window.location.href = href;
-  }
-
-  function onWhatsApp() {
-    const problem = validate();
-    if (problem) {
-      setError(problem);
-      return;
-    }
-    const href = `${athlete.whatsapp}?text=${encodeURIComponent(buildText(form))}`;
-    setSent(true);
-    window.open(href, "_blank", "noopener,noreferrer");
   }
 
   const field =
@@ -195,13 +183,6 @@ export default function SponsorInquiryForm() {
         >
           Send by email
         </button>
-        <button
-          type="button"
-          onClick={onWhatsApp}
-          className="rounded-md border border-[#D4AF37] px-6 py-3 text-sm font-bold uppercase tracking-wider text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-        >
-          Send on WhatsApp
-        </button>
       </div>
 
       {sent ? (
@@ -210,7 +191,7 @@ export default function SponsorInquiryForm() {
           <a className="text-[#D4AF37] underline" href={`mailto:${athlete.email}`}>
             {athlete.email}
           </a>{" "}
-          directly or use WhatsApp.
+          directly.
         </p>
       ) : null}
     </form>
