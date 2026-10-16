@@ -47,6 +47,9 @@ const LINKS = [
   { title: "Articles", href: "/articles" },
   { title: "Media", href: "/media" },
   { title: "Sponsors", href: "/sponsors" },
+  { title: "Athlete Profile", href: "/athlete-profile" },
+  { title: "CV", href: "/cv" },
+  { title: "Sponsorship", href: "/sponsorship" },
   { title: "Contact", href: "/contact" },
 ];
 
