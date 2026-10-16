@@ -86,7 +86,6 @@ export const journey = [
   { year: '2024', title: 'National Bronze' },
   { year: '2024', title: 'Wushu Silver' },
   { year: '2025', title: 'Senior National Silver' },
-  { year: '2026', title: 'World Championship Campaign' },
 ];
 
 export const represented = [
