@@ -1,17 +1,12 @@
 /**
- * Single source of truth for the athlete profile, CV, sponsorship and
- * 2027 goals pages.
- *
- * RULE: only facts supplied by the athlete are listed here. Do not add a
- * date of birth, medal totals, dates or participation for 2027 events
- * until they are officially verified.
+ * Athlete-supplied competition record and site content.
+ * Planned events remain explicitly unconfirmed until verified.
  */
-
-export const SITE_URL = "https://kickboxer-harsh.online";
+export const SITE_URL = "https://kickboxer-harsh.vercel.app";
 
 export const athlete = {
   name: "Harsh Bharti",
-  headline: "Indian Full Contact Kickboxer",
+  headline: "Indian Competitive Kickboxer",
   region: "Himachal Pradesh, India",
   discipline: "Full Contact Kickboxing",
   email: "kickboxerharsh@gmail.com",
@@ -29,48 +24,52 @@ export type ResultKind = "gold" | "silver" | "bronze" | "placed" | "participant"
 
 export interface CompetitionRecord {
   year: number;
-  /** Short result line, e.g. "National Silver Medal". */
   headline: string;
   kind: ResultKind;
-  /** Event name, only where the athlete supplied one. */
-  event?: string;
+  event: string;
   location: string;
   category?: string;
+  date?: string;
 }
 
-/** Newest first. Exactly the records supplied by the athlete. */
+/** Newest first. Records and qualifiers supplied by the athlete. */
 export const competitionRecords: CompetitionRecord[] = [
   {
     year: 2026,
-    headline: "Fifth Place",
+    headline: "5th Place",
     kind: "placed",
-    event: "Senior National Kickboxing Championship",
+    event: "National Kickboxing Championship — Seniors & Masters",
     location: "Indore, Madhya Pradesh",
-    category: "-54 kg Full Contact",
+    category: "−54 kg Full Contact",
+    date: "8–12 September",
   },
   {
     year: 2025,
-    headline: "Senior National Silver Medal",
+    headline: "Silver Medal",
     kind: "silver",
+    event: "Senior National Kickboxing Championship",
     location: "Raipur",
   },
   {
     year: 2025,
     headline: "Participant",
     kind: "participant",
-    event: "Inter-University Kickboxing Championship",
-    location: "Subharti University, Meerut",
+    event: "Kickboxing Inter-University Championship",
+    location: "Swami Vivekanand Subharti University, Meerut",
+    date: "12–16 March",
   },
   {
     year: 2024,
-    headline: "National Bronze Medal",
+    headline: "Bronze Medal",
     kind: "bronze",
+    event: "National Kickboxing Championship",
     location: "Siliguri",
   },
   {
     year: 2023,
-    headline: "National Silver Medal",
+    headline: "Silver Medal",
     kind: "silver",
+    event: "National Kickboxing Championship",
     location: "Ranchi",
   },
   {
@@ -85,7 +84,7 @@ export const competitionRecords: CompetitionRecord[] = [
     headline: "Participant",
     kind: "participant",
     event: "Junior National Kickboxing Championship",
-    location: "Shoolini University, Solan",
+    location: "Shoolini University, Solan, Himachal Pradesh",
   },
 ];
 
@@ -97,7 +96,7 @@ export interface PlannedGoal {
   status: "Planned goal";
 }
 
-/** The five 2027 goals. No dates, no confirmed participation. */
+/** Goals only: dates and participation have not been confirmed. */
 export const plannedGoals2027: PlannedGoal[] = [
   { name: "India Open 2027", status: "Planned goal" },
   { name: "Italy World Cup", status: "Planned goal" },
@@ -106,7 +105,6 @@ export const plannedGoals2027: PlannedGoal[] = [
   { name: "Senior World Championship", status: "Planned goal" },
 ];
 
-/** Package wording is carried over from the existing /sponsors page. */
 export const sponsorPackages = [
   {
     tier: "Bronze",
@@ -147,8 +145,6 @@ export const sponsorPackages = [
 
 export const downloads = {
   cv: "/downloads/Harsh-Bharti-CV.pdf",
-  /** Path the live site already links to (currently a 404). */
   athleteProfile: "/media/Harsh-Bharti-Athlete-Profile.pdf",
-  /** Path the live /sponsors page already links to (currently a 404). */
   sponsorshipProposal: "/downloads/sponsorship-proposal.pdf",
 } as const;
