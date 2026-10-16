@@ -40,13 +40,17 @@ export default function DownloadCTA() {
 
             <div className="mt-8 flex flex-wrap gap-3">
 
-              <span className="rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-sm text-gold">
+              <a href="/athlete-profile" className="rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-sm text-gold transition hover:bg-gold hover:text-black">
                 Athlete Profile
-              </span>
+              </a>
 
-              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white">
+              <a href="/cv" className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:border-gold/40 hover:text-gold">
+                Download CV
+              </a>
+
+              <a href="/sponsorship" className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:border-gold/40 hover:text-gold">
                 Sponsorship
-              </span>
+              </a>
 
               <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white">
                 Media Kit
@@ -72,7 +76,7 @@ export default function DownloadCTA() {
             </a>
 
             <a
-              href="/sponsors"
+              href="/sponsorship"
               className="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white transition hover:border-gold/40 hover:bg-white/10"
             >
               Sponsorship
