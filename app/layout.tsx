@@ -288,6 +288,15 @@ const organizationSchema = {
 
   logo: "https://kickboxer-harsh.online/profile.jpg",
 
+  email: "kickboxerharsh@gmail.com",
+
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Sponsorship and media enquiries",
+    email: "kickboxerharsh@gmail.com",
+    availableLanguage: ["English", "Hindi"]
+  },
+
   sameAs: [
     "https://www.instagram.com/harsh_bharti5",
 
