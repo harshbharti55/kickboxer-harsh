@@ -134,6 +134,8 @@ const personSchema = {
 
   url: "https://kickboxer-harsh.online",
 
+  email: "kickboxerharsh@gmail.com",
+
   image: "https://kickboxer-harsh.online/profile.jpg",
 
   description:
@@ -285,6 +287,15 @@ const organizationSchema = {
   url: "https://kickboxer-harsh.online",
 
   logo: "https://kickboxer-harsh.online/profile.jpg",
+
+  email: "kickboxerharsh@gmail.com",
+
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Sponsorship and media enquiries",
+    email: "kickboxerharsh@gmail.com",
+    availableLanguage: ["English", "Hindi"]
+  },
 
   sameAs: [
     "https://www.instagram.com/harsh_bharti5",

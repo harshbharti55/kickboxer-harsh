@@ -86,7 +86,6 @@ export const journey = [
   { year: '2024', title: 'National Bronze' },
   { year: '2024', title: 'Wushu Silver' },
   { year: '2025', title: 'Senior National Silver' },
-  { year: '2026', title: 'World Championship Campaign' },
 ];
 
 export const represented = [
@@ -177,11 +176,9 @@ export const sponsors = [
 ];
 
 export const contact = {
-  whatsapp: "https://wa.me/919816875780",
   email: "Kickboxerharsh@gmail.com",
   instagram: "https://www.instagram.com/harsh_bharti5?igsh=NmhnZ3M3MWdhbDMw",
   facebook: "https://www.facebook.com/share/1Dw6ZKqKyE/",
   twitter: "https://x.com/Harsh_bharti5",
   linkedin: "https://www.linkedin.com/in/harsh-bharti-931b31251",
-  phone: "+91 9816875780",
 };

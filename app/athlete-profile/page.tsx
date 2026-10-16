@@ -76,12 +76,6 @@ export default function AthleteProfilePage() {
               {athlete.email}
             </a>
           </li>
-          <li>
-            Phone / WhatsApp:{" "}
-            <a className="text-[#D4AF37] underline" href={athlete.whatsapp} target="_blank" rel="noopener noreferrer">
-              {athlete.phone}
-            </a>
-          </li>
           <li className="flex flex-wrap gap-x-4 gap-y-1">
             {athlete.socials.map((s) => (
               <a key={s.label} className="text-[#D4AF37] underline" href={s.href} target="_blank" rel="noopener noreferrer">

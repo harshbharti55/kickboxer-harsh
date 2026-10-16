@@ -6,7 +6,6 @@ import {
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
-  FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -32,11 +31,6 @@ const SOCIALS = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/harsh-bharti-931b31251",
     icon: FaLinkedinIn,
-  },
-  {
-    name: "WhatsApp",
-    href: "https://wa.me/919816875780",
-    icon: FaWhatsapp,
   },
 ];
 
@@ -144,6 +138,8 @@ export default function Footer() {
                 );
               })}
             </div>
+
+            <a href="mailto:kickboxerharsh@gmail.com" className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-gold/20 bg-gold/5 p-5 text-white transition hover:border-gold/50"><span className="text-gold">Email</span><span>kickboxerharsh@gmail.com</span></a>
 
             <div className="mt-8 rounded-2xl border border-gold/20 bg-gold/5 p-5">
 

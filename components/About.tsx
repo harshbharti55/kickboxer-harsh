@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 import SectionHeading from "./SectionHeading";
-import { boxer, journey, represented, contact } from "@/data/site";
+import { boxer, journey, represented } from "@/data/site";
 
 export default function About() {
   return (
@@ -267,9 +267,7 @@ export default function About() {
     </a>
 
     <a
-      href={contact.whatsapp}
-      target="_blank"
-      rel="noreferrer"
+      href="/sponsorship"
       className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold text-white transition hover:border-gold/40 hover:bg-white/10"
     >
       Become a Sponsor
@@ -404,7 +402,7 @@ export default function About() {
           <div className="mt-10 flex flex-wrap justify-center gap-5">
 
             <a
-              href={contact.whatsapp}
+              href="/sponsorship"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-gold px-8 py-4 font-semibold text-black transition hover:scale-105"

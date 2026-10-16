@@ -2,12 +2,12 @@ import type { ReactNode } from "react";
 import { PLANNED_NOTE, plannedGoals2027, competitionRecords } from "../../data/athlete";
 import type { ResultKind } from "../../data/athlete";
 
-export const GOLD = "#D4AF37";
+export const GOLD = "#E8C56A";
 
 export function PageShell({ children }: { children: ReactNode }) {
   return (
-    <main className="min-h-screen bg-black px-4 pb-24 pt-28 text-neutral-200 sm:px-6">
-      <div className="mx-auto w-full max-w-5xl">{children}</div>
+    <main className="min-h-screen bg-[#080c17] bg-[radial-gradient(ellipse_at_top_right,rgba(72,229,224,.07),transparent_35rem),radial-gradient(ellipse_at_top_left,rgba(255,77,109,.06),transparent_32rem)] px-4 pb-24 pt-28 text-slate-200 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl">{children}</div>
     </main>
   );
 }
@@ -16,10 +16,10 @@ export function PageHero({ eyebrow, title, intro, children }: {
   eyebrow: string; title: string; intro?: string; children?: ReactNode;
 }) {
   return (
-    <header className="border-b border-[#D4AF37]/30 pb-10">
-      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">{eyebrow}</p>
+    <header className="border-b border-[#e8c56a]/30 pb-10">
+      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#e8c56a]">{eyebrow}</p>
       <h1 className="mt-3 text-4xl font-black uppercase tracking-tight text-white sm:text-6xl">{title}</h1>
-      {intro ? <p className="mt-5 max-w-2xl text-base text-neutral-400 sm:text-lg">{intro}</p> : null}
+      {intro ? <p className="mt-5 max-w-2xl text-base text-slate-400 sm:text-lg">{intro}</p> : null}
       {children ? <div className="mt-6 flex flex-wrap gap-3">{children}</div> : null}
     </header>
   );
@@ -28,7 +28,7 @@ export function PageHero({ eyebrow, title, intro, children }: {
 export function Section({ title, id, children }: { title: string; id?: string; children: ReactNode }) {
   return (
     <section id={id} className="mt-14">
-      <h2 className="border-l-4 border-[#D4AF37] pl-4 text-2xl font-bold uppercase tracking-wide text-white">{title}</h2>
+      <h2 className="border-l-4 border-[#e8c56a] pl-4 text-2xl font-bold uppercase tracking-wide text-white">{title}</h2>
       <div className="mt-6">{children}</div>
     </section>
   );
@@ -40,7 +40,7 @@ export function GoldButton({ href, children, download, external }: {
   return (
     <a href={href} download={download ? true : undefined} target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="inline-flex items-center justify-center rounded-md bg-[#D4AF37] px-5 py-3 text-sm font-bold uppercase tracking-wider text-black transition hover:bg-[#e6c24f] focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+      className="inline-flex items-center justify-center rounded-md bg-[#e8c56a] px-5 py-3 text-sm font-bold uppercase tracking-wider text-black transition hover:bg-[#f5d98b] focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
       {children}
     </a>
   );
@@ -62,7 +62,7 @@ const kindLabel: Record<ResultKind, string> = {
 export function ResultBadge({ kind }: { kind: ResultKind }) {
   const strong = kind === "gold" || kind === "silver" || kind === "bronze";
   return <span className={"inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider " +
-    (strong ? "bg-[#D4AF37] text-black" : "border border-[#D4AF37]/60 text-[#D4AF37]")}>{kindLabel[kind]}</span>;
+    (strong ? "bg-[#D4AF37] text-black" : "border border-[#e8c56a]/60 text-[#D4AF37]")}>{kindLabel[kind]}</span>;
 }
 
 export function RecordsList() {
@@ -70,12 +70,12 @@ export function RecordsList() {
     <ol className="space-y-4">
       {competitionRecords.map((r) => (
         <li key={`${r.year}-${r.headline}-${r.location}`}
-          className="grid gap-3 rounded-lg border border-neutral-800 bg-neutral-950 p-5 sm:grid-cols-[5rem_1fr_auto] sm:items-center">
+          className="grid gap-3 rounded-lg border border-white/10 bg-[#0c1220] p-5 sm:grid-cols-[5rem_1fr_auto] sm:items-center">
           <span className="text-2xl font-black text-[#D4AF37]">{r.year}</span>
           <div>
             <p className="font-semibold text-white">{r.headline}</p>
-            <p className="text-sm text-neutral-300">{r.event}</p>
-            <p className="text-sm text-neutral-500">{r.location}{r.category ? ` · ${r.category}` : ""}</p>
+            <p className="text-sm text-slate-300">{r.event}</p>
+            <p className="text-sm text-slate-500">{r.location}{r.category ? ` · ${r.category}` : ""}</p>
             {r.date ? <p className="mt-1 text-xs text-neutral-500">{r.date}</p> : null}
           </div>
           <ResultBadge kind={r.kind} />
@@ -88,7 +88,7 @@ export function RecordsList() {
 export function PlannedGoalsList() {
   return (
     <div>
-      <p className="mb-5 rounded-md border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-4 text-sm leading-6 text-[#e6c24f]">{PLANNED_NOTE}</p>
+      <p className="mb-5 rounded-md border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-4 text-sm leading-6 text-[#f5d98b]">{PLANNED_NOTE}</p>
       <ul className="grid gap-4 sm:grid-cols-2">
         {plannedGoals2027.map((g) => (
           <li key={g.name} className="rounded-lg border border-neutral-800 bg-neutral-950 p-5">

@@ -63,9 +63,6 @@ export default function PressKitPage() {
             📧 kickboxerharsh@gmail.com
           </p>
 
-          <p className="mt-2 text-white/70">
-            📱 +91 9816875780
-          </p>
 
           <p className="mt-2 text-white/70">
             🌐 kickboxer-harsh.online

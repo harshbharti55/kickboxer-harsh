@@ -11,8 +11,6 @@ export const athlete = {
   discipline: "Full Contact Kickboxing",
   weightClass: "−54 kg Full Contact",
   email: "kickboxerharsh@gmail.com",
-  phone: "+91 9816875780",
-  whatsapp: "https://wa.me/919816875780",
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/harsh_bharti5" },
     { label: "Facebook", href: "https://www.facebook.com/share/1Dw6ZKqKyE/" },
@@ -146,7 +144,6 @@ export const sponsorshipGoal = {
   currentFunding: "₹0 — seeking sponsorship",
   selectionStatus: "Not yet confirmed",
   contactEmail: "kickboxerharsh@gmail.com",
-  contactPhone: "+91 9816875780",
   note: "Budget is preliminary and must be validated with official event information and actual quotations.",
 } as const;
 

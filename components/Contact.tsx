@@ -6,8 +6,6 @@ import {
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
-  FaWhatsapp,
-  FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -19,7 +17,6 @@ import {
   Calendar,
 } from "lucide-react";
 
-const PHONE_NUMBER = "9816875780";
 const EMAIL = "kickboxerharsh@gmail.com";
 
 const SOCIALS = [
@@ -67,23 +64,15 @@ const SERVICES = [
   },
 ];
 
-function buildWhatsAppLink(message: string) {
-  return `https://wa.me/91${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-
 export default function ContactSection() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const whatsappUrl = useMemo(() => {
-    return buildWhatsAppLink(
-`Name: ${name}
-Phone: ${phone}
-Subject: ${subject}
-Message: ${message}`
-    );
+  const emailUrl = useMemo(() => {
+    const body = `Name: ${name}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
+    return `mailto:${EMAIL}?subject=${encodeURIComponent(subject || "Website enquiry")}&body=${encodeURIComponent(body)}`;
   }, [name, phone, subject, message]);
 
   return (
@@ -145,25 +134,6 @@ Message: ${message}`
     </p>
 
     <div className="mt-8 space-y-5">
-
-      <a
-        href={`tel:${PHONE_NUMBER}`}
-        className="group flex items-center gap-5 rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:border-gold/40 hover:bg-white/10"
-      >
-        <div className="rounded-2xl bg-gold/10 p-4">
-          <FaPhoneAlt className="text-xl text-gold" />
-        </div>
-
-        <div>
-          <p className="text-sm uppercase tracking-[0.2em] text-white/45">
-            Phone
-          </p>
-
-          <p className="mt-1 text-lg font-semibold text-white">
-            +91 {PHONE_NUMBER}
-          </p>
-        </div>
-      </a>
 
       <a
         href={`mailto:${EMAIL}`}
@@ -314,7 +284,7 @@ Message: ${message}`
   <div className="flex items-center gap-4">
 
     <div className="rounded-2xl bg-gold/10 p-4">
-      <FaWhatsapp className="text-2xl text-gold" />
+      <FaEnvelope className="text-2xl text-gold" />
     </div>
 
     <div>
@@ -332,18 +302,13 @@ Message: ${message}`
   </div>
 
   <p className="mt-5 leading-7 text-white/65">
-    Fill in the details below and your message will open directly in
-    WhatsApp. I usually respond within 24 hours.
+    Fill in the details below and your email app will open with your message ready to send.
   </p>
 
   <form
     onSubmit={(e) => {
       e.preventDefault();
-      window.open(
-        whatsappUrl,
-        "_blank",
-        "noopener,noreferrer"
-      );
+      window.location.href = emailUrl;
     }}
     className="mt-10 space-y-6"
   >
@@ -431,9 +396,9 @@ Message: ${message}`
       type="submit"
       className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-5 font-semibold text-black transition-all duration-300 hover:shadow-[0_0_35px_rgba(212,175,55,0.35)]"
     >
-      <FaWhatsapp className="text-xl" />
+      <FaEnvelope className="text-xl" />
 
-      Send on WhatsApp
+      Send by Email
 
       <ArrowRight className="h-5 w-5" />
     </motion.button>
@@ -510,15 +475,11 @@ Message: ${message}`
             <div className="flex flex-col gap-5">
 
               <a
-                href={buildWhatsAppLink(
-                  "Hello Harsh, I would like to discuss a sponsorship opportunity."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${EMAIL}?subject=Sponsorship%20Enquiry`}
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-gold px-8 py-4 font-semibold text-black transition-all duration-300 hover:scale-105"
               >
-                <FaWhatsapp className="text-xl" />
-                Sponsor Me
+                <FaEnvelope className="text-xl" />
+                Sponsorship Enquiry
               </a>
 
               <a

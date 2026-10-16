@@ -81,7 +81,6 @@ export default function CvPage() {
       <Section title="Contact">
         <ul className="space-y-3 text-neutral-300">
           <li>Email: <a className="text-[#D4AF37] underline" href={`mailto:${athlete.email}`}>{athlete.email}</a></li>
-          <li>Phone: <a className="text-[#D4AF37] underline" href={`tel:${athlete.phone.replace(/[^+\\d]/g, "")}`}>{athlete.phone}</a></li>
           <li>Portfolio: <a className="text-[#D4AF37] underline" href={SITE_URL} target="_blank" rel="noreferrer">{SITE_URL}</a></li>
         </ul>
       </Section>
