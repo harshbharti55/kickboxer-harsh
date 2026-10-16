@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, Check, Globe2, Handshake, Medal, Sparkles, Target } from "lucide-react";
+import { ArrowUpRight, Check, Globe2, Handshake, Sparkles, Target } from "lucide-react";
 import {
   PageShell,
   PageHero,
@@ -9,7 +9,7 @@ import {
   RecordsList,
 } from "../../components/athlete/Ui";
 import SponsorInquiryForm from "../../components/athlete/SponsorInquiryForm";
-import { athlete, downloads, sponsorPackages, sponsorshipGoal, SITE_URL } from "../../data/athlete";
+import { athlete, downloads, sponsorPackages, SITE_URL } from "../../data/athlete";
 
 export const metadata: Metadata = {
   title: "Athlete Sponsorship | Partner with Harsh Bharti",
