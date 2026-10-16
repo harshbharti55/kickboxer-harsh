@@ -11,6 +11,7 @@ const pages = [
   "/media",
   "/articles",
   "/sponsors",
+  "/sponsorship",
   "/downloads",
   "/contact",
   "/privacy",
@@ -23,6 +24,7 @@ const articleSlugs = [
   "how-i-prepare-for-championships",
   "my-kickboxing-journey",
   "nutrition-for-kickboxers",
+  "life-of-a-student-athlete",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -46,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
           path === "/terms" ||
           path === "/cookies"
         ? 0.3
+        : path === "/articles" || path === "/sponsorship"
+        ? 0.9
         : 0.8,
   }));
 
