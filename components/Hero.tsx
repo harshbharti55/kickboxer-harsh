@@ -1,307 +1,129 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion'
-import {
-  MessageCircleMore,
-  PlayCircle,
-  Trophy,
-  Medal,
-  Flag,
-} from 'lucide-react';
-import { boxer, contact } from '@/data/site';
+import Link from 'next/link';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowDownRight, ArrowUpRight, Medal, Trophy, Handshake, PlayCircle } from 'lucide-react';
+import { athlete, competitionRecords, sponsorshipGoal } from '@/data/athlete';
 
 export default function Hero() {
+  const reduceMotion = useReducedMotion();
+  const medals = competitionRecords.filter((record) => ['gold', 'silver', 'bronze'].includes(record.kind)).length;
+
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden min-h-screen"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 grid-overlay opacity-20" />
-      
-<div className="absolute inset-0 overflow-hidden">
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-    className="h-full w-full object-cover brightness-[0.35] scale-105"
-  >
-    <source src="/media/harsh.mp4" type="video/mp4" />
-  </video>
+    <section id="home" className="hero-stage relative isolate overflow-hidden bg-[#070707] text-white">
+      <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+      <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-[#d90429]/20 blur-[100px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute right-[-5rem] top-40 h-96 w-96 rounded-full bg-[#ffd700]/10 blur-[120px]" aria-hidden="true" />
+      <div className="hero-vertical-label pointer-events-none absolute left-6 top-1/2 hidden -translate-y-1/2 -rotate-90 text-[10px] font-bold uppercase tracking-[0.55em] text-white/30 xl:block">Discipline · Courage · India</div>
 
-  <div className="absolute inset-0 bg-black/60" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-black" />
-</div>
-
-      <div className="container-page relative z-10 grid min-h-screen items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="container-page relative z-10 grid min-h-[calc(100svh-4rem)] items-center gap-10 pb-16 pt-28 sm:gap-12 sm:pb-20 lg:grid-cols-[1.02fr_.98fr] lg:gap-8 lg:pt-24 xl:gap-16">
         <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="max-w-2xl"
->
-  {/* Top Badge */}
-  <div className="mb-6 inline-flex items-center rounded-full border border-gold/30 bg-gold/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.35em] text-gold">
-    🇮🇳 Indian Kickboxing Athlete
-  </div>
-
-  {/* Heading */}
-  <h1 className="font-display leading-[0.9] text-white">
-    <span className="block text-6xl sm:text-7xl lg:text-8xl">
-      HARSH
-    </span>
-
-    <span className="block text-6xl sm:text-7xl lg:text-8xl text-gradient">
-      BHARTI
-    </span>
-  </h1>
-
-  {/* Subtitle */}
-  <p className="mt-5 text-xl font-semibold text-gold">
-    National Medalist • Full Contact Kickboxer
-  </p>
-
-  {/* Description */}
-  <p className="mt-6 max-w-xl text-lg leading-8 text-white/75">
-    Dedicated to representing India through discipline, hard work and elite
-    kickboxing. Every round is another step toward becoming a World Champion.
-  </p>
-
-  {/* Achievement Badges */}
-  <div className="mt-8 flex flex-wrap gap-3">
-    <div className="rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-sm text-gold">
-      🥈 National Medalist
-    </div>
-
-    <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white">
-      🇮🇳 Representing India
-    </div>
-
-    <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white">
-      🥊 Full Contact
-    </div>
-
-    <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white">
-      ⭐ 8+ Years Experience
-    </div>
-  </div>
-
-  {/* Buttons */}
-  <div className="mt-10 flex flex-wrap gap-4">
-    <a
-      href="#media"
-      className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3 font-semibold text-black transition hover:scale-105"
-    >
-      <PlayCircle className="h-5 w-5" />
-      Watch Highlights
-    </a>
-
-    <a
-      href="/achievements"
-      className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3 font-semibold text-white hover:border-gold/40 hover:bg-white/10"
-    >
-      <Trophy className="h-5 w-5 text-gold" />
-      Achievements
-    </a>
-
-    <a
-      href="/cv"
-      className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-7 py-3 font-semibold text-gold transition hover:bg-gold hover:text-black"
-    >
-      <Medal className="h-5 w-5" />
-      Athlete CV
-    </a>
-
-    <a
-      href="/sponsorship"
-      className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3 font-semibold text-white transition hover:border-gold/40 hover:bg-white/10"
-    >
-      Sponsorship
-    </a>
-
-    <a
-      href={contact.whatsapp}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-7 py-3 font-semibold text-gold hover:bg-gold hover:text-black"
-    >
-      <MessageCircleMore className="h-5 w-5" />
-      Sponsor Me
-    </a>
-  </div>
-
-  {/* Stats */}
-  <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-    {[
-      {
-        icon: <Medal className="h-5 w-5 text-gold" />,
-        label: "Medals",
-        value: "5+",
-      },
-      {
-        icon: <Flag className="h-5 w-5 text-gold" />,
-        label: "Country",
-        value: "India",
-      },
-      {
-        icon: <Trophy className="h-5 w-5 text-gold" />,
-        label: "Division",
-        value: boxer.division,
-      },
-      {
-        icon: <Medal className="h-5 w-5 text-gold" />,
-        label: "Experience",
-        value: boxer.experienceYears,
-      },
-    ].map((item) => (
-      <div
-        key={item.label}
-        className="glass rounded-2xl border border-white/10 p-5"
-      >
-        {item.icon}
-
-        <p className="mt-3 text-xs uppercase tracking-[0.25em] text-white/50">
-          {item.label}
-        </p>
-
-        <p className="mt-2 text-xl font-bold text-white">
-          {item.value}
-        </p>
-      </div>
-    ))}
-  </div>
-</motion.div>
-        {/* RIGHT IMAGE CARD */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.92, x: 30 }}
-  animate={{ opacity: 1, scale: 1, x: 0 }}
-  transition={{ duration: 0.9 }}
-  whileHover={{
-    scale: 1.02,
-    rotate: -1,
-  }}
-  className="relative"
->
-  {/* Glow */}
-  <div className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-gold/25 via-redbrand/20 to-transparent blur-3xl" />
-
-  <div className="glass relative overflow-hidden rounded-[2.5rem] border border-white/10 p-3 shadow-glow">
-
-    <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-
-      <Image
-        src="/media/hero.png"
-        alt="Harsh Bharti"
-        fill
-        priority
-        className="object-cover object-top transition duration-700 hover:scale-105"
-      />
-
-      {/* Dark Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
-
-      {/* Top Badge */}
-      <div className="absolute left-5 top-5 rounded-full border border-gold/30 bg-black/50 px-4 py-2 backdrop-blur-md">
-        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-          Team India 🇮🇳
-        </span>
-      </div>
-
-      {/* Bottom Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.5,
-          duration: 0.6,
-        }}
-        className="absolute bottom-0 left-0 right-0 p-6"
-      >
-        <div className="rounded-3xl border border-white/10 bg-black/45 p-6 backdrop-blur-xl">
-
-          <p className="text-xs uppercase tracking-[0.35em] text-gold">
-            Dream
-          </p>
-
-          <h3 className="mt-2 text-3xl font-bold text-white">
-            World Champion
-          </h3>
-
-          <p className="mt-3 text-sm leading-6 text-white/70">
-            Every round, every punch and every sacrifice is a step toward
-            representing India on the world's biggest stage.
-          </p>
-
-          <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "82%" }}
-              transition={{
-                duration: 2,
-                delay: 1,
-              }}
-              className="h-full rounded-full bg-gradient-to-r from-gold to-yellow-300"
-            />
+          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65 }}
+          className="relative z-20 mx-auto w-full max-w-2xl lg:mx-0"
+        >
+          <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-[#ffd700]/25 bg-[#ffd700]/[0.07] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffe16a] sm:px-4 sm:text-xs sm:tracking-[0.28em]">
+            <span className="relative flex h-2 w-2 shrink-0"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ffd700] opacity-60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-[#ffd700]" /></span>
+            Indian Kickboxing Athlete · Himachal Pradesh
           </div>
 
-          <div className="mt-2 flex items-center justify-between text-xs text-white/60">
-            <span>Journey Progress</span>
-            <span>82%</span>
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.42em] text-white/45 sm:mt-10">The next round starts here</p>
+          <h1 className="hero-name mt-2 font-display text-[clamp(4.4rem,15vw,8.8rem)] leading-[0.78] tracking-tight text-white sm:text-[clamp(6rem,10vw,9rem)]">
+            HARSH <span className="hero-name-accent block">BHARTI<span className="text-[#ffd700]">.</span></span>
+          </h1>
+          <div className="mt-7 flex items-center gap-3 sm:mt-8">
+            <span className="h-px w-10 bg-[#ffd700] sm:w-14" />
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#ffd700] sm:text-sm sm:tracking-[0.3em]">Full Contact · −54 kg</p>
+          </div>
+          <p className="mt-5 max-w-xl text-base leading-7 text-white/65 sm:text-lg sm:leading-8">
+            Built through discipline. Proven on the national stage. Working toward the world stage — one round, one goal, one opportunity at a time.
+          </p>
+
+          <div className="mt-7 flex flex-col gap-3 min-[420px]:flex-row sm:mt-9 sm:gap-4">
+            <Link href="/sponsorship" className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-[#ffd700] px-5 py-3 text-sm font-extrabold text-black shadow-[0_10px_35px_rgba(255,215,0,.15)] transition duration-300 hover:-translate-y-1 hover:bg-[#ffe66d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ffd700] sm:px-6">
+              <Handshake className="h-5 w-5" /> Sponsor the journey <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Link>
+            <Link href="/achievements" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-xl border border-white/15 bg-white/[0.035] px-5 py-3 text-sm font-bold text-white transition hover:border-white/35 hover:bg-white/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-6">
+              <Trophy className="h-5 w-5 text-[#ffd700]" /> Explore achievements
+            </Link>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link href="/cv" className="inline-flex min-h-10 items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold text-white/65 transition hover:text-[#ffd700]"><Medal className="h-4 w-4" /> View athlete CV <ArrowUpRight className="h-3.5 w-3.5" /></Link>
+            <Link href="/calendar" className="inline-flex min-h-10 items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold text-white/65 transition hover:text-[#ffd700]"><PlayCircle className="h-4 w-4" /> 2027 target calendar <ArrowUpRight className="h-3.5 w-3.5" /></Link>
           </div>
 
-        </div>
-      </motion.div>
+          <div className="mt-10 grid max-w-xl grid-cols-3 border-y border-white/10 py-5 sm:mt-12 sm:py-6">
+            <div className="pr-3 sm:pr-5">
+              <p className="font-display text-3xl text-[#ffd700] sm:text-4xl">02</p>
+              <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.17em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">Gold · 2022</p>
+            </div>
+            <div className="border-x border-white/10 px-3 sm:px-5">
+              <p className="font-display text-3xl text-white sm:text-4xl">2018<span className="text-[#ffd700]">—</span>26</p>
+              <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.17em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">Competition years</p>
+            </div>
+            <div className="pl-3 sm:pl-5">
+              <p className="font-display text-3xl text-white sm:text-4xl">−54<span className="text-sm">kg</span></p>
+              <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.17em] text-white/45 sm:text-[10px] sm:tracking-[0.2em]">Full Contact</p>
+            </div>
+          </div>
+          <p className="mt-3 text-[11px] leading-5 text-white/35">2027 World Championship participation is a goal, not yet confirmed. Selection and event details remain subject to official confirmation.</p>
+        </motion.div>
 
-    </div>
-  </div>
-</motion.div>
-        </div>{/* <-- Close container-page */}
-        
-        {/* Bottom Fade */}
-      
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 24, rotateY: -8 }}
+          animate={{ opacity: 1, y: 0, rotateY: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="hero-perspective relative mx-auto w-full max-w-[34rem] lg:ml-auto"
+        >
+          <div className="hero-orbit hero-orbit-one pointer-events-none absolute inset-[4%] rounded-[2rem] border border-[#ffd700]/20 sm:rounded-[2.5rem]" aria-hidden="true" />
+          <div className="hero-orbit hero-orbit-two pointer-events-none absolute inset-[9%] rounded-[2rem] border border-[#d90429]/25 sm:rounded-[2.5rem]" aria-hidden="true" />
+          <motion.div
+            whileHover={reduceMotion ? undefined : { rotateY: -5, rotateX: 3, y: -5 }}
+            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+            className="hero-photo-card relative z-10 mx-3 aspect-[4/4.7] overflow-hidden rounded-[1.8rem] border border-white/15 bg-[#111] p-2 shadow-[0_30px_100px_rgba(0,0,0,.65)] sm:mx-6 sm:rounded-[2.4rem] sm:p-3"
+            style={{ transformStyle: 'preserve-3d' }}
+          >
+            <div className="relative h-full w-full overflow-hidden rounded-[1.3rem] sm:rounded-[1.8rem]">
+              <Image src="/media/hero.png" alt="Harsh Bharti, Indian kickboxing athlete" fill priority sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 42vw" className="object-cover object-top transition-transform duration-700 hover:scale-[1.04]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ffd700]/10 via-transparent to-[#d90429]/20 mix-blend-screen" />
+              <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/55 px-3 py-2 backdrop-blur-xl sm:left-6 sm:top-6 sm:px-4">
+                <span className="text-base">🇮🇳</span><span className="text-[9px] font-extrabold uppercase tracking-[0.22em] text-white sm:text-[10px]">India · Full Contact</span>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8" style={{ transform: 'translateZ(32px)' }}>
+                <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#ffd700]">The athlete · The ambition</p>
+                <h2 className="mt-2 font-display text-4xl leading-none text-white sm:text-6xl">NO SHORTCUTS.</h2>
+                <p className="mt-3 max-w-sm text-sm leading-6 text-white/70">Every round is earned. Every opportunity matters.</p>
+              </div>
+              <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 rotate-90 text-[9px] font-bold uppercase tracking-[0.35em] text-white/60 sm:block">HIMACHAL PRADESH · INDIA</div>
+            </div>
+          </motion.div>
 
-       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-black/70 to-transparent" />
+          <motion.div
+            animate={reduceMotion ? undefined : { y: [0, -7, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            className="hero-float-card absolute -left-1 bottom-10 z-20 max-w-[13rem] rounded-2xl border border-[#ffd700]/25 bg-[#101010]/90 p-4 shadow-2xl backdrop-blur-xl sm:-left-2 sm:bottom-14 sm:max-w-[15rem] sm:p-5"
+          >
+            <div className="flex items-center gap-2 text-[#ffd700]"><Trophy className="h-4 w-4" /><span className="text-[9px] font-bold uppercase tracking-[0.2em]">National results</span></div>
+            <p className="mt-2 text-sm font-bold text-white sm:text-base">2× Gold · 2022</p>
+            <p className="mt-1 text-[10px] text-white/45 sm:text-xs">WAKO India Open National Tournament</p>
+          </motion.div>
+          <div className="absolute -right-1 top-[18%] z-20 hidden max-w-[12rem] rounded-2xl border border-white/10 bg-[#111]/90 p-4 shadow-2xl backdrop-blur-xl sm:block">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/45">Next ambition</p>
+            <p className="mt-2 text-sm font-bold text-[#ffd700]">World Stage · 2027</p>
+            <p className="mt-1 text-[10px] leading-4 text-white/45">Selection not yet confirmed</p>
+          </div>
+        </motion.div>
+      </div>
 
-{/* Scroll Indicator */}
-<motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 1.5 }}
-  className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2"
->
-  <a
-    href="#about"
-    className="group flex flex-col items-center gap-2"
-  >
-    <span className="text-xs uppercase tracking-[0.35em] text-white/50 transition group-hover:text-gold">
-      Scroll
-    </span>
-
-    <motion.div
-      animate={{ y: [0, 10, 0] }}
-      transition={{
-        repeat: Infinity,
-        duration: 1.6,
-      }}
-      className="flex h-12 w-7 items-start justify-center rounded-full border border-gold/40 p-1"
-    >
-      <motion.div
-        animate={{ y: [0, 16, 0] }}
-        transition={{
-          repeat: Infinity,
-          duration: 1.6,
-        }}
-        className="h-2 w-2 rounded-full bg-gold"
-      />
-    </motion.div>
-  </a>
-</motion.div>
-        </section>
-    );
+      <div className="container-page relative z-10 pb-8">
+        <a href="#stats" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 transition hover:text-[#ffd700]">
+          Scroll to explore <ArrowDownRight className="h-4 w-4" />
+        </a>
+        <span className="float-right hidden text-[10px] uppercase tracking-[0.25em] text-white/25 sm:inline">01 / The journey begins</span>
+      </div>
+    </section>
+  );
 }
-
-        
-        
