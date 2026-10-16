@@ -148,8 +148,8 @@ export default function Timeline() {
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/70">
             Victory teaches confidence. Defeat teaches resilience. Every fight
-            is another chapter in the pursuit of excellence and the dream of
-            becoming a World Champion.
+            is another chapter in the pursuit of excellence and continued
+            growth as an athlete.
           </p>
         </motion.div>
 
