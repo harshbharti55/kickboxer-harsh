@@ -4,9 +4,10 @@
 
 :root {
   color-scheme: dark;
-  --brand-gold: #e8c56a;
-  --brand-red: #ff4d6d;
-  --ink: #080c17;
+  --brand-ice: #38bdf8;
+  --brand-blue-dark: #075985;
+  --ink: #070707;
+  --paper: #f7f7f7;
 }
 
 html {
@@ -18,58 +19,46 @@ html {
 body {
   @apply bg-bg text-soft antialiased;
   background:
-    radial-gradient(ellipse at 8% 8%, rgba(255, 77, 109, 0.12), transparent 32rem),
-    radial-gradient(ellipse at 90% 14%, rgba(72, 229, 224, 0.09), transparent 28rem),
-    linear-gradient(180deg, #080c17 0%, #0b1020 48%, #070a13 100%);
+    radial-gradient(ellipse at 8% 8%, rgba(56, 189, 248, 0.15), transparent 32rem),
+    radial-gradient(ellipse at 90% 14%, rgba(255, 255, 255, 0.035), transparent 28rem),
+    linear-gradient(180deg, #080808 0%, #0c0c0d 48%, #050505 100%);
   min-width: 320px;
   overflow-x: clip;
 }
 
-img, video {
-  max-width: 100%;
-}
+img, video { max-width: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
 
-button, a {
-  -webkit-tap-highlight-color: transparent;
-}
+::selection { background: rgba(56, 189, 248, 0.45); color: white; }
 
-::selection {
-  background: rgba(255, 215, 0, 0.3);
-  color: white;
-}
-
-.container-page {
-  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
-}
+.container-page { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
 
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(17, 17, 17, 0.72);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .grid-overlay {
-  background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 4%, #f5d98b 42%, #e8c56a 62%, #ff4d6d 100%);
+  background: linear-gradient(100deg, #ffffff 4%, #ffb7c0 38%, #38bdf8 78%, #075985 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.noise {
-  position: relative;
-}
+.noise { position: relative; }
 .noise::after {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.04;
   background-image: linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px);
   background-size: 100% 2px;
   mix-blend-mode: overlay;
@@ -78,44 +67,33 @@ button, a {
 .hero-stage {
   isolation: isolate;
   background:
-    radial-gradient(ellipse at 75% 42%, rgba(255,77,109,.12), transparent 34%),
-    radial-gradient(ellipse at 12% 70%, rgba(72,229,224,.07), transparent 32%),
-    #080c17;
+    radial-gradient(ellipse at 75% 42%, rgba(56,189,248,.18), transparent 34%),
+    radial-gradient(ellipse at 12% 70%, rgba(255,255,255,.04), transparent 32%),
+    #070707;
 }
 .hero-grid {
-  opacity: .42;
+  opacity: .45;
   background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: linear-gradient(to bottom, black, transparent 90%);
 }
-.hero-name {
-  text-shadow: 0 6px 0 rgba(255,255,255,.025), 0 24px 60px rgba(0,0,0,.35);
-}
+.hero-name { text-shadow: 0 6px 0 rgba(255,255,255,.025), 0 24px 60px rgba(0,0,0,.5); }
 .hero-name-accent {
-  background: linear-gradient(100deg, #fff1a3 0%, #ffd700 35%, #ff5a5f 78%, #d90429 100%);
+  background: linear-gradient(100deg, #fff 0%, #ffb7c0 34%, #38bdf8 75%, #075985 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 8px 30px rgba(217,4,41,.12));
+  filter: drop-shadow(0 8px 30px rgba(56,189,248,.18));
 }
-.hero-perspective {
-  perspective: 1200px;
-  transform-style: preserve-3d;
-}
-.hero-photo-card {
-  transform-style: preserve-3d;
-  will-change: transform;
-}
+.hero-perspective { perspective: 1200px; transform-style: preserve-3d; }
+.hero-photo-card { transform-style: preserve-3d; will-change: transform; }
 .hero-orbit {
   transform: rotate(8deg) translateZ(-30px);
-  box-shadow: 0 0 70px rgba(232,197,106,.07);
+  box-shadow: 0 0 70px rgba(56,189,248,.12);
 }
-.hero-orbit-two {
-  transform: rotate(-7deg) translateZ(-50px);
-}
-.hero-float-card {
-  box-shadow: 0 18px 55px rgba(0,0,0,.42), 0 0 35px rgba(72,229,224,.08);
-}
+.hero-orbit-two { transform: rotate(-7deg) translateZ(-50px); }
+.hero-float-card { box-shadow: 0 18px 55px rgba(0,0,0,.6), 0 0 35px rgba(56,189,248,.12); }
+
 @media (max-width: 639px) {
   .hero-grid { background-size: 32px 32px; }
   .hero-orbit { inset: 2%; }
