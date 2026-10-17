@@ -4,8 +4,8 @@
 
 :root {
   color-scheme: dark;
-  --brand-red: #f32640;
-  --brand-red-dark: #a80d24;
+  --brand-ice: #38bdf8;
+  --brand-blue-dark: #075985;
   --ink: #070707;
   --paper: #f7f7f7;
 }
@@ -19,7 +19,7 @@ html {
 body {
   @apply bg-bg text-soft antialiased;
   background:
-    radial-gradient(ellipse at 8% 8%, rgba(243, 38, 64, 0.15), transparent 32rem),
+    radial-gradient(ellipse at 8% 8%, rgba(56, 189, 248, 0.15), transparent 32rem),
     radial-gradient(ellipse at 90% 14%, rgba(255, 255, 255, 0.035), transparent 28rem),
     linear-gradient(180deg, #080808 0%, #0c0c0d 48%, #050505 100%);
   min-width: 320px;
@@ -29,7 +29,7 @@ body {
 img, video { max-width: 100%; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
-::selection { background: rgba(243, 38, 64, 0.45); color: white; }
+::selection { background: rgba(56, 189, 248, 0.45); color: white; }
 
 .container-page { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
 
@@ -46,7 +46,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 4%, #ffb7c0 38%, #f32640 78%, #a80d24 100%);
+  background: linear-gradient(100deg, #ffffff 4%, #ffb7c0 38%, #38bdf8 78%, #075985 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -67,7 +67,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-stage {
   isolation: isolate;
   background:
-    radial-gradient(ellipse at 75% 42%, rgba(243,38,64,.18), transparent 34%),
+    radial-gradient(ellipse at 75% 42%, rgba(56,189,248,.18), transparent 34%),
     radial-gradient(ellipse at 12% 70%, rgba(255,255,255,.04), transparent 32%),
     #070707;
 }
@@ -79,20 +79,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .hero-name { text-shadow: 0 6px 0 rgba(255,255,255,.025), 0 24px 60px rgba(0,0,0,.5); }
 .hero-name-accent {
-  background: linear-gradient(100deg, #fff 0%, #ffb7c0 34%, #f32640 75%, #a80d24 100%);
+  background: linear-gradient(100deg, #fff 0%, #ffb7c0 34%, #38bdf8 75%, #075985 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 8px 30px rgba(243,38,64,.18));
+  filter: drop-shadow(0 8px 30px rgba(56,189,248,.18));
 }
 .hero-perspective { perspective: 1200px; transform-style: preserve-3d; }
 .hero-photo-card { transform-style: preserve-3d; will-change: transform; }
 .hero-orbit {
   transform: rotate(8deg) translateZ(-30px);
-  box-shadow: 0 0 70px rgba(243,38,64,.12);
+  box-shadow: 0 0 70px rgba(56,189,248,.12);
 }
 .hero-orbit-two { transform: rotate(-7deg) translateZ(-50px); }
-.hero-float-card { box-shadow: 0 18px 55px rgba(0,0,0,.6), 0 0 35px rgba(243,38,64,.12); }
+.hero-float-card { box-shadow: 0 18px 55px rgba(0,0,0,.6), 0 0 35px rgba(56,189,248,.12); }
 
 @media (max-width: 639px) {
   .hero-grid { background-size: 32px 32px; }
