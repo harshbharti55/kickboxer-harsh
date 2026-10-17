@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative isolate min-h-[100svh] overflow-hidden bg-[#070707] text-white">
       <div className="pointer-events-none absolute inset-0 opacity-40" aria-hidden="true" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px)', backgroundSize: '44px 44px' }} />
-      <div className="relative z-10 grid min-h-[100svh] lg:grid-cols-2">
+      <div className="relative z-10 grid min-h-[100svh] grid-cols-1 lg:grid-cols-[0.96fr_1.04fr]">
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
@@ -50,7 +50,7 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: 'easeOut' }}
           className="group relative order-1 min-h-[52svh] overflow-hidden border-b border-white/10 lg:order-2 lg:min-h-[100svh] lg:border-b-0 lg:border-l lg:border-white/10"
         >
-          <Image src="/gallery/IMG-20250718-WA0013.jpg" alt="Harsh Bharti competing in a kickboxing ring" fill priority sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover object-[center_28%] transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035]" />
+          <Image src="/gallery/DSC_3075.JPG" alt="Harsh Bharti in competition gear during a kickboxing event" fill priority sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover object-[center_24%] transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-black/10 to-black/15 lg:bg-gradient-to-r lg:from-[#070707]/50 lg:via-transparent lg:to-black/10" />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(243,38,64,.12),transparent_42%)]" />
           <div className="absolute left-5 top-6 flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-md sm:left-8 sm:top-8 sm:text-[10px]"><span className="h-2 w-2 rounded-full bg-[#f32640]" />Fight mode · Competition ready</div>
