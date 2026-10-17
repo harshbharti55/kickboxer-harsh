@@ -1,502 +1,65 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaEnvelope,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import {
-  ArrowRight,
-  Download,
-  Handshake,
-  Trophy,
-  Calendar,
-} from "lucide-react";
+import { ArrowUpRight, Handshake, Trophy, Calendar, Mail } from "lucide-react";
 
 const EMAIL = "kickboxerharsh@gmail.com";
 
-const SOCIALS = [
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/harsh_bharti5",
-    icon: FaInstagram,
-    color: "from-pink-500 to-orange-400",
-  },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/share/1Dw6ZKqKyE/",
-    icon: FaFacebookF,
-    color: "from-blue-500 to-cyan-400",
-  },
-  {
-    name: "X",
-    href: "https://x.com/Harsh_bharti5",
-    icon: FaXTwitter,
-    color: "from-white to-gray-300",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/harsh-bharti-931b31251",
-    icon: FaLinkedinIn,
-    color: "from-sky-500 to-blue-700",
-  },
-];
-
-const SERVICES = [
-  {
-    title: "Sponsorship",
-    icon: Handshake,
-    text: "Brand partnerships & athlete sponsorships",
-  },
-  {
-    title: "Media",
-    icon: Calendar,
-    text: "Interviews, podcasts & press",
-  },
-  {
-    title: "Events",
-    icon: Trophy,
-    text: "Seminars, competitions & appearances",
-  },
-];
-
 export default function ContactSection() {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-
   const emailUrl = useMemo(() => {
-    const body = `Name: ${name}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
+    const body = `Name: ${name}\nSubject: ${subject}\nMessage: ${message}`;
     return `mailto:${EMAIL}?subject=${encodeURIComponent(subject || "Website enquiry")}&body=${encodeURIComponent(body)}`;
-  }, [name, phone, subject, message]);
+  }, [name, subject, message]);
+
+  const opportunities = [
+    { title: "Sponsorship", text: "Brand partnerships and athlete support", icon: Handshake },
+    { title: "Media", text: "Interviews, stories and press", icon: Calendar },
+    { title: "Events", text: "Sport events and appearances", icon: Trophy },
+  ];
 
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden bg-black py-28"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_60%)]" />
-      <div className="absolute inset-0 grid-overlay opacity-20" />
-
+    <section id="contact" className="relative overflow-hidden bg-[#070707] py-24 sm:py-28">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(243,38,64,0.1),transparent_60%)]" aria-hidden="true" />
+      <div className="absolute inset-0 grid-overlay opacity-20" aria-hidden="true" />
       <div className="container-page relative z-10">
-
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto mb-16 max-w-3xl text-center"
-        >
-          <div className="inline-flex rounded-full border border-gold/20 bg-gold/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-gold">
-            Contact & Sponsorship
-          </div>
-
-          <h2 className="mt-6 font-display text-5xl text-white sm:text-6xl">
-            Let's Build Something
-            <span className="block text-gradient">
-              Extraordinary
-            </span>
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/65">
-            Whether you're a sponsor, journalist, event organizer or fan,
-            I'd love to hear from you. Let's create opportunities together.
-          </p>
+        <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="mx-auto mb-14 max-w-3xl text-center">
+          <div className="inline-flex rounded-full border border-[#f32640]/30 bg-[#f32640]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#ff5268]">Contact & Sponsorship</div>
+          <h2 className="mt-6 font-display text-4xl text-white sm:text-6xl">Let’s build something <span className="block text-gradient">extraordinary.</span></h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">For sponsorships, media, events and brand collaborations, reach out by email.</p>
         </motion.div>
-
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-
-          {/* LEFT PANEL */}
-<motion.div
-  initial={{ opacity: 0, x: -40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.7 }}
-  className="space-y-8"
->
-
-  {/* Contact Card */}
-  <div className="glass rounded-[2.5rem] border border-white/10 p-8">
-
-    <h3 className="text-3xl font-display text-white">
-      Contact Information
-    </h3>
-
-    <p className="mt-4 leading-7 text-white/65">
-      Available for sponsorships, media interviews, seminars,
-      competitions and brand collaborations.
-    </p>
-
-    <div className="mt-8 space-y-5">
-
-      <a
-        href={`mailto:${EMAIL}`}
-        className="group flex items-center gap-5 rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:border-gold/40 hover:bg-white/10"
-      >
-        <div className="rounded-2xl bg-gold/10 p-4">
-          <FaEnvelope className="text-xl text-gold" />
-        </div>
-
-        <div>
-          <p className="text-sm uppercase tracking-[0.2em] text-white/45">
-            Email
-          </p>
-
-          <p className="mt-1 text-lg text-white">
-            {EMAIL}
-          </p>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-
-  {/* Services */}
-  <div className="glass rounded-[2.5rem] border border-white/10 p-8">
-
-    <p className="text-xs uppercase tracking-[0.35em] text-gold">
-      Available For
-    </p>
-
-    <div className="mt-8 space-y-5">
-
-      {SERVICES.map((service) => {
-        const Icon = service.icon;
-
-        return (
-          <motion.div
-            key={service.title}
-            whileHover={{ x: 6 }}
-            className="flex items-start gap-5 rounded-2xl border border-white/10 bg-white/5 p-5"
-          >
-            <div className="rounded-2xl bg-gold/10 p-4">
-              <Icon className="h-6 w-6 text-gold" />
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-5">
+            <div className="glass rounded-3xl p-6 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff5268]">Direct contact</p>
+              <h3 className="mt-3 text-2xl font-black text-white">One inbox. Real opportunities.</h3>
+              <p className="mt-3 leading-7 text-white/60">Available for sponsorship discussions, media interviews and sports partnerships.</p>
+              <a href={`mailto:${EMAIL}`} className="mt-6 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.035] p-4 transition hover:border-[#f32640]/50">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f32640]/10 text-[#ff5268]"><Mail className="h-5 w-5" /></span>
+                <span className="min-w-0"><span className="block text-xs uppercase tracking-[0.2em] text-white/40">Email only</span><span className="mt-1 block break-all text-sm font-semibold text-white sm:text-base">{EMAIL}</span></span>
+                <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-[#ff5268]" />
+              </a>
             </div>
-
-            <div>
-
-              <h4 className="text-lg font-semibold text-white">
-                {service.title}
-              </h4>
-
-              <p className="mt-2 text-white/65">
-                {service.text}
-              </p>
-
+            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              {opportunities.map(({ title, text, icon: Icon }) => <div key={title} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f32640]/10 text-[#ff5268]"><Icon className="h-5 w-5" /></span><span><span className="block font-bold text-white">{title}</span><span className="mt-1 block text-sm text-white/50">{text}</span></span></div>)}
             </div>
-
           </motion.div>
-        );
-      })}
-
-    </div>
-
-  </div>
-
-  {/* Social Media */}
-  <div className="glass rounded-[2.5rem] border border-white/10 p-8">
-
-    <p className="text-xs uppercase tracking-[0.35em] text-gold">
-      Follow My Journey
-    </p>
-
-    <div className="mt-8 grid grid-cols-2 gap-4">
-
-      {SOCIALS.map((social) => {
-        const Icon = social.icon;
-
-        return (
-          <motion.a
-            key={social.name}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              y: -6,
-            }}
-            className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:border-gold/40"
-          >
-            <div
-              className={`inline-flex rounded-2xl bg-gradient-to-br ${social.color} p-4`}
-            >
-              <Icon className="text-xl text-white" />
-            </div>
-
-            <p className="mt-5 font-semibold text-white">
-              {social.name}
-            </p>
-
-          </motion.a>
-        );
-      })}
-
-    </div>
-
-  </div>
-
-  {/* Download Profile */}
-  <motion.a
-    whileHover={{
-      scale: 1.02,
-    }}
-    href="/media/Harsh-Bharti-Athlete-Profile.pdf"
-    className="flex items-center justify-between rounded-[2rem] border border-gold/30 bg-gradient-to-r from-gold/10 via-black to-black p-8 transition-all duration-300 hover:border-gold"
-  >
-
-    <div>
-
-      <p className="text-xs uppercase tracking-[0.3em] text-gold">
-        Athlete Portfolio
-      </p>
-
-      <h3 className="mt-2 text-2xl font-display text-white">
-        Download Media Kit
-      </h3>
-
-      <p className="mt-3 text-white/65">
-        Athlete profile, achievements, sponsorship opportunities and career highlights.
-      </p>
-
-    </div>
-
-    <div className="rounded-full bg-gold p-4">
-      <Download className="h-6 w-6 text-black" />
-    </div>
-
-  </motion.a>
-
-</motion.div>
-          {/* RIGHT PANEL */}
-<motion.div
-  initial={{ opacity: 0, x: 40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.7 }}
-  className="glass rounded-[2.5rem] border border-white/10 p-8"
->
-  <div className="flex items-center gap-4">
-
-    <div className="rounded-2xl bg-gold/10 p-4">
-      <FaEnvelope className="text-2xl text-gold" />
-    </div>
-
-    <div>
-
-      <p className="text-xs uppercase tracking-[0.35em] text-gold">
-        Quick Inquiry
-      </p>
-
-      <h3 className="mt-1 text-3xl font-display text-white">
-        Send a Message
-      </h3>
-
-    </div>
-
-  </div>
-
-  <p className="mt-5 leading-7 text-white/65">
-    Fill in the details below and your email app will open with your message ready to send.
-  </p>
-
-  <form
-    onSubmit={(e) => {
-      e.preventDefault();
-      window.location.href = emailUrl;
-    }}
-    className="mt-10 space-y-6"
-  >
-
-    {/* Name */}
-    <div>
-
-      <label className="mb-2 block text-sm font-medium text-white/70">
-        Full Name
-      </label>
-
-      <input
-        type="text"
-        required
-        placeholder="Your Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-gold"
-      />
-
-    </div>
-
-    {/* Phone */}
-    <div>
-
-      <label className="mb-2 block text-sm font-medium text-white/70">
-        Phone Number
-      </label>
-
-      <input
-        type="tel"
-        required
-        placeholder="+91 XXXXX XXXXX"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-gold"
-      />
-
-    </div>
-
-    {/* Subject */}
-    <div>
-
-      <label className="mb-2 block text-sm font-medium text-white/70">
-        Subject
-      </label>
-
-      <input
-        type="text"
-        required
-        placeholder="Sponsorship / Event / Media"
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
-        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-gold"
-      />
-
-    </div>
-
-    {/* Message */}
-    <div>
-
-      <label className="mb-2 block text-sm font-medium text-white/70">
-        Message
-      </label>
-
-      <textarea
-        rows={6}
-        required
-        placeholder="Tell me about your sponsorship, event, collaboration or inquiry..."
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        className="w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-gold"
-      />
-
-    </div>
-
-    {/* Button */}
-    <motion.button
-      whileHover={{
-        scale: 1.02,
-      }}
-      whileTap={{
-        scale: 0.98,
-      }}
-      type="submit"
-      className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-5 font-semibold text-black transition-all duration-300 hover:shadow-[0_0_35px_rgba(212,175,55,0.35)]"
-    >
-      <FaEnvelope className="text-xl" />
-
-      Send by Email
-
-      <ArrowRight className="h-5 w-5" />
-    </motion.button>
-
-  </form>
-
-  {/* Small Note */}
-  <div className="mt-8 rounded-2xl border border-gold/20 bg-gold/5 p-5">
-
-    <p className="text-sm leading-7 text-white/60">
-      <span className="font-semibold text-gold">
-        Preferred inquiries:
-      </span>{" "}
-      Sponsorship proposals, media interviews, seminars, athlete
-      collaborations, competitions and business opportunities.
-    </p>
-
-  </div>
-
-</motion.div>
-                  </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="mt-20 overflow-hidden rounded-[2.5rem] border border-gold/20 bg-gradient-to-r from-gold/10 via-black to-black p-10"
-        >
-          <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_0.7fr]">
-
-            {/* Left */}
-            <div>
-
-              <p className="text-sm uppercase tracking-[0.35em] text-gold">
-                Partnership Opportunity
-              </p>
-
-              <h2 className="mt-5 text-4xl font-display text-white lg:text-5xl">
-                Let's Build Something Great Together
-              </h2>
-
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-white/70">
-                I am actively seeking partnerships with brands, sponsors,
-                sports organizations, media companies and event organizers
-                who believe in dedication, performance and the future of
-                Indian kickboxing.
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-
-                <span className="rounded-full border border-gold/30 bg-gold/10 px-5 py-2 text-sm text-gold">
-                  Sponsorship
-                </span>
-
-                <span className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white">
-                  Media
-                </span>
-
-                <span className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white">
-                  Speaking
-                </span>
-
-                <span className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white">
-                  Events
-                </span>
-
-              </div>
-
-            </div>
-
-            {/* Right */}
-            <div className="flex flex-col gap-5">
-
-              <a
-                href={`mailto:${EMAIL}?subject=Sponsorship%20Enquiry`}
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-gold px-8 py-4 font-semibold text-black transition-all duration-300 hover:scale-105"
-              >
-                <FaEnvelope className="text-xl" />
-                Sponsorship Enquiry
-              </a>
-
-              <a
-                href={`mailto:${EMAIL}`}
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-gold/40 hover:bg-white/10"
-              >
-                <FaEnvelope />
-                Send Email
-              </a>
-
-            </div>
-
-          </div>
-        </motion.div>
-
+          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="glass rounded-3xl p-6 sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff5268]">Start a conversation</p>
+            <h3 className="mt-3 text-2xl font-black text-white">Tell me what you have in mind.</h3>
+            <p className="mt-3 text-sm leading-6 text-white/55">This form opens your email app with the details filled in. It does not send anything automatically.</p>
+            <form className="mt-6 space-y-4" onSubmit={(event) => { event.preventDefault(); window.location.href = emailUrl; }}>
+              <label className="block text-sm font-semibold text-white/75">Your name<input required value={name} onChange={(event) => setName(event.target.value)} className="mt-2 w-full rounded-xl border border-white/15 bg-black/50 px-4 py-3 text-base text-white outline-none transition focus:border-[#f32640]" placeholder="Name" autoComplete="name" /></label>
+              <label className="block text-sm font-semibold text-white/75">Subject<input value={subject} onChange={(event) => setSubject(event.target.value)} className="mt-2 w-full rounded-xl border border-white/15 bg-black/50 px-4 py-3 text-base text-white outline-none transition focus:border-[#f32640]" placeholder="Sponsorship enquiry" /></label>
+              <label className="block text-sm font-semibold text-white/75">Message<textarea required minLength={10} rows={5} value={message} onChange={(event) => setMessage(event.target.value)} className="mt-2 w-full resize-y rounded-xl border border-white/15 bg-black/50 px-4 py-3 text-base text-white outline-none transition focus:border-[#f32640]" placeholder="Tell me a little about your enquiry..." /></label>
+              <button type="submit" className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#f32640] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#ff4058] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f32640]">Prepare email <ArrowUpRight className="h-4 w-4" /></button>
+            </form>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-          
