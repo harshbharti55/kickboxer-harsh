@@ -37,22 +37,21 @@ export const metadata: Metadata = {
 
   keywords: [
     'Harsh Bharti',
-    'Harsh Bharti Kickboxer',
+    'Harsh Bharti kickboxer',
     'Kickboxer Harsh',
-    'Indian Kickboxer',
-    'Kickboxing',
-    'Combat Sports',
-    'WAKO India',
+    'Harsh Bharti official website',
+    'Harsh Bharti athlete profile',
+    'Indian kickboxer',
+    'Indian kickboxing athlete',
+    'WAKO India Open National Tournament',
     'Full Contact Kickboxing',
-    'National Kickboxing Medalist',
-    'International Kickboxer',
-    'Athlete',
-    'Sports',
-    'BPES',
-    'Himachal Pradesh',
-    'Official Website',
-    'Harsh Bharti Wiki',
-    'Harsh Bharti Wikipedia',
+    'national kickboxing championship',
+    'Harsh Bharti kickboxing achievements',
+    'Harsh Bharti competition results',
+    'Harsh Bharti sponsorship',
+    'sponsor an Indian athlete',
+    'Himachal Pradesh kickboxer',
+    'BPES student and kickboxer',
   ],
 
   authors: [
@@ -124,189 +123,41 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://kickboxer-harsh.online/#person",
-
   name: "Harsh Bharti",
-
-  alternateName: [
-    "Kickboxer Harsh",
-    "Harsh Bharti Kickboxer"
-  ],
-
-  url: "https://kickboxer-harsh.online",
-
+  alternateName: ["Kickboxer Harsh", "Harsh Bharti Kickboxer"],
+  url: "https://kickboxer-harsh.online/",
   email: "kickboxerharsh@gmail.com",
-
   image: "https://kickboxer-harsh.online/profile.jpg",
-
   description:
-    "Harsh Bharti is an Indian kickboxer, national medalist, international competitor and BPES student from Himachal Pradesh, India.",
-
-  birthDate: "2006-07-24",
-
-  birthPlace: {
-    "@type": "Place",
-    name: "Shimla, Himachal Pradesh, India"
-  },
-
-  gender: "Male",
-
+    "Harsh Bharti is an Indian competitive kickboxer from Himachal Pradesh. His athlete profile documents national kickboxing competition results, medals, training, and sponsorship goals.",
   nationality: {
     "@type": "Country",
     name: "India"
   },
-
-  homeLocation: {
-    "@type": "Place",
-    name: "Shimla, Himachal Pradesh, India"
-  },
-
   jobTitle: "Competitive Kickboxer",
-
   sport: "Kickboxing",
-
   hasOccupation: {
     "@type": "Occupation",
     name: "Competitive Kickboxer"
   },
-
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "Lamrin Tech Skills University"
-  },
-
-  knowsLanguage: [
-    "English",
-    "Hindi"
-  ],
-
   knowsAbout: [
     "Kickboxing",
-    "Combat Sports",
     "Full Contact Kickboxing",
-    "Sports Marketing",
-    "Athlete Sponsorship",
-    "Physical Education",
-    "Wushu"
+    "Combat Sports",
+    "Athlete Sponsorship"
   ],
-
   award: [
-    "Gold Medal - Junior National Kickboxing Championship 2022",
-    "Silver Medal - National Kickboxing Championship 2023",
-    "Bronze Medal - National Kickboxing Championship 2024",
-    "Silver Medal - Senior National Kickboxing Championship 2025"
+    "Two gold medals - WAKO India Open National Tournament, New Delhi (2022)",
+    "Silver medal - National Kickboxing Championship, Ranchi (2023)",
+    "Bronze medal - National Kickboxing Championship, Siliguri (2024)",
+    "Silver medal - Senior National Kickboxing Championship, Raipur (2025)",
+    "Fifth place - National Kickboxing Championship, Seniors & Masters, Indore (2026), -54 kg"
   ],
-
-  identifier: [
-    {
-      "@type": "PropertyValue",
-      propertyID: "Wikidata",
-      value: "Q138682935"
-    }
-  ],
-
   sameAs: [
-    "https://www.wikidata.org/wiki/Q138682935",
-
-    "https://www.instagram.com/harsh_bharti5",
-
-    "https://youtube.com/@harsh_bharti_kickboxer",
-
-    "https://www.linkedin.com/in/harsh-bharti-931b31251",
-
-    "https://x.com/Harsh_bharti5",
-
-    "https://www.facebook.com/share/1ERg1t4UHH/",
-
-    "https://liquipedia.net/lab/Harsh_bharti",
-
-    "https://sportsmatik.com/athlete/Harshbharti",
-
-    "https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education",
-
-    "https://hi.wikipedia.org/wiki/हर्ष_भारती",
-
-    "https://mr.wikipedia.org/wiki/हर्ष_भारती",
-
-    "https://te.wikipedia.org/wiki/హర్ష్_భారతి",
-
-    "https://gu.wikipedia.org/wiki/હર્ષ_ભારતી",
-
-    "https://bn.wikipedia.org/wiki/হর্ষ_ভারতী",
-
-    "https://ta.wikipedia.org/wiki/ஹர்ஷ்_பாரதி",
-
-    "https://ne.wikipedia.org/wiki/हर्ष_भारती"
-  ],
-
-  subjectOf: [
-    {
-      "@type": "NewsArticle",
-      url: "https://www.firstverdict.com/harsh-bharti-won-gold-medal-in-junior-kick-boxing-competition"
-    },
-    {
-      "@type": "Article",
-      url: "https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education"
-    }
-  ],
-
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": "https://kickboxer-harsh.online"
-  }
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-
-  "@id": "https://kickboxer-harsh.online/#website",
-
-  url: "https://kickboxer-harsh.online",
-
-  name: "Harsh Bharti",
-
-  description:
-    "Official website of Indian Kickboxer Harsh Bharti.",
-
-  inLanguage: "en",
-
-  publisher: {
-    "@id": "https://kickboxer-harsh.online/#person"
-  }
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-
-  "@type": "Organization",
-
-  "@id": "https://kickboxer-harsh.online/#organization",
-
-  name: "Harsh Bharti",
-
-  url: "https://kickboxer-harsh.online",
-
-  logo: "https://kickboxer-harsh.online/profile.jpg",
-
-  email: "kickboxerharsh@gmail.com",
-
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "Sponsorship and media enquiries",
-    email: "kickboxerharsh@gmail.com",
-    availableLanguage: ["English", "Hindi"]
-  },
-
-  sameAs: [
-    "https://www.instagram.com/harsh_bharti5",
-
-    "https://youtube.com/@harsh_bharti_kickboxer",
-
-    "https://x.com/Harsh_bharti5",
-
-    "https://www.linkedin.com/in/harsh-bharti-931b31251",
-
-    "https://www.facebook.com/share/1ERg1t4UHH/"
+    "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw",
+    "https://www.facebook.com/share/1ERw93PBWt/",
+    "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
+    "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   ]
 };
 
