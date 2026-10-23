@@ -162,6 +162,17 @@ const personSchema = {
 };
 
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://kickboxer-harsh.online/#website",
+  url: "https://kickboxer-harsh.online/",
+  name: "Harsh Bharti | Indian Kickboxer",
+  description: "Official athlete website for Harsh Bharti, an Indian competitive kickboxer.",
+  inLanguage: "en-IN",
+  publisher: { "@id": "https://kickboxer-harsh.online/#person" }
+};
+
 
 export default function RootLayout({
   children,
@@ -171,7 +182,6 @@ export default function RootLayout({
   const structuredData = [
     personSchema,
     websiteSchema,
-    organizationSchema,
   ];
 
   return (
