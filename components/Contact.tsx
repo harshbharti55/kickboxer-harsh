@@ -7,8 +7,8 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaEnvelope,
+  FaYoutube,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import {
   ArrowRight,
   Download,
@@ -35,7 +35,7 @@ const SOCIALS = [
   {
     name: "YouTube",
     href: "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
-    icon: FaEnvelope,
+    icon: FaYoutube,
     color: "from-red-600 to-red-400",
   },
   {
@@ -72,7 +72,7 @@ export default function ContactSection() {
   const emailUrl = useMemo(() => {
     const body = `Name: ${name}\nSubject: ${subject}\nMessage: ${message}`;
     return `mailto:${EMAIL}?subject=${encodeURIComponent(subject || "Website enquiry")}&body=${encodeURIComponent(body)}`;
-  }, [name, phone, subject, message]);
+  }, [name, subject, message]);
 
   return (
     <section
