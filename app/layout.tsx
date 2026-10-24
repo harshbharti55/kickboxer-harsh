@@ -200,7 +200,7 @@ export default function RootLayout({
   const structuredData = [
     personSchema,
     websiteSchema,
-    organizationSchema,
+    webpageSchema,
   ];
 
   return (
