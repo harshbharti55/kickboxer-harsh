@@ -12,10 +12,10 @@ export const athlete = {
   weightClass: "−54 kg Full Contact",
   email: "kickboxerharsh@gmail.com",
   socials: [
-    { label: "Instagram", href: "https://www.instagram.com/harsh_bharti5" },
-    { label: "Facebook", href: "https://www.facebook.com/share/1Dw6ZKqKyE/" },
-    { label: "X", href: "https://x.com/Harsh_bharti5" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/harsh-bharti-931b31251" },
+    { label: "Instagram", href: "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw" },
+    { label: "Facebook", href: "https://www.facebook.com/share/1ERw93PBWt/" },
+    { label: "YouTube", href: "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
   ],
 } as const;
 

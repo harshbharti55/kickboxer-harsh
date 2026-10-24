@@ -207,15 +207,15 @@ const personSchema = {
   sameAs: [
     "https://www.wikidata.org/wiki/Q138682935",
 
-    "https://www.instagram.com/harsh_bharti5",
+    "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw",
 
-    "https://youtube.com/@harsh_bharti_kickboxer",
+    "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
 
-    "https://www.linkedin.com/in/harsh-bharti-931b31251",
+    "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android",
 
     "https://x.com/Harsh_bharti5",
 
-    "https://www.facebook.com/share/1ERg1t4UHH/",
+    "https://www.facebook.com/share/1ERw93PBWt/",
 
     "https://liquipedia.net/lab/Harsh_bharti",
 
@@ -298,15 +298,15 @@ const organizationSchema = {
   },
 
   sameAs: [
-    "https://www.instagram.com/harsh_bharti5",
+    "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw",
 
-    "https://youtube.com/@harsh_bharti_kickboxer",
+    "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
 
     "https://x.com/Harsh_bharti5",
 
-    "https://www.linkedin.com/in/harsh-bharti-931b31251",
+    "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android",
 
-    "https://www.facebook.com/share/1ERg1t4UHH/"
+    "https://www.facebook.com/share/1ERw93PBWt/"
   ]
 };
 

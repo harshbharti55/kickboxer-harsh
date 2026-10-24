@@ -6,7 +6,7 @@ export const boxer = {
   birthDate: '24 July 2006',
   hometown: 'Shimla, Himachal Pradesh',
   nationality: 'Indian',
-  weightClass: '-51 kg',
+  weightClass: '−54 kg',
   division: 'Full Contact',
   team: 'Himachal Pradesh',
   style:
@@ -33,59 +33,80 @@ export const boxer = {
     { label: 'Wushu experience', value: '4 years' },
     { label: 'Boxing experience', value: '3 years' },
     { label: 'Training camps attended', value: '3' },
-    { label: 'Career wins', value: '27' },
-    { label: 'KO victories', value: '14' },
+    { label: 'Verified record entries', value: '7' },
+    { label: 'Weight category', value: '−54 kg' },
   ],
 };
 
 export const stats = [
-  { label: "National Gold", value: 1 },
-  { label: "National Silver", value: 2 },
-  { label: "National Bronze", value: 1 },
-  { label: "International Events", value: 2 },
-  { label: "Years Experience", value: 8 },
-  { label: "Training Camps", value: 3 },
+  { label: "Gold Medals · 2022", value: 2 },
+  { label: "Silver Medals", value: 2 },
+  { label: "Bronze Medals", value: 1 },
+  { label: "Competition Record", value: 7 },
+  { label: "Competition Years", value: 8 },
+  { label: "Weight Category (kg)", value: 54 },
 ];
 
 export const fightRecords = [
   {
-    opponent: "Senior National Championship",
+    opponent: "National Kickboxing Championship — Seniors & Masters",
+    result: "5th Place",
+    date: "8–12 September 2026",
+    event: "Indore, Madhya Pradesh",
+    method: "−54 kg Full Contact",
+  },
+  {
+    opponent: "Senior National Kickboxing Championship",
     result: "Silver",
     date: "2025",
     event: "Raipur, Chhattisgarh",
-    method: "Full Contact -51 kg",
+    method: "Senior division",
+  },
+  {
+    opponent: "Kickboxing Inter-University Championship",
+    result: "Participant",
+    date: "12–16 March 2025",
+    event: "Swami Vivekanand Subharti University, Meerut",
+    method: "Inter-university competition",
   },
   {
     opponent: "National Kickboxing Championship",
     result: "Bronze",
     date: "2024",
     event: "Siliguri",
-    method: "Full Contact -51 kg",
+    method: "National championship",
   },
   {
-    opponent: "WAKO India Nationals",
+    opponent: "National Kickboxing Championship",
     result: "Silver",
     date: "2023",
     event: "Ranchi",
-    method: "Full Contact -51 kg",
+    method: "National championship",
   },
   {
-    opponent: "Junior National Championship",
-    result: "Gold",
+    opponent: "WAKO India Open National Tournament",
+    result: "Two Gold Medals",
     date: "2022",
-    event: "Kolkata",
-    method: "Full Contact -45 kg",
+    event: "New Delhi",
+    method: "National tournament",
+  },
+  {
+    opponent: "Junior National Kickboxing Championship",
+    result: "Participant",
+    date: "2018",
+    event: "Shoolini University, Solan, Himachal Pradesh",
+    method: "Junior division",
   },
 ];
 
 export const journey = [
-  { year: '2018', title: 'First National Championship' },
-  { year: '2022', title: 'Junior National Gold' },
-  { year: '2022', title: 'India Open International Gold' },
-  { year: '2023', title: 'National Silver' },
-  { year: '2024', title: 'National Bronze' },
-  { year: '2024', title: 'Wushu Silver' },
-  { year: '2025', title: 'Senior National Silver' },
+  { year: '2018', title: 'Junior National Championship — Participant' },
+  { year: '2022', title: 'WAKO India Open National Tournament — Two Gold Medals' },
+  { year: '2023', title: 'National Championship — Silver Medal' },
+  { year: '2024', title: 'National Championship — Bronze Medal' },
+  { year: '2025', title: 'Senior National Championship — Silver Medal' },
+  { year: '2025', title: 'Inter-University Championship — Participant' },
+  { year: '2026', title: 'National Championship — 5th Place, −54 kg' },
 ];
 
 export const represented = [
@@ -129,10 +150,10 @@ export const highlights = [
 ];
 
 export const achievements = [
-  { title: 'Championship belts', count: 4 },
-  { title: 'Medals', count: 18 },
-  { title: 'Certificates', count: 12 },
-  { title: 'Awards', count: 9 },
+  { title: 'Gold Medals (2022)', count: 2 },
+  { title: 'Silver Medals', count: 2 },
+  { title: 'Bronze Medals', count: 1 },
+  { title: 'Recorded Competitions', count: 7 },
 ];
 
 export const gallery = [
@@ -169,16 +190,13 @@ export const gallery = [
 { src: "/gallery/Screenshot_20230830-150314~2.png", alt: "Gallery 31" },
   ];
 export const sponsors = [
-  { name: 'Brand Partner One', type: 'Performance wear' },
-  { name: 'Brand Partner Two', type: 'Nutrition support' },
-  { name: 'Brand Partner Three', type: 'Event collaboration' },
-  { name: 'Brand Partner Four', type: 'Media sponsorship' },
+
 ];
 
 export const contact = {
   email: "Kickboxerharsh@gmail.com",
-  instagram: "https://www.instagram.com/harsh_bharti5?igsh=NmhnZ3M3MWdhbDMw",
-  facebook: "https://www.facebook.com/share/1Dw6ZKqKyE/",
-  twitter: "https://x.com/Harsh_bharti5",
-  linkedin: "https://www.linkedin.com/in/harsh-bharti-931b31251",
+  instagram: "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw",
+  facebook: "https://www.facebook.com/share/1ERw93PBWt/",
+  youtube: "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
+  linkedin: "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android",
 };
