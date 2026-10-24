@@ -124,193 +124,73 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://kickboxer-harsh.online/#person",
-
   name: "Harsh Bharti",
-
-  alternateName: [
-    "Kickboxer Harsh",
-    "Harsh Bharti Kickboxer"
-  ],
-
-  url: "https://kickboxer-harsh.online",
-
-  email: "kickboxerharsh@gmail.com",
-
-  image: "https://kickboxer-harsh.online/profile.jpg",
-
-  description:
-    "Harsh Bharti is an Indian kickboxer, national medalist, international competitor and BPES student from Himachal Pradesh, India.",
-
-  birthDate: "2006-07-24",
-
-  birthPlace: {
-    "@type": "Place",
-    name: "Shimla, Himachal Pradesh, India"
+  alternateName: ["Kickboxer Harsh", "Harsh Bharti Kickboxer"],
+  url: "https://kickboxer-harsh.online/",
+  image: {
+    "@type": "ImageObject",
+    url: "https://kickboxer-harsh.online/profile.jpg"
   },
-
-  gender: "Male",
-
+  email: "kickboxerharsh@gmail.com",
+  description:
+    "Harsh Bharti is an Indian competitive kickboxer from Himachal Pradesh. His website presents his competition record, athlete profile, media, and sponsorship enquiries.",
   nationality: {
     "@type": "Country",
     name: "India"
   },
-
-  homeLocation: {
-    "@type": "Place",
-    name: "Shimla, Himachal Pradesh, India"
-  },
-
   jobTitle: "Competitive Kickboxer",
-
-  sport: "Kickboxing",
-
-  hasOccupation: {
-    "@type": "Occupation",
-    name: "Competitive Kickboxer"
-  },
-
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "Lamrin Tech Skills University"
-  },
-
-  knowsLanguage: [
-    "English",
-    "Hindi"
-  ],
-
   knowsAbout: [
     "Kickboxing",
-    "Combat Sports",
-    "Full Contact Kickboxing",
-    "Sports Marketing",
-    "Athlete Sponsorship",
-    "Physical Education",
-    "Wushu"
+    "Combat sports",
+    "Athlete development",
+    "Sports sponsorship"
   ],
-
-  award: [
-    "Gold Medal - Junior National Kickboxing Championship 2022",
-    "Silver Medal - National Kickboxing Championship 2023",
-    "Bronze Medal - National Kickboxing Championship 2024",
-    "Silver Medal - Senior National Kickboxing Championship 2025"
-  ],
-
-  identifier: [
-    {
-      "@type": "PropertyValue",
-      propertyID: "Wikidata",
-      value: "Q138682935"
-    }
-  ],
-
   sameAs: [
-    "https://www.wikidata.org/wiki/Q138682935",
-
-    "https://www.instagram.com/harsh_bharti5",
-
-    "https://youtube.com/@harsh_bharti_kickboxer",
-
-    "https://www.linkedin.com/in/harsh-bharti-931b31251",
-
-    "https://x.com/Harsh_bharti5",
-
-    "https://www.facebook.com/share/1ERg1t4UHH/",
-
-    "https://liquipedia.net/lab/Harsh_bharti",
-
-    "https://sportsmatik.com/athlete/Harshbharti",
-
-    "https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education",
-
-    "https://hi.wikipedia.org/wiki/हर्ष_भारती",
-
-    "https://mr.wikipedia.org/wiki/हर्ष_भारती",
-
-    "https://te.wikipedia.org/wiki/హర్ష్_భారతి",
-
-    "https://gu.wikipedia.org/wiki/હર્ષ_ભારતી",
-
-    "https://bn.wikipedia.org/wiki/হর্ষ_ভারতী",
-
-    "https://ta.wikipedia.org/wiki/ஹர்ஷ்_பாரதி",
-
-    "https://ne.wikipedia.org/wiki/हर्ष_भारती"
+    "https://www.instagram.com/harsh_bharti5/",
+    "https://www.facebook.com/share/1ERw93PBWt/",
+    "https://youtube.com/@kickboxerharsh",
+    "https://www.linkedin.com/in/harsh-bharti-931b31251/",
+    "https://x.com/harsh_bharti5"
   ],
-
-  subjectOf: [
-    {
-      "@type": "NewsArticle",
-      url: "https://www.firstverdict.com/harsh-bharti-won-gold-medal-in-junior-kick-boxing-competition"
-    },
-    {
-      "@type": "Article",
-      url: "https://www.sportanddev.org/latest/news/blueprint-balancing-elite-training-higher-education"
-    }
-  ],
-
   mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": "https://kickboxer-harsh.online"
+    "@id": "https://kickboxer-harsh.online/#webpage"
   }
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-
   "@id": "https://kickboxer-harsh.online/#website",
-
-  url: "https://kickboxer-harsh.online",
-
-  name: "Harsh Bharti",
-
+  url: "https://kickboxer-harsh.online/",
+  name: "Harsh Bharti | Indian Kickboxer",
+  alternateName: "Kickboxer Harsh",
   description:
-    "Official website of Indian Kickboxer Harsh Bharti.",
-
-  inLanguage: "en",
-
+    "Official athlete website of Indian kickboxer Harsh Bharti, with competition results, career profile, media, and sponsorship information.",
+  inLanguage: "en-IN",
   publisher: {
     "@id": "https://kickboxer-harsh.online/#person"
   }
 };
 
-const organizationSchema = {
+const webpageSchema = {
   "@context": "https://schema.org",
-
-  "@type": "Organization",
-
-  "@id": "https://kickboxer-harsh.online/#organization",
-
-  name: "Harsh Bharti",
-
-  url: "https://kickboxer-harsh.online",
-
-  logo: "https://kickboxer-harsh.online/profile.jpg",
-
-  email: "kickboxerharsh@gmail.com",
-
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "Sponsorship and media enquiries",
-    email: "kickboxerharsh@gmail.com",
-    availableLanguage: ["English", "Hindi"]
+  "@type": "WebPage",
+  "@id": "https://kickboxer-harsh.online/#webpage",
+  url: "https://kickboxer-harsh.online/",
+  name: "Harsh Bharti | Indian Kickboxer",
+  description:
+    "Official athlete profile, kickboxing achievements, competition record, and sponsorship enquiries for Harsh Bharti.",
+  isPartOf: {
+    "@id": "https://kickboxer-harsh.online/#website"
   },
-
-  sameAs: [
-    "https://www.instagram.com/harsh_bharti5",
-
-    "https://youtube.com/@harsh_bharti_kickboxer",
-
-    "https://x.com/Harsh_bharti5",
-
-    "https://www.linkedin.com/in/harsh-bharti-931b31251",
-
-    "https://www.facebook.com/share/1ERg1t4UHH/"
-  ]
+  about: {
+    "@id": "https://kickboxer-harsh.online/#person"
+  },
+  mainEntity: {
+    "@id": "https://kickboxer-harsh.online/#person"
+  },
+  inLanguage: "en-IN"
 };
-
-
 
 export default function RootLayout({
   children,
@@ -320,7 +200,7 @@ export default function RootLayout({
   const structuredData = [
     personSchema,
     websiteSchema,
-    organizationSchema,
+    webpageSchema,
   ];
 
   return (
