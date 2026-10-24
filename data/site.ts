@@ -44,7 +44,7 @@ export const stats = [
   { label: "Bronze Medals", value: 1 },
   { label: "Competition Record", value: 7 },
   { label: "Competition Years", value: 8 },
-  { label: "Weight Category", value: "−54 kg" },
+  { label: "Weight Category (kg)", value: 54 },
 ];
 
 export const fightRecords = [
