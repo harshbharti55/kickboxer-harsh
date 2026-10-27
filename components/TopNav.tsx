@@ -9,6 +9,7 @@ const links = [
   { label: 'Achievements', href: '/achievements' },
   { label: 'Calendar', href: '/calendar' },
   { label: 'Media', href: '/media' },
+  { label: 'Articles', href: '/articles' },
   { label: 'Sponsors', href: '/sponsors' },
   { label: 'Contact', href: '/contact' },
 ];
