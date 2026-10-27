@@ -2,22 +2,20 @@ export const boxer = {
   name: 'Harsh Bharti',
   nickname: 'KickBoxer Harsh',
   tagline: 'Fighting for greatness, one round at a time.',
-  age: 19,
-  birthDate: '24 July 2006',
-  hometown: 'Shimla, Himachal Pradesh',
+  hometown: 'Himachal Pradesh, India',
   nationality: 'Indian',
   weightClass: '−54 kg',
   division: 'Full Contact',
   team: 'Himachal Pradesh',
   style:
-    'An aggressive full-contact fighter known for high-volume combinations, speed, pressure fighting, and knockout power.',
-  experienceYears: '8+ years',
+    'A competitive full-contact kickboxing athlete focused on combinations, speed, pressure, and continued technical development.',
+  experienceYears: 'Competition record documented from 2018 onward',
   bio:
-    'Harsh Bharti is an Indian combat-sports athlete from Shimla who combines discipline, pressure, and knockout intent. He competes with a professional mindset and trains to represent India at the highest level.',
+    'Harsh Bharti is an Indian competitive kickboxer from Himachal Pradesh. His recorded competition history includes two gold medals in 2022, silver medals in 2023 and 2025, a bronze medal in 2024, and a fifth-place national finish in 2026.',
   goals: {
     shortTerm: [
-      'Represent India at the World Championship',
-      'Compete at the Uzbekistan World Cup',
+      'Target a Senior World Championship campaign in 2027; selection is not confirmed',
+      'Review international competition opportunities after official dates and eligibility are confirmed',
       'Win National Gold',
     ],
     longTerm: [
@@ -29,22 +27,22 @@ export const boxer = {
   quote:
     'Champions are not made in the ring. They are made in the hours of hard work when nobody is watching.',
   funFacts: [
-    { label: 'Kickboxing experience', value: '8+ years' },
-    { label: 'Wushu experience', value: '4 years' },
-    { label: 'Boxing experience', value: '3 years' },
-    { label: 'Training camps attended', value: '3' },
-    { label: 'Verified record entries', value: '7' },
-    { label: 'Weight category', value: '−54 kg' },
+    { label: 'Gold medals (2022)', value: '2' },
+    { label: 'Silver medals', value: '2' },
+    { label: 'Bronze medals', value: '1' },
+    { label: 'Fifth-place finishes', value: '1' },
+    { label: 'Recorded competition entries', value: '7' },
+    { label: 'Weight class', value: '−54 kg' },
   ],
 };
 
 export const stats = [
-  { label: "Gold Medals · 2022", value: 2 },
-  { label: "Silver Medals", value: 2 },
-  { label: "Bronze Medals", value: 1 },
-  { label: "Competition Record", value: 7 },
-  { label: "Competition Years", value: 8 },
-  { label: "Weight Category (kg)", value: 54 },
+  { label: "Gold Medals · 2022", value: "2" },
+  { label: "Silver Medals", value: "2" },
+  { label: "Bronze Medals", value: "1" },
+  { label: "Fifth-Place Finish", value: "1" },
+  { label: "Competition Entries", value: "7" },
+  { label: "Weight Class", value: "−54 kg" },
 ];
 
 export const fightRecords = [
@@ -110,21 +108,17 @@ export const journey = [
 ];
 
 export const represented = [
-  'Himachal Pradesh Kickboxing Team',
-  'Himachal Pradesh Wushu Team',
-  'State Boxing Competitions',
-  'Inter-University Wushu Championship, Srinagar',
+  'Himachal Pradesh, India',
 ];
 
 export const training = {
-  gym: 'State Combat Sports Training Center',
-  coaches: ['Head Coach', 'Strength Coach', 'Conditioning Coach', 'Sparring Partners'],
+  gym: 'Training location available on request',
+  coaches: [],
   routine: [
-    '4:00 AM – Morning Training',
-    'Strength & Conditioning',
-    'Technical Drills',
-    'Sparring Sessions',
-    'Recovery & Mobility',
+    'Technical drills',
+    'Strength & conditioning',
+    'Sparring and tactical practice',
+    'Recovery and mobility',
   ],
 };
 
@@ -153,7 +147,7 @@ export const achievements = [
   { title: 'Gold Medals (2022)', count: 2 },
   { title: 'Silver Medals', count: 2 },
   { title: 'Bronze Medals', count: 1 },
-  { title: 'Recorded Competitions', count: 7 },
+  { title: 'Fifth-Place Finish (2026)', count: 1 },
 ];
 
 export const gallery = [
@@ -194,7 +188,7 @@ export const sponsors = [
 ];
 
 export const contact = {
-  email: "Kickboxerharsh@gmail.com",
+  email: "kickboxerharsh@gmail.com",
   instagram: "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw",
   facebook: "https://www.facebook.com/share/1ERw93PBWt/",
   youtube: "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
