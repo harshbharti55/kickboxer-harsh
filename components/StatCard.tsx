@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 type Props = {
   label: string;
-  value: number;
+  value: number | string;
 };
 
 export default function StatCard({ label, value }: Props) {
