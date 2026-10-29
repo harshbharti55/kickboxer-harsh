@@ -5,8 +5,10 @@
 :root {
   color-scheme: dark;
   --brand-gold: #e8c56a;
+  --brand-ice: #70d7f2;
+  --brand-blue: #142d50;
   --brand-red: #ff4d6d;
-  --ink: #080c17;
+  --ink: #081426;
 }
 
 html {
@@ -17,10 +19,12 @@ html {
 
 body {
   @apply bg-bg text-soft antialiased;
-  background:
-    radial-gradient(ellipse at 8% 8%, rgba(255, 77, 109, 0.12), transparent 32rem),
-    radial-gradient(ellipse at 90% 14%, rgba(72, 229, 224, 0.09), transparent 28rem),
-    linear-gradient(180deg, #080c17 0%, #0b1020 48%, #070a13 100%);
+  background-color: #081426;
+  background-image:
+    radial-gradient(ellipse at 12% 7%, rgba(51, 132, 190, 0.30), transparent 34rem),
+    radial-gradient(ellipse at 88% 20%, rgba(82, 211, 239, 0.16), transparent 30rem),
+    radial-gradient(ellipse at 55% 72%, rgba(232, 197, 106, 0.07), transparent 35rem),
+    linear-gradient(180deg, #0d1e36 0%, #09172a 45%, #07111f 100%);
   min-width: 320px;
   overflow-x: clip;
 }
@@ -43,9 +47,10 @@ button, a {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(26, 57, 91, 0.72), rgba(11, 26, 46, 0.84));
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(112, 215, 242, 0.17);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
 }
 
 .grid-overlay {
@@ -55,7 +60,7 @@ button, a {
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 4%, #f5d98b 42%, #e8c56a 62%, #ff4d6d 100%);
+  background: linear-gradient(100deg, #ffffff 4%, #aeeeff 36%, #e8c56a 72%, #fff1b6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -78,9 +83,10 @@ button, a {
 .hero-stage {
   isolation: isolate;
   background:
-    radial-gradient(ellipse at 75% 42%, rgba(255,77,109,.12), transparent 34%),
-    radial-gradient(ellipse at 12% 70%, rgba(72,229,224,.07), transparent 32%),
-    #080c17;
+    radial-gradient(ellipse at 78% 38%, rgba(79, 198, 236, .20), transparent 36%),
+    radial-gradient(ellipse at 12% 68%, rgba(41, 113, 183, .20), transparent 34%),
+    radial-gradient(ellipse at 48% 100%, rgba(232,197,106,.08), transparent 38%),
+    linear-gradient(135deg, #102541 0%, #09172a 54%, #07111f 100%);
 }
 .hero-grid {
   opacity: .42;
@@ -92,7 +98,7 @@ button, a {
   text-shadow: 0 6px 0 rgba(255,255,255,.025), 0 24px 60px rgba(0,0,0,.35);
 }
 .hero-name-accent {
-  background: linear-gradient(100deg, #fff1a3 0%, #ffd700 35%, #ff5a5f 78%, #d90429 100%);
+  background: linear-gradient(100deg, #ffffff 0%, #9be8fb 35%, #e8c56a 78%, #fff0b0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
