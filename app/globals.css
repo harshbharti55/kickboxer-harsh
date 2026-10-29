@@ -19,12 +19,12 @@ html {
 
 body {
   @apply bg-bg text-soft antialiased;
-  background-color: #081426;
+  background-color: #0b1b30;
   background-image:
-    radial-gradient(ellipse at 12% 7%, rgba(51, 132, 190, 0.30), transparent 34rem),
-    radial-gradient(ellipse at 88% 20%, rgba(82, 211, 239, 0.16), transparent 30rem),
+    radial-gradient(ellipse at 12% 7%, rgba(55, 145, 211, 0.38), transparent 36rem),
+    radial-gradient(ellipse at 88% 20%, rgba(82, 211, 239, 0.22), transparent 32rem),
     radial-gradient(ellipse at 55% 72%, rgba(232, 197, 106, 0.07), transparent 35rem),
-    linear-gradient(180deg, #0d1e36 0%, #09172a 45%, #07111f 100%);
+    linear-gradient(180deg, #102744 0%, #0b1b30 48%, #091729 100%);
   min-width: 320px;
   overflow-x: clip;
 }
@@ -47,7 +47,7 @@ button, a {
 }
 
 .glass {
-  background: linear-gradient(145deg, rgba(26, 57, 91, 0.72), rgba(11, 26, 46, 0.84));
+  background: linear-gradient(145deg, rgba(31, 69, 108, 0.76), rgba(13, 34, 58, 0.88));
   backdrop-filter: blur(18px);
   border: 1px solid rgba(112, 215, 242, 0.17);
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
