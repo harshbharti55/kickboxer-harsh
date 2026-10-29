@@ -11,7 +11,7 @@ export default function Hero() {
   const medals = competitionRecords.filter((record) => ['gold', 'silver', 'bronze'].includes(record.kind)).length;
 
   return (
-    <section id="home" className="hero-stage relative isolate overflow-hidden bg-[#080c17] text-white">
+    <section id="home" className="hero-stage relative isolate overflow-hidden text-white">
       <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-[#ff4d6d]/20 blur-[100px]" aria-hidden="true" />
       <div className="pointer-events-none absolute right-[-5rem] top-40 h-96 w-96 rounded-full bg-[#e8c56a]/10 blur-[120px]" aria-hidden="true" />
