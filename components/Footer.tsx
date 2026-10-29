@@ -131,7 +131,9 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={social.name}\n                    title={social.name}\n                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-sky-100/15 bg-[#0a2036]/70 text-white transition hover:border-gold hover:bg-gold hover:text-black"
+                    aria-label={social.name}
+                    title={social.name}
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-sky-100/15 bg-[#0a2036]/70 text-white transition hover:border-gold hover:bg-gold hover:text-black"
                   >
                     <Icon />
                   </a>
