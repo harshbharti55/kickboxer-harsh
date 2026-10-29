@@ -92,7 +92,7 @@ export default function ArticlePage() {
           <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">My competition record</h2>
           <p className="mt-4 max-w-2xl leading-7 text-slate-400">These milestones reflect the competition history supplied for my athlete profile.</p>
           <ol className="mt-8 space-y-4">
-            {milestones.map((item, index) => (
+            {milestones.map((item) => (
               <li key={`${item.year}-${item.event}`} className="grid gap-4 rounded-2xl border border-white/10 bg-white/[.035] p-5 sm:grid-cols-[5rem_1fr] sm:p-6">
                 <div className="text-2xl font-black text-[#8bdcff]">{item.year}</div>
                 <div>
