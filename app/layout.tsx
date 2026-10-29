@@ -202,7 +202,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${bebas.variable} font-sans antialiased bg-black`}
+        className={`${inter.variable} ${bebas.variable} font-sans antialiased`}
       >
         <script
           type="application/ld+json"
