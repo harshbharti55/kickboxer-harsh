@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#080C17',
+        bg: '#0B1B30',
         redbrand: '#FF4D6D',
         gold: '#E8C56A',
         soft: '#F5F5F5',
@@ -19,7 +19,7 @@ const config: Config = {
         glow: '0 0 0 1px rgba(255,215,0,0.18), 0 20px 80px rgba(0,0,0,0.45)',
       },
       backgroundImage: {
-        'hero-radial': 'radial-gradient(circle at top, rgba(217,4,41,.28), transparent 40%), radial-gradient(circle at right, rgba(255,215,0,.13), transparent 28%), linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0))',
+        'hero-radial': 'radial-gradient(circle at top, rgba(64,177,224,.24), transparent 42%), radial-gradient(circle at right, rgba(232,197,106,.13), transparent 30%), linear-gradient(180deg, rgba(35,76,119,.22), rgba(8,20,38,.08))',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
