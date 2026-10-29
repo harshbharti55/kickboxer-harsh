@@ -159,8 +159,12 @@ export default function Footer() {
 
         </div>
 
+        {/* Bottom divider: ice-blue line with a gold center accent */}
+        <div className="mt-16 h-px w-full bg-gradient-to-r from-transparent via-sky-200/45 to-transparent" aria-hidden="true" />
+        <div className="mx-auto -mt-px h-[2px] w-24 rounded-full bg-gradient-to-r from-sky-300 via-[#e8c56a] to-sky-300 shadow-[0_0_18px_rgba(125,211,252,0.28)]" aria-hidden="true" />
+
         {/* Bottom */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center lg:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-5 border-t border-sky-100/10 pt-8 text-center lg:flex-row">
 
           <p className="text-sm text-white/50">
             © {new Date().getFullYear()} {boxer.name}. All Rights Reserved.
