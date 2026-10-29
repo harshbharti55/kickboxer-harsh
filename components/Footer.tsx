@@ -6,30 +6,30 @@ import {
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
+  FaYoutube,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 import { boxer } from "@/data/site";
 
 const SOCIALS = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/harsh_bharti5",
+    href: "https://www.instagram.com/harsh_bharti5?vrfl=NmhnZ3M3MWdhbDMw",
     icon: FaInstagram,
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/share/1Dw6ZKqKyE/",
+    href: "https://www.facebook.com/share/1ERw93PBWt/",
     icon: FaFacebookF,
   },
   {
-    name: "X",
-    href: "https://x.com/Harsh_bharti5",
-    icon: FaXTwitter,
+    name: "YouTube",
+    href: "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
+    icon: FaYoutube,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/harsh-bharti-931b31251",
+    href: "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     icon: FaLinkedinIn,
   },
 ];
@@ -49,10 +49,10 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-black">
+    <footer className="relative overflow-hidden border-t border-sky-200/15 bg-[linear-gradient(145deg,#102943_0%,#0b1d32_48%,#081626_100%)]">
 
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_12%_0%,rgba(56,189,248,0.12),transparent_45%),radial-gradient(ellipse_at_85%_10%,rgba(232,197,106,0.08),transparent_40%)]" />
 
       <div className="container-page relative z-10 py-20">
 
@@ -131,7 +131,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:border-gold hover:bg-gold hover:text-black"
+                    aria-label={social.name}\n                    title={social.name}\n                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-sky-100/15 bg-[#0a2036]/70 text-white transition hover:border-gold hover:bg-gold hover:text-black"
                   >
                     <Icon />
                   </a>
@@ -139,9 +139,9 @@ export default function Footer() {
               })}
             </div>
 
-            <a href="mailto:kickboxerharsh@gmail.com" className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-gold/20 bg-gold/5 p-5 text-white transition hover:border-gold/50"><span className="text-gold">Email</span><span>kickboxerharsh@gmail.com</span></a>
+            <a href="mailto:kickboxerharsh@gmail.com" className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-sky-100/15 bg-[#0a2036]/70 p-5 text-white transition hover:border-gold/50"><span className="text-gold">Email</span><span>kickboxerharsh@gmail.com</span></a>
 
-            <div className="mt-8 rounded-2xl border border-gold/20 bg-gold/5 p-5">
+            <div className="mt-8 rounded-2xl border border-sky-100/15 bg-[#0a2036]/70 p-5">
 
               <p className="text-xs uppercase tracking-[0.3em] text-gold">
                 Available For
@@ -170,7 +170,7 @@ export default function Footer() {
 
           <a
             href="#home"
-            className="rounded-full border border-white/10 px-5 py-2 text-sm font-medium text-white transition hover:border-gold hover:text-gold"
+            className="rounded-full border border-sky-100/15 bg-[#0a2036]/50 px-5 py-2 text-sm font-medium text-white transition hover:border-gold hover:text-gold"
           >
             ↑ Back to Top
           </a>
