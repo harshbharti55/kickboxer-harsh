@@ -171,7 +171,7 @@ export default function Footer() {
           </p>
 
           <p className="text-sm text-white/40">
-            Designed & Developed with ❤️ for champions.
+            Harsh Bharti | Indian Kickboxing Athlete
           </p>
 
           <a
