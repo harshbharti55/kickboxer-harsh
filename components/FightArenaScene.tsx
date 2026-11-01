@@ -16,8 +16,8 @@ function RingRopes() {
   return (
     <group>
       {ropes.map((rope, i) => (
-        <mesh key={i} position={rope.position} scale={rope.scale} rotation={rope.rotation}>
-          <cylinderGeometry args={[0.035, 0.035, 1, 8]} />
+        <mesh key={i} position={rope.position} rotation={rope.rotation}>
+          <boxGeometry args={[rope.scale[0], 0.035, 0.035]} />
           <meshStandardMaterial color={i % 4 === 0 ? '#e8c56a' : '#70d7f2'} metalness={0.55} roughness={0.3} emissive={i % 4 === 0 ? '#8c6420' : '#123d58'} emissiveIntensity={0.35} />
         </mesh>
       ))}
