@@ -1,10 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowDownRight, ArrowUpRight, Medal, Trophy, Handshake, PlayCircle } from 'lucide-react';
 import { athlete, competitionRecords, sponsorshipGoal } from '@/data/athlete';
+
+const FightArenaScene = dynamic(() => import('./FightArenaScene'), { ssr: false });
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -12,6 +15,8 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-stage relative isolate overflow-hidden text-white">
+      <FightArenaScene />
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(7,17,31,0.78)_0%,rgba(7,17,31,0.42)_48%,rgba(7,17,31,0.16)_100%)]" aria-hidden="true" />
       <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-[#ff4d6d]/20 blur-[100px]" aria-hidden="true" />
       <div className="pointer-events-none absolute right-[-5rem] top-40 h-96 w-96 rounded-full bg-[#e8c56a]/10 blur-[120px]" aria-hidden="true" />
