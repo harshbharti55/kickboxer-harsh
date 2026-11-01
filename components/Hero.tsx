@@ -1,10 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowDownRight, ArrowUpRight, Medal, Trophy, Handshake, PlayCircle } from 'lucide-react';
 import { athlete, competitionRecords, sponsorshipGoal } from '@/data/athlete';
+
+const FightArenaScene = dynamic(() => import('./FightArenaScene'), { ssr: false });
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
