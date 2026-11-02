@@ -101,39 +101,32 @@ export interface PlannedGoal {
 /** Tentative planning windows only; not official event dates or confirmed entries. */
 export const plannedGoals2027: PlannedGoal[] = [
   {
-    name: "India Open International Kickboxing Cup",
+    name: "South Asian Kickboxing Championship 2027",
     status: "Planned goal",
-    planningWindow: "Target: February 2027",
-    targetLocation: "India",
-    note: "Tentative planning window; event dates and entry unconfirmed.",
+    planningWindow: "11–17 January 2027",
+    targetLocation: "Nepal",
+    note: "Date and host country are from the newly released federation calendar supplied by the athlete. Personal entry, selection, eligibility and participation are not confirmed.",
   },
   {
-    name: "WAKO World Cup — Italy",
+    name: "3rd Thailand Kickboxing World Cup 2027",
     status: "Planned goal",
-    planningWindow: "Target window: March–June 2027",
-    targetLocation: "Italy",
-    note: "Tentative planning window; event dates and entry unconfirmed.",
+    planningWindow: "11–14 February 2027",
+    targetLocation: "Bangkok, Thailand",
+    note: "Date and venue are from the newly released federation calendar supplied by the athlete. Personal entry, selection, eligibility and participation are not confirmed.",
   },
   {
-    name: "Thailand World Cup",
+    name: "6th India Open International Kickboxing Cup 2027",
     status: "Planned goal",
-    planningWindow: "Target window: April–August 2027",
-    targetLocation: "Thailand",
-    note: "Tentative planning window; event dates and entry unconfirmed.",
-  },
-  {
-    name: "Uzbekistan World Cup",
-    status: "Planned goal",
-    planningWindow: "Target window: September–October 2027",
-    targetLocation: "Uzbekistan",
-    note: "Tentative planning window; event dates and entry unconfirmed.",
+    planningWindow: "26–30 March 2027",
+    targetLocation: "New Delhi, India",
+    note: "Date and host city are from the newly released federation calendar supplied by the athlete. Personal entry, selection, eligibility and participation are not confirmed.",
   },
   {
     name: "WAKO Senior World Kickboxing Championship",
     status: "Planned goal",
     planningWindow: "2027 — exact dates to be confirmed",
     targetLocation: "Tashkent, Uzbekistan (target)",
-    note: "Primary international goal. Selection, eligibility, dates, and participation are not confirmed.",
+    note: "Separate long-term international target. Selection, eligibility, event dates, funding and participation are not confirmed.",
   },
 ];
 
