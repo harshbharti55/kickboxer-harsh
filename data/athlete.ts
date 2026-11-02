@@ -88,7 +88,7 @@ export const competitionRecords: CompetitionRecord[] = [
 ];
 
 export const PLANNED_NOTE =
-  "These are planning targets only. Dates, eligibility, selection, and participation must be confirmed through official event and federation information.";
+  "Event dates and host locations reflect the federation calendar details supplied by the athlete. These are target competitions only; the athlete’s eligibility, selection, entry, and participation are not confirmed.";
 
 export interface PlannedGoal {
   name: string;
