@@ -63,7 +63,7 @@ export default function CalendarPage() {
           })}
         </div>
         <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm leading-6 text-white/55">
-          Planning windows are athlete goals, not official event dates. Confirm the calendar, eligibility, qualification/selection process, registration, and travel budget with the relevant federation before making commitments.
+          Dates and host locations shown above reflect the newly released federation calendar details supplied by the athlete. These calendar listings do not confirm Harsh Bharti’s personal entry, eligibility, selection, qualification, registration, or participation. Confirm individual requirements and travel costs with the relevant federation before making commitments.
           <div className="mt-3 flex flex-wrap gap-4">
             <a className="inline-flex items-center gap-1 text-gold underline" href="https://www.wako.sport/event-list" target="_blank" rel="noreferrer">WAKO event list <ArrowUpRight className="h-3 w-3" /></a>
             <a className="inline-flex items-center gap-1 text-gold underline" href="https://www.wakoindia.org/calendar/" target="_blank" rel="noreferrer">WAKO India calendar <ArrowUpRight className="h-3 w-3" /></a>
