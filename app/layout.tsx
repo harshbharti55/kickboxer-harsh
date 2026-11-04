@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const bebas = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--font-bebas' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kickboxer-harsh.online'),
+  metadataBase: new URL('https://www.kickboxer-harsh.online'),
   verification: {
     google: "LTDs5YFw033xWbomaMJ02IX1EGHQl9QbblH-xRsHAPs",
   },
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     'Indian Kickboxer', 'Full Contact Kickboxing', 'WAKO India',
     'National Kickboxing Medalist', 'Himachal Pradesh Athlete',
   ],
-  authors: [{ name: 'Harsh Bharti', url: 'https://kickboxer-harsh.online' }],
+  authors: [{ name: 'Harsh Bharti', url: 'https://www.kickboxer-harsh.online' }],
   creator: 'Harsh Bharti',
   publisher: 'Harsh Bharti',
-  alternates: { canonical: 'https://kickboxer-harsh.online/' },
+  alternates: { canonical: 'https://www.kickboxer-harsh.online/' },
   robots: {
     index: true,
     follow: true,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://kickboxer-harsh.online/',
+    url: 'https://www.kickboxer-harsh.online/',
     siteName: 'Harsh Bharti',
     title: 'Harsh Bharti | Indian Kickboxer',
     description: 'Official athlete profile, national competition record, kickboxing media and sponsorship information for Harsh Bharti.',
@@ -59,12 +59,12 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://kickboxer-harsh.online/#person",
+  "@id": "https://www.kickboxer-harsh.online/#person",
   name: "Harsh Bharti",
   alternateName: ["Kickboxer Harsh", "Harsh Bharti Kickboxer"],
-  url: "https://kickboxer-harsh.online/",
+  url: "https://www.kickboxer-harsh.online/",
   image: [
-    "https://kickboxer-harsh.online/media/hero.png",
+    "https://www.kickboxer-harsh.online/media/hero.png",
   ],
   email: "kickboxerharsh@gmail.com",
   description: "Harsh Bharti is an Indian competitive full contact kickboxer from Himachal Pradesh. His official website presents his athlete profile, competition record, media and sponsorship enquiries.",
@@ -77,31 +77,31 @@ const personSchema = {
     "https://youtube.com/@kickboxerharsh?si=wMdeCiRbkroEMKWb",
     "https://www.linkedin.com/in/harsh-bharti-931b31251?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   ],
-  mainEntityOfPage: { "@id": "https://kickboxer-harsh.online/#webpage" }
+  mainEntityOfPage: { "@id": "https://www.kickboxer-harsh.online/#webpage" }
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://kickboxer-harsh.online/#website",
-  url: "https://kickboxer-harsh.online/",
+  "@id": "https://www.kickboxer-harsh.online/#website",
+  url: "https://www.kickboxer-harsh.online/",
   name: "Harsh Bharti | Indian Kickboxer",
   alternateName: "Kickboxer Harsh",
   description: "Official athlete website of Indian kickboxer Harsh Bharti, with competition results, career profile, media and sponsorship information.",
   inLanguage: "en-IN",
-  publisher: { "@id": "https://kickboxer-harsh.online/#person" }
+  publisher: { "@id": "https://www.kickboxer-harsh.online/#person" }
 };
 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://kickboxer-harsh.online/#webpage",
-  url: "https://kickboxer-harsh.online/",
+  "@id": "https://www.kickboxer-harsh.online/#webpage",
+  url: "https://www.kickboxer-harsh.online/",
   name: "Harsh Bharti | Indian Kickboxer",
   description: "Official athlete profile, kickboxing achievements, competition record and sponsorship enquiries for Harsh Bharti.",
-  isPartOf: { "@id": "https://kickboxer-harsh.online/#website" },
-  about: { "@id": "https://kickboxer-harsh.online/#person" },
-  mainEntity: { "@id": "https://kickboxer-harsh.online/#person" },
+  isPartOf: { "@id": "https://www.kickboxer-harsh.online/#website" },
+  about: { "@id": "https://www.kickboxer-harsh.online/#person" },
+  mainEntity: { "@id": "https://www.kickboxer-harsh.online/#person" },
   inLanguage: "en-IN"
 };
 
