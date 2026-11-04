@@ -115,12 +115,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main className="pt-20">{children}</main>
         <Footer />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-4NW5L754S1" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4NWSL7S4S1" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-4NW5L754S1');
+            gtag('config', 'G-4NWSL7S4S1');
           `}
         </Script>
       </body>
