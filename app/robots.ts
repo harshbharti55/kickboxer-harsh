@@ -11,8 +11,8 @@ export default function robots(): MetadataRoute.Robots {
       ],
     },
 
-    sitemap: "https://kickboxer-harsh.online/sitemap.xml",
+    sitemap: "https://www.kickboxer-harsh.online/sitemap.xml",
 
-    host: "https://kickboxer-harsh.online",
+    host: "https://www.kickboxer-harsh.online",
   };
 }
