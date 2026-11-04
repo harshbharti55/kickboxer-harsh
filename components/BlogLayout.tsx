@@ -11,7 +11,7 @@ export default function BlogLayout({
   category,
   children,
 }: BlogProps) {
-  const articleUrl = `https://kickboxer-harsh.online/articles/${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+  const articleUrl = `https://www.kickboxer-harsh.online/articles/${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
   const dateIso = new Date(date).toISOString().slice(0, 10);
   const articleSchema = {
     "@context": "https://schema.org",
@@ -21,8 +21,8 @@ export default function BlogLayout({
     datePublished: dateIso,
     dateModified: dateIso,
     mainEntityOfPage: articleUrl,
-    author: { "@type": "Person", "@id": "https://kickboxer-harsh.online/#person", name: "Harsh Bharti", url: "https://kickboxer-harsh.online/" },
-    publisher: { "@type": "Organization", "@id": "https://kickboxer-harsh.online/#organization", name: "Harsh Bharti", url: "https://kickboxer-harsh.online/" },
+    author: { "@type": "Person", "@id": "https://www.kickboxer-harsh.online/#person", name: "Harsh Bharti", url: "https://www.kickboxer-harsh.online/" },
+    publisher: { "@type": "Organization", "@id": "https://www.kickboxer-harsh.online/#organization", name: "Harsh Bharti", url: "https://www.kickboxer-harsh.online/" },
     inLanguage: "en-IN",
   };
   return (
