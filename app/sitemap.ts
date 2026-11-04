@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://kickboxer-harsh.online";
+const BASE_URL = "https://www.kickboxer-harsh.online";
 
 const pages = [
   "",

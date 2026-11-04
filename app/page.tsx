@@ -22,11 +22,11 @@ export default function Page() {
             "@graph": [
               {
                 "@type": "ProfilePage",
-                "@id": "https://kickboxer-harsh.online/#profile",
-                url: "https://kickboxer-harsh.online/",
+                "@id": "https://www.kickboxer-harsh.online/#profile",
+                url: "https://www.kickboxer-harsh.online/",
                 name: "Harsh Bharti Athlete Profile",
-                mainEntity: { "@id": "https://kickboxer-harsh.online/#person" },
-                isPartOf: { "@id": "https://kickboxer-harsh.online/#website" },
+                mainEntity: { "@id": "https://www.kickboxer-harsh.online/#person" },
+                isPartOf: { "@id": "https://www.kickboxer-harsh.online/#website" },
               },
             ],
           }).replace(/</g, "\\u003c"),

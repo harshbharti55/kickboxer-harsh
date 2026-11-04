@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
 
-const baseUrl = "https://kickboxer-harsh.online";
+const baseUrl = "https://www.kickboxer-harsh.online";
 const articleUrl = `${baseUrl}/articles/my-kickboxing-journey`;
 
 export const metadata: Metadata = {

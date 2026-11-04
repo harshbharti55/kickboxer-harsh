@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kickboxer-harsh.online/sitemap.xml
+Sitemap: https://www.kickboxer-harsh.online/sitemap.xml

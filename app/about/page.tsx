@@ -1,547 +1,104 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  User,
-  Trophy,
-  Flag,
-  Target,
-} from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Flag, Medal, Target, Trophy } from "lucide-react";
+import { athlete, competitionRecords, plannedGoals2027 } from "@/data/athlete";
 
 export default function AboutPage() {
   return (
-    <main className="bg-black text-white">
-
-      {/* Hero */}
-
-      <section className="relative overflow-hidden py-28">
-
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_60%)]" />
-        <div className="absolute inset-0 grid-overlay opacity-20" />
-
-        <div className="container-page relative z-10">
-
-          <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mx-auto max-w-4xl text-center"
-          >
-
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-gold">
-
-              <User className="h-4 w-4" />
-
-              About Harsh Bharti
-
-            </div>
-
-            <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl">
-
-              Passion.
-
-              <span className="block text-gradient">
-                Discipline. Excellence.
-              </span>
-
-            </h1>
-
-            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/70">
-
-              National medal-winning Full Contact Kickboxer dedicated to
-              representing India with pride while inspiring the next
-              generation through sport, discipline and perseverance.
-
+    <main className="min-h-screen bg-[#081626] text-white">
+      <section className="relative overflow-hidden border-b border-sky-200/10 bg-[radial-gradient(circle_at_80%_20%,rgba(56,189,248,.14),transparent_36%),linear-gradient(145deg,#102943,#081626_65%)] py-24 sm:py-32">
+        <div className="container-page relative z-10 grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .65 }}>
+            <p className="text-xs font-bold uppercase tracking-[.32em] text-[#e8c56a]">Athlete profile · India</p>
+            <h1 className="mt-5 font-display text-6xl leading-[.95] sm:text-7xl lg:text-8xl">HARSH <span className="block text-sky-200">BHARTI.</span></h1>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200/75">
+              {athlete.name} is an Indian competitive {athlete.discipline} athlete from {athlete.region}. His journey is shaped by national championship experience, disciplined preparation and the ambition to compete internationally.
             </p>
-
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="rounded-full border border-sky-200/20 bg-sky-200/5 px-4 py-2 text-sm text-sky-100">🇮🇳 Representing India</span>
+              <span className="rounded-full border border-sky-200/20 bg-sky-200/5 px-4 py-2 text-sm text-sky-100">{athlete.weightClass}</span>
+              <span className="rounded-full border border-sky-200/20 bg-sky-200/5 px-4 py-2 text-sm text-sky-100">National medalist</span>
+            </div>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link href="/achievements" className="inline-flex items-center gap-2 rounded-xl bg-[#e8c56a] px-5 py-3 font-bold text-[#081626]">Competition record <ArrowUpRight className="h-4 w-4" /></Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-5 py-3 font-bold text-white hover:border-sky-200/50">Contact & socials <ArrowUpRight className="h-4 w-4" /></Link>
+            </div>
           </motion.div>
-
+          <motion.div initial={{ opacity: 0, scale: .97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .7, delay: .1 }} className="relative mx-auto w-full max-w-lg">
+            <div className="absolute -inset-3 rounded-[2rem] border border-sky-200/20" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] border border-white/15 bg-[#102943]">
+              <Image src="/media/hero.png" alt="Harsh Bharti, Indian full contact kickboxing athlete" fill priority sizes="(max-width: 1024px) 90vw, 42vw" className="object-cover object-top" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#081626]/90 via-transparent to-transparent" />
+              <p className="absolute bottom-6 left-6 text-xs font-bold uppercase tracking-[.28em] text-[#e8c56a]">Discipline · Courage · Consistency</p>
+            </div>
+          </motion.div>
         </div>
-
       </section>
 
-      {/* Profile */}
-
-      <section className="container-page py-24">
-
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="overflow-hidden rounded-[2.5rem] border border-white/10"
-          >
-
-            <div className="relative aspect-[4/5]">
-
-              <Image
-                src="/media/hero.png"
-                alt="Harsh Bharti"
-                fill
-                priority
-                className="object-cover"
-              />
-
-            </div>
-
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Athlete Profile
-            </p>
-
-            <h2 className="mt-4 font-display text-5xl">
-              My Story
-            </h2>
-
-            <p className="mt-8 text-lg leading-8 text-white/70">
-              I am Harsh Bharti, an Indian Full Contact Kickboxing athlete
-              committed to continuous improvement, national excellence,
-              and international success. Every competition is an
-              opportunity to grow stronger, represent my country and
-              inspire others through hard work and determination.
-            </p>
-
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
-
-              <div className="glass rounded-3xl border border-white/10 p-6">
-
-                <Trophy className="h-8 w-8 text-gold" />
-
-                <h3 className="mt-4 text-xl font-semibold">
-                  National Medalist
-                </h3>
-
-              </div>
-
-              <div className="glass rounded-3xl border border-white/10 p-6">
-
-                <Flag className="h-8 w-8 text-gold" />
-
-                <h3 className="mt-4 text-xl font-semibold">
-                  Representing India
-                </h3>
-
-              </div>
-
-              <div className="glass rounded-3xl border border-white/10 p-6">
-
-                <Target className="h-8 w-8 text-gold" />
-
-                <h3 className="mt-4 text-xl font-semibold">
-                  World Championship Goal
-                </h3>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-        </div>
-
-      </section>
-      
-            {/* Career Journey */}
-
-      <section className="container-page py-24">
-
-        <div className="mx-auto max-w-3xl text-center">
-
-          <p className="text-sm uppercase tracking-[0.35em] text-gold">
-            My Journey
-          </p>
-
-          <h2 className="mt-4 font-display text-5xl text-white">
-            Building A Champion
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-white/70">
-            My kickboxing journey has been built on dedication, discipline,
-            continuous learning and a dream of representing India at the
-            highest level.
-          </p>
-
-        </div>
-
-        <div className="relative mx-auto mt-20 max-w-5xl">
-
-          <div className="absolute left-4 top-0 h-full w-px bg-gold/30 lg:left-1/2" />
-
+      <section className="container-page py-20 sm:py-24">
+        <div className="grid gap-5 sm:grid-cols-3">
           {[
-            {
-              year: "2017",
-              title: "Started Kickboxing",
-              description:
-                "Began my journey with a dream of becoming an elite athlete.",
-            },
-            {
-              year: "2022",
-              title: "National Gold Medal",
-              description:
-                "Won Gold Medal at the Junior National Kickboxing Championship.",
-            },
-            {
-              year: "2023",
-              title: "National Silver Medal",
-              description:
-                "Earned Silver Medal at the WAKO India National Championship.",
-            },
-            {
-              year: "2024",
-              title: "National Bronze Medal",
-              description:
-                "Continued improving with another national podium finish.",
-            },
-            {
-              year: "2025",
-              title: "Senior National Silver",
-              description:
-                "Achieved Silver Medal at the Senior National Championship.",
-            },
-            {
-              year: "Future",
-              title: "World Championship",
-              description:
-                "Working every day to represent India on the world stage.",
-            },
-          ].map((item, index) => (
+            { icon: Trophy, title: "Two gold medals", detail: "WAKO India Open National Tournament · 2022" },
+            { icon: Medal, title: "National podiums", detail: "Silver in 2023 and 2025; bronze in 2024" },
+            { icon: Flag, title: "Latest national result", detail: "5th place · Seniors & Masters · 2026" },
+          ].map((item) => {
+            const Icon = item.icon;
+            return <div key={item.title} className="rounded-2xl border border-sky-200/15 bg-gradient-to-br from-[#173957] to-[#0c2037] p-6">
+              <Icon className="h-7 w-7 text-[#e8c56a]" />
+              <h2 className="mt-5 text-xl font-bold">{item.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-300/65">{item.detail}</p>
+            </div>;
+          })}
+        </div>
+      </section>
 
-            <motion.div
-              key={item.year}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.08 }}
-              className={`relative mb-12 lg:flex ${
-                index % 2 === 0
-                  ? "lg:flex-row"
-                  : "lg:flex-row-reverse"
-              }`}
-            >
-
-              <div className="absolute left-1 top-6 h-6 w-6 rounded-full border-4 border-black bg-gold lg:left-1/2 lg:-translate-x-1/2" />
-
-              <div className="ml-12 lg:ml-0 lg:w-1/2 lg:px-10">
-
-                <div className="glass rounded-[2rem] border border-white/10 p-8">
-
-                  <span className="rounded-full bg-gold/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-                    {item.year}
-                  </span>
-
-                  <h3 className="mt-6 text-3xl font-display text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-5 leading-8 text-white/70">
-                    {item.description}
-                  </p>
-
+      <section className="border-y border-sky-200/10 bg-[#0c2035] py-20">
+        <div className="container-page">
+          <p className="text-xs font-bold uppercase tracking-[.3em] text-[#e8c56a]">The journey</p>
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl">COMPETITION RECORD</h2>
+          <p className="mt-4 max-w-2xl leading-7 text-slate-300/65">The following results and participation details are based on the competition record supplied by the athlete.</p>
+          <ol className="mt-10 space-y-4">
+            {competitionRecords.map((record) => (
+              <li key={`${record.year}-${record.event}`} className="grid gap-3 rounded-2xl border border-white/10 bg-white/[.035] p-5 sm:grid-cols-[110px_1fr_auto] sm:items-center sm:p-6">
+                <p className="font-display text-3xl text-sky-200">{record.year}</p>
+                <div>
+                  <h3 className="font-bold text-white">{record.event}</h3>
+                  <p className="mt-1 text-sm text-slate-300/60">{record.location}{record.date ? ` · ${record.date}` : ""}{record.category ? ` · ${record.category}` : ""}</p>
                 </div>
-
-              </div>
-
-            </motion.div>
-
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* Mission & Vision */}
-
-      <section className="container-page py-24">
-
-        <div className="grid gap-8 lg:grid-cols-2">
-
-          <motion.div
-            whileHover={{ y: -8 }}
-            className="glass rounded-[2.5rem] border border-white/10 p-10"
-          >
-
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Mission
-            </p>
-
-            <h2 className="mt-5 font-display text-4xl text-white">
-              Inspire Through Sport
-            </h2>
-
-            <p className="mt-6 leading-8 text-white/70">
-              To compete with integrity, inspire young athletes and proudly
-              represent India while promoting the values of discipline,
-              respect and perseverance through kickboxing.
-            </p>
-
-          </motion.div>
-
-          <motion.div
-            whileHover={{ y: -8 }}
-            className="glass rounded-[2.5rem] border border-white/10 p-10"
-          >
-
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Vision
-            </p>
-
-            <h2 className="mt-5 font-display text-4xl text-white">
-              Global Excellence
-            </h2>
-
-            <p className="mt-6 leading-8 text-white/70">
-              To become a World Championship medalist, build a lasting
-              legacy in Indian kickboxing and motivate future generations
-              to pursue excellence in sport.
-            </p>
-
-          </motion.div>
-
-        </div>
-
-      </section>
-            {/* Athlete Profile */}
-
-      <section className="container-page py-24">
-
-        <div className="mx-auto max-w-3xl text-center">
-
-          <p className="text-sm uppercase tracking-[0.35em] text-gold">
-            Athlete Profile
-          </p>
-
-          <h2 className="mt-4 font-display text-5xl text-white">
-            Beyond The Medals
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-white/70">
-            My journey is built on discipline, resilience and the desire to
-            continually improve as both an athlete and an individual.
-          </p>
-
-        </div>
-
-        <div className="mt-20 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-
-          {/* Stats */}
-
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="grid gap-6 sm:grid-cols-2"
-          >
-
-            {[
-              {
-                value: "8+",
-                label: "Years Experience",
-              },
-              {
-                value: "20+",
-                label: "Competitions",
-              },
-              {
-                value: "5+",
-                label: "National Medals",
-              },
-              {
-                value: "100%",
-                label: "Commitment",
-              },
-            ].map((item) => (
-
-              <motion.div
-                key={item.label}
-                whileHover={{ y: -6 }}
-                className="glass rounded-[2rem] border border-white/10 p-8 text-center"
-              >
-
-                <h3 className="text-5xl font-display text-gold">
-                  {item.value}
-                </h3>
-
-                <p className="mt-4 uppercase tracking-[0.25em] text-white/60">
-                  {item.label}
-                </p>
-
-              </motion.div>
-
+                <span className="w-fit rounded-full border border-[#e8c56a]/30 px-3 py-1.5 text-xs font-bold text-[#e8c56a]">{record.headline}</span>
+              </li>
             ))}
-
-          </motion.div>
-
-          {/* Core Values */}
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="glass rounded-[2.5rem] border border-white/10 p-10"
-          >
-
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Core Values
-            </p>
-
-            <h2 className="mt-5 font-display text-4xl text-white">
-              What Drives Me
-            </h2>
-
-            <div className="mt-10 space-y-6">
-
-              {[
-                {
-                  title: "Discipline",
-                  text: "Daily commitment to training, recovery and continuous improvement.",
-                },
-                {
-                  title: "Respect",
-                  text: "Respect for coaches, teammates, opponents and the sport.",
-                },
-                {
-                  title: "Perseverance",
-                  text: "Overcoming challenges with determination and resilience.",
-                },
-                {
-                  title: "Excellence",
-                  text: "Always striving for higher performance on and off the mat.",
-                },
-              ].map((item) => (
-
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-6"
-                >
-
-                  <h3 className="text-2xl font-semibold text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-white/65">
-                    {item.text}
-                  </p>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          </motion.div>
-
+          </ol>
         </div>
-
       </section>
 
-      {/* Representation */}
-
-      <section className="container-page py-24">
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="overflow-hidden rounded-[2.5rem] border border-gold/20 bg-gradient-to-r from-gold/10 via-black to-black p-12"
-        >
-
-          <div className="mx-auto max-w-4xl text-center">
-
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Proud Representation
-            </p>
-
-            <h2 className="mt-5 font-display text-5xl text-white">
-              Competing For
-              <span className="block text-gradient">
-                India
-              </span>
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/70">
-              Every competition is an opportunity to proudly represent India,
-              inspire the next generation of athletes and contribute to the
-              growth of kickboxing nationally and internationally.
-            </p>
-
-          </div>
-
-        </motion.div>
-
-      </section>
-            {/* Final CTA */}
-
-      <section className="container-page pb-28">
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="overflow-hidden rounded-[2.5rem] border border-gold/20 bg-gradient-to-r from-gold/10 via-black to-black p-12"
-        >
-
-          <div className="mx-auto max-w-4xl text-center">
-
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Let's Build The Future
-            </p>
-
-            <h2 className="mt-5 font-display text-5xl text-white">
-              The Journey
-              <span className="block text-gradient">
-                Continues
-              </span>
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/70">
-              Every training session, competition and achievement is another
-              step toward representing India at the highest level. I welcome
-              opportunities to collaborate with sponsors, organizations,
-              media and supporters who believe in excellence and the future
-              of Indian kickboxing.
-            </p>
-
-            <div className="mt-10 flex flex-wrap justify-center gap-5">
-
-              <a
-                href="/downloads/athlete-profile.pdf"
-                className="rounded-full bg-gold px-8 py-4 font-semibold text-black transition hover:scale-105"
-              >
-                Download Athlete Profile
-              </a>
-
-              <a
-                href="/sponsors"
-                className="rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white transition hover:border-gold/40 hover:bg-white/10"
-              >
-                Sponsor Me
-              </a>
-
-              <a
-                href="/contact"
-                className="rounded-full border border-gold/30 bg-gold/10 px-8 py-4 font-semibold text-gold transition hover:bg-gold hover:text-black"
-              >
-                Contact Me
-              </a>
-
-            </div>
-
-          </div>
-
-        </motion.div>
-
+      <section className="container-page py-20 sm:py-24">
+        <div className="flex items-center gap-3"><Target className="h-6 w-6 text-[#e8c56a]" /><p className="text-xs font-bold uppercase tracking-[.3em] text-[#e8c56a]">Looking ahead</p></div>
+        <h2 className="mt-3 font-display text-4xl sm:text-5xl">2027 INTERNATIONAL TARGETS</h2>
+        <p className="mt-4 max-w-3xl leading-7 text-slate-300/65">These are planned competition targets based on the federation calendar details supplied by the athlete. They are not confirmation of selection, entry or participation.</p>
+        <div className="mt-9 grid gap-4 md:grid-cols-2">
+          {plannedGoals2027.map((goal) => (
+            <article key={goal.name} className="rounded-2xl border border-sky-200/15 bg-gradient-to-br from-[#173957]/80 to-[#0c2037] p-6">
+              <span className="text-[10px] font-extrabold uppercase tracking-[.22em] text-[#e8c56a]">{goal.status}</span>
+              <h3 className="mt-3 text-xl font-bold">{goal.name}</h3>
+              <p className="mt-2 text-sm text-sky-100/65">{goal.planningWindow} · {goal.targetLocation}</p>
+              {goal.note && <p className="mt-4 text-xs leading-6 text-slate-300/50">{goal.note}</p>}
+            </article>
+          ))}
+        </div>
       </section>
 
+      <section className="container-page pb-24">
+        <div className="rounded-3xl border border-[#e8c56a]/25 bg-[linear-gradient(120deg,rgba(232,197,106,.09),rgba(56,189,248,.06),rgba(12,32,53,.9))] p-8 sm:p-12">
+          <p className="text-xs font-bold uppercase tracking-[.3em] text-[#e8c56a]">Mission</p>
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl">EARN EVERY ROUND.</h2>
+          <p className="mt-5 max-w-3xl leading-8 text-slate-200/70">To keep improving through disciplined training, compete with integrity, represent India with pride and encourage more young people to discover the values of sport.</p>
+          <p className="mt-4 text-sm text-slate-300/50">The 2027 Senior World Championship remains a target only. Selection, eligibility, event dates, funding and participation are not confirmed.</p>
+        </div>
+      </section>
     </main>
   );
 }
-      
